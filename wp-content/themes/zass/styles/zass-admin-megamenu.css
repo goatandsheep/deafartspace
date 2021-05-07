@@ -1,0 +1,36 @@
+.field-description span.description {display: none;}
+
+.item-type-zass-column, .item-type-zass-mega, .zass_is_mega_field, .zass_is_description_field, .zass_mega_column_label{
+	display:none;
+}
+.zass_is_mega.menu-item-depth-0 .item-type-zass-mega, .zass_is_mega.menu-item-depth-1 .item-type-zass-column{
+	display:block; font-style: italic;
+}
+
+.zass_is_mega.menu-item-depth-0 .item-type-wpdef, .zass_is_mega.menu-item-depth-1 .item-type-wpdef {
+	display:none;
+}
+.menu-item-depth-0 .zass_is_mega_field {
+	display:block;
+}
+.zass_is_mega.menu-item-depth-2 .field-description, .zass_is_mega.menu-item-depth-2 .zass_is_description_field,
+.zass_is_mega.menu-item-depth-3 .field-description, .zass_is_mega.menu-item-depth-3 .zass_is_description_field,
+.zass_is_mega.menu-item-depth-4 .field-description, .zass_is_mega.menu-item-depth-4 .zass_is_description_field,
+.zass_is_mega.menu-item-depth-5 .field-description, .zass_is_mega.menu-item-depth-5 .zass_is_description_field,
+.zass_is_mega.menu-item-depth-6 .field-description, .zass_is_mega.menu-item-depth-6 .zass_is_description_field,
+.zass_is_mega.menu-item-depth-7 .field-description, .zass_is_mega.menu-item-depth-7 .zass_is_description_field,
+.zass_is_mega.menu-item-depth-8 .field-description, .zass_is_mega.menu-item-depth-8 .zass_is_description_field{
+	display: block;
+}
+.zass_is_mega.menu-item-depth-1 .zass_mega_column_label {
+	color: #888;
+	display: inline-block;
+	font-size: 11px;
+}
+.menu-item-settings:after {
+	content: " ";
+	display: block;
+	height: 0px !Important;
+	clear: both;
+	visibility: hidden;
+}

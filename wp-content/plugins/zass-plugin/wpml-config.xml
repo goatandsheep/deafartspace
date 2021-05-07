@@ -1,0 +1,132 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="copy">zass_override_default_layout</custom-field>
+        <custom-field action="copy">zass_title_background</custom-field>
+        <custom-field action="copy">zass_rev_slider_before_header</custom-field>
+        <custom-field action="copy">zass_video_bckgr_loop</custom-field>
+        <custom-field action="copy">zass_video_bckgr_mute</custom-field>
+        <custom-field action="copy">zass_prtfl_custom_content</custom-field>
+        <custom-field action="copy">zass_transparent_header</custom-field>
+        <custom-field action="copy">zass_layout</custom-field>
+        <custom-field action="copy">zass_top_header</custom-field>
+        <custom-field action="copy">zass_bottom_header</custom-field>
+        <custom-field action="copy">zass_footer_style</custom-field>
+        <custom-field action="copy">zass_pre_footer</custom-field>
+        <custom-field action="copy">zass_show_title_page</custom-field>
+        <custom-field action="copy">zass_show_breadcrumb</custom-field>
+        <custom-field action="copy">zass_show_sidebar</custom-field>
+        <custom-field action="copy">zass_show_share</custom-field>
+        <custom-field action="copy">zass_custom_sidebar</custom-field>
+        <custom-field action="translate">zass_rev_slider</custom-field>
+        <custom-field action="copy">zass_video_bckgr_url</custom-field>
+        <custom-field action="copy">zass_video_bckgr_start</custom-field>
+        <custom-field action="copy">zass_video_bckgr_end</custom-field>
+        <custom-field action="copy">zass_super_slider_ids</custom-field>
+        <custom-field action="translate">zass_collection</custom-field>
+        <custom-field action="translate">zass_materials</custom-field>
+        <custom-field action="translate">zass_model</custom-field>
+        <custom-field action="translate">zass_status</custom-field>
+        <custom-field action="translate">zass_ext_link_button_title</custom-field>
+        <custom-field action="translate">zass_ext_link_url</custom-field>
+        <custom-field action="translate">zass_feature_1</custom-field>
+        <custom-field action="translate">zass_feature_2</custom-field>
+        <custom-field action="translate">zass_feature_3</custom-field>
+        <custom-field action="translate">zass_feature_4</custom-field>
+        <custom-field action="translate">zass_feature_5</custom-field>
+        <custom-field action="translate">zass_feature_6</custom-field>
+        <custom-field action="translate">zass_feature_7</custom-field>
+        <custom-field action="translate">zass_feature_8</custom-field>
+        <custom-field action="translate">zass_feature_9</custom-field>
+        <custom-field action="translate">zass_feature_10</custom-field>
+        <custom-field action="translate">zass_add_description</custom-field>
+        <custom-field action="copy">zass_featured_imgid_2</custom-field>
+        <custom-field action="copy">zass_featured_imgid_3</custom-field>
+        <custom-field action="copy">zass_featured_imgid_4</custom-field>
+        <custom-field action="copy">zass_featured_imgid_5</custom-field>
+        <custom-field action="copy">zass_prtfl_gallery</custom-field>
+        <custom-field action="translate">zass_page_subtitle</custom-field>
+        <custom-field action="copy">zass_title_background_imgid</custom-field>
+        <custom-field action="copy">zass_title_alignment</custom-field>
+        <custom-field action="copy">zass_footer_size</custom-field>
+        <custom-field action="copy">zass_header_size</custom-field>
+        <custom-field action="copy">zass_show_footer_sidebar</custom-field>
+        <custom-field action="copy">zass_show_offcanvas_sidebar</custom-field>
+        <custom-field action="copy">zass_custom_footer_sidebar</custom-field>
+        <custom-field action="copy">zass_custom_offcanvas_sidebar</custom-field>
+        <custom-field action="copy">zass_header_syle</custom-field>
+        <custom-field action="copy">zass_top_menu</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">zass-portfolio</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">zass_portfolio_category</taxonomy>
+    </taxonomies>
+    <shortcodes>
+        <shortcode>
+            <tag>zass_counter</tag>
+            <attributes>
+                <attribute>txt_before_counter</attribute>
+                <attribute>txt_after_counter</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_typed</tag>
+            <attributes>
+                <attribute>txt_before_typed</attribute>
+                <attribute>txt_after_typed</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_banner</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+                <attribute type="link" encoding="vc_link">link</attribute>
+                <attribute>button_text</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_icon</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_icon_teaser</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_icon_box</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_map</tag>
+            <attributes>
+                <attribute>location_title</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_pricing_table</tag>
+            <attributes>
+                <attribute>title</attribute>
+                <attribute>subtitle</attribute>
+                <attribute>button_text</attribute>
+                <attribute type="link" encoding="vc_link">link</attribute>
+            </attributes>
+        </shortcode>
+        <shortcode>
+            <tag>zass_contact_form</tag>
+            <attributes>
+                <attribute>title</attribute>
+            </attributes>
+        </shortcode>
+    </shortcodes>
+</wpml-config>

@@ -1,0 +1,3280 @@
+# Copyright (C) 2021 theAlThemist
+# This file is distributed under the GPL.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zass 3.9.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/zass\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-04-21T11:16:22+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: zass\n"
+
+#. Theme Name of the theme
+msgid "Zass"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "http://althemist.com/zass"
+msgstr ""
+
+#. Description of the theme
+msgid "<strong>Zass theme by theAlThemist</strong> - <br/> Advanced WordPress / WooCommerce theme for handmade artists and artisans:<br/> <a href='http://www.althemist.com'>Other themes by us.</a>"
+msgstr ""
+
+#. Author of the theme
+msgid "theAlThemist"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.althemist.com"
+msgstr ""
+
+#: archive.php:89
+msgid "No posts were found. Sorry!"
+msgstr ""
+
+#: archive.php:99
+#: index.php:105
+#: partials/content-zass_portfolio_category.php:325
+#: search.php:88
+msgid "Next &raquo;"
+msgstr ""
+
+#: archive.php:100
+#: index.php:106
+#: partials/content-zass_portfolio_category.php:326
+#: search.php:89
+msgid "&laquo; Back"
+msgstr ""
+
+#: archive.php:112
+#: forum.php:166
+#: index.php:120
+#: page.php:186
+#: partials/content-zass_portfolio_category.php:314
+#: single-zass-portfolio.php:359
+#: single.php:165
+#: woocommerce/global/wrapper-start.php:102
+msgid "show"
+msgstr ""
+
+#: comments.php:11
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:24
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:30
+#: comments.php:43
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:31
+#: comments.php:44
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr ""
+
+#: content-none.php:5
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:7
+msgid "Apologies, but no results were found. Perhaps searching will help find a related post."
+msgstr ""
+
+#: content-page.php:7
+#: content-related-posts.php:177
+#: content.php:187
+msgid "Pages:"
+msgstr ""
+
+#: content-related-posts.php:50
+#: content-related-posts.php:63
+#: content.php:56
+#: content.php:69
+msgid "View"
+msgstr ""
+
+#: content-related-posts.php:98
+#: content.php:106
+msgid "Aside"
+msgstr ""
+
+#: content-related-posts.php:101
+#: content.php:109
+#: incl/zass-options-framework/zass-options-medialibrary-uploader.php:287
+msgid "Gallery"
+msgstr ""
+
+#: content-related-posts.php:104
+#: content.php:112
+msgid "Link"
+msgstr ""
+
+#: content-related-posts.php:107
+#: content.php:115
+msgid "Image"
+msgstr ""
+
+#: content-related-posts.php:110
+#: content.php:118
+msgid "Quote"
+msgstr ""
+
+#: content-related-posts.php:113
+#: content.php:121
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2639
+#: single-zass-portfolio.php:231
+msgid "Status"
+msgstr ""
+
+#: content-related-posts.php:116
+#: content.php:124
+msgid "Video"
+msgstr ""
+
+#: content-related-posts.php:119
+#: content.php:127
+msgid "Audio"
+msgstr ""
+
+#: content-related-posts.php:122
+#: content.php:130
+msgid "Chat"
+msgstr ""
+
+#: content-related-posts.php:131
+#: content.php:139
+msgid "Sticky"
+msgstr ""
+
+#: content-related-posts.php:144
+#: content.php:152
+msgid "View all posts in %s"
+msgstr ""
+
+#: content-related-posts.php:164
+#: content.php:174
+msgid "About the Author:"
+msgstr ""
+
+#: functions.php:76
+msgid "Showing %1$s to %2$s of %3$s (%4$s Pages)"
+msgstr ""
+
+#: functions.php:94
+msgid "Home"
+msgstr ""
+
+#: functions.php:218
+msgid "Forums"
+msgstr ""
+
+#: functions.php:288
+msgid "Page"
+msgstr ""
+
+#: functions.php:320
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:320
+#: functions.php:335
+msgid "Edit"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: functions.php:332
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:337
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:343
+msgid "Reply"
+msgstr ""
+
+#: functions.php:473
+#: functions.php:490
+msgid "read more"
+msgstr ""
+
+#: functions.php:597
+msgid "Sorry, no posts matched your criteria"
+msgstr ""
+
+#: functions.php:598
+msgid "Please try another search term"
+msgstr ""
+
+#: functions.php:602
+msgid "View all results"
+msgstr ""
+
+#: functions.php:960
+msgid "prev"
+msgstr ""
+
+#: functions.php:961
+msgid "next"
+msgstr ""
+
+#: header.php:93
+msgid "Show/Hide"
+msgstr ""
+
+#: header.php:93
+msgid "Slide toggle"
+msgstr ""
+
+#: header.php:212
+msgid "Wishlist"
+msgstr ""
+
+#: header.php:223
+msgid "My Account"
+msgstr ""
+
+#: incl/system/core-functions.php:64
+msgid "Main Menu"
+msgstr ""
+
+#: incl/system/core-functions.php:67
+msgid "Mobile Menu"
+msgstr ""
+
+#: incl/system/core-functions.php:70
+msgid "Top Menu"
+msgstr ""
+
+#: incl/system/core-functions.php:73
+msgid "Footer Menu"
+msgstr ""
+
+#: incl/system/core-functions.php:86
+msgid "Default Sidebar"
+msgstr ""
+
+#: incl/system/core-functions.php:88
+msgid "Default Blog widget area"
+msgstr ""
+
+#: incl/system/core-functions.php:97
+msgid "Footer Sidebar"
+msgstr ""
+
+#: incl/system/core-functions.php:99
+msgid "Footer widget area"
+msgstr ""
+
+#: incl/system/core-functions.php:108
+msgid "Pre Header Sidebar"
+msgstr ""
+
+#: incl/system/core-functions.php:110
+msgid "Pre header widget area"
+msgstr ""
+
+#: incl/system/core-functions.php:122
+msgid "Default Shop sidebar"
+msgstr ""
+
+#: incl/system/core-functions.php:135
+msgid "Default Forum sidebar"
+msgstr ""
+
+#: incl/system/core-functions.php:183
+msgid "Zass Plugin"
+msgstr ""
+
+#: incl/system/core-functions.php:192
+msgid "Envato Market - WordPress Theme & Plugin management for the Envato Market"
+msgstr ""
+
+#: incl/system/core-functions.php:201
+msgid "WooCommerce - excelling eCommerce"
+msgstr ""
+
+#: incl/system/core-functions.php:207
+msgid "YITH WooCommerce Wishlist"
+msgstr ""
+
+#: incl/system/core-functions.php:213
+msgid "Revolution Slider"
+msgstr ""
+
+#: incl/system/core-functions.php:222
+msgid "WPBakery Page Builder"
+msgstr ""
+
+#: incl/system/core-functions.php:250
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: incl/system/core-functions.php:251
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: incl/system/core-functions.php:253
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:337
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: incl/system/core-functions.php:255
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:339
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: incl/system/core-functions.php:256
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: incl/system/core-functions.php:257
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:341
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: incl/system/core-functions.php:261
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:347
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: incl/system/core-functions.php:265
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:353
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: incl/system/core-functions.php:269
+msgid "There is an update available for: %1$s. Prior update please make sure that the theme is compatible with the new version."
+msgid_plural "There are updates available for the following plugins: %1$s. Prior update please make sure that the theme is compatible with the new version."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: incl/system/core-functions.php:273
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:365
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: incl/system/core-functions.php:277
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:371
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: incl/system/core-functions.php:281
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:377
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: incl/system/core-functions.php:284
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: incl/system/core-functions.php:287
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: incl/system/core-functions.php:290
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: incl/system/core-functions.php:291
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:394
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: incl/system/core-functions.php:292
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:395
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3037
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: incl/system/core-functions.php:294
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:397
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: incl/system/core-functions.php:296
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:399
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: incl/system/core-functions.php:298
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:401
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: incl/system/core-functions.php:299
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: incl/system/core-functions.php:300
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:403
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: incl/system/core-functions.php:301
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported by that font, translate this to 'off'. Do not translate into your own language.
+#: incl/system/core-functions.php:791
+msgctxt "Google fonts: on or off"
+msgid "on"
+msgstr ""
+
+#: incl/system/core-functions.php:914
+#: woocommerce/cart/cart.php:34
+#: woocommerce/cart/cart.php:79
+msgid "Product"
+msgstr ""
+
+#: incl/system/core-functions.php:915
+msgid "was added to the cart"
+msgstr ""
+
+#: incl/system/core-functions.php:920
+msgid "Login"
+msgstr ""
+
+#: incl/system/core-functions.php:921
+msgid "Register"
+msgstr ""
+
+#: incl/system/core-functions.php:1472
+msgid "- No menu -"
+msgstr ""
+
+#: incl/system/core-functions.php:1473
+msgid "- Use global set top menu -"
+msgstr ""
+
+#: incl/system/core-functions.php:1518
+msgid "The Main Calendar"
+msgstr ""
+
+#: incl/system/core-functions.php:1522
+msgid "Calendar Category"
+msgstr ""
+
+#: incl/system/core-functions.php:1528
+#: incl/system/core-functions.php:1532
+msgid "Events List"
+msgstr ""
+
+#: incl/system/core-functions.php:1538
+msgid "Events on"
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:359
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:393
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:912
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2618
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:1019
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:1019
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:1022
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:1022
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:1206
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3033
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2067
+msgid "TGMPA v%s"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2427
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2473
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2477
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2481
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2485
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2567
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2688
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2693
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2699
+msgid "Activate %2$s"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3583
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3586
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3588
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3592
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3594
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3594
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3594
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3597
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3600
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: incl/tgm-plugin-activation/class-tgm-plugin-activation.php:3605
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: incl/woocommerce-functions.php:58
+msgid "Vendor"
+msgstr ""
+
+#: incl/woocommerce-functions.php:61
+msgid "Reviews"
+msgstr ""
+
+#: incl/woocommerce-functions.php:63
+msgid "Policies"
+msgstr ""
+
+#: incl/woocommerce-functions.php:261
+msgid "Refine Products"
+msgstr ""
+
+#: incl/woocommerce-functions.php:382
+msgid "Min price"
+msgstr ""
+
+#: incl/woocommerce-functions.php:383
+msgid "Max price"
+msgstr ""
+
+#: incl/woocommerce-functions.php:386
+msgid "Price range:"
+msgstr ""
+
+#: incl/woocommerce-functions.php:586
+msgid "This limited offer ends in"
+msgstr ""
+
+#: incl/woocommerce-functions.php:589
+msgid "Hurry! Only <b>%u</b> left"
+msgstr ""
+
+#: incl/woocommerce-functions.php:591
+msgid "Saving"
+msgstr ""
+
+#: incl/woocommerce-functions.php:738
+msgid "Compare"
+msgstr ""
+
+#: incl/woocommerce-functions.php:807
+msgid "View your shopping cart"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-framework.php:100
+msgid "Theme Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-framework.php:152
+#: incl/zass-options-framework/zass-options-framework.php:159
+msgid "Save All Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-framework.php:153
+#: incl/zass-options-framework/zass-options-framework.php:160
+msgid "Restore Defaults"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-framework.php:153
+#: incl/zass-options-framework/zass-options-framework.php:160
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-framework.php:193
+msgid "Default options restored."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-framework.php:239
+msgid "Options saved."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-functions.php:26
+msgid "-- None --"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-interface.php:465
+msgid "Add"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-interface.php:469
+msgid "List of created custom sidebars:"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-interface.php:479
+msgid "No custom sidebars."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-medialibrary-uploader.php:74
+msgid "Upload"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-medialibrary-uploader.php:97
+#: incl/zass-options-framework/zass-options-medialibrary-uploader.php:195
+msgid "View File"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-medialibrary-uploader.php:156
+msgid "Manage images"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-medialibrary-uploader.php:157
+msgid "Remove Image(s)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-medialibrary-uploader.php:287
+msgid "Previously Uploaded"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:250
+msgid "No Repeat"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:251
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:252
+msgid "Repeat Vertically"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:253
+msgid "Repeat All"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:266
+msgid "Top Left"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:267
+msgid "Top Center"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:268
+msgid "Top Right"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:269
+msgid "Middle Left"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:270
+msgid "Middle Center"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:271
+msgid "Middle Right"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:272
+msgid "Bottom Left"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:273
+msgid "Bottom Center"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:274
+msgid "Bottom Right"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:287
+msgid "Scroll Normally"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:288
+msgid "Fixed in Place"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:360
+#: incl/zass-options-framework/zass-options.php:58
+msgid "Normal"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:361
+msgid "Italic"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:362
+msgid "Bold"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options-sanitize.php:363
+msgid "Bold Italic"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:24
+msgid "Standard"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:25
+msgid "Masonry"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:54
+msgid "List View"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:59
+msgid "Transparent"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:66
+msgctxt "theme-options"
+msgid "Day/Month styled date format"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:67
+msgctxt "theme-options"
+msgid "WP date format"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:75
+msgctxt "theme-options"
+msgid "Use Ajax"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:79
+msgctxt "theme-options"
+msgid "Search only in Products"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:89
+msgctxt "theme-options"
+msgid "Enabled"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:90
+msgctxt "theme-options"
+msgid "Disabled"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:194
+msgctxt "theme-options"
+msgid "Single product gallery"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:226
+msgctxt "theme-options"
+msgid "General"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:230
+msgctxt "theme-options"
+msgid "Responsive"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:231
+msgctxt "theme-options"
+msgid "Enable responsive design."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:237
+msgctxt "theme-options"
+msgid "Use Site Preloader"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:238
+msgctxt "theme-options"
+msgid "Enable preloader for the whole site."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:244
+msgctxt "theme-options"
+msgid "Layout"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:245
+msgctxt "theme-options"
+msgid "Choose layout to be used sitewide."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:252
+msgctxt "theme-options"
+msgid "Logo"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:253
+#: incl/zass-options-framework/zass-options.php:260
+#: incl/zass-options-framework/zass-options.php:266
+msgctxt "theme-options"
+msgid "Choose or upload new logo."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:259
+msgctxt "theme-options"
+msgid "Transparent Header Alternative Logo"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:265
+msgctxt "theme-options"
+msgid "Footer Logo (Needs to be enabled from Footer area->Show logo in footer)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:271
+msgctxt "theme-options"
+msgid "Text Logo Typography"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:272
+msgctxt "theme-options"
+msgid "Set font options for text logo (only active if there is no image logo selected)."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:287
+msgctxt "theme-options"
+msgid "Google Maps JavaScript API key"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:288
+msgctxt "theme-options"
+msgid "Enter your Google Maps JavaScript API key, to be used for google map integration in Map shortcode. <a target=\"_blank\" href=\"%s\">Generate Google Maps JavaScript API key</a>"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:299
+msgctxt "theme-options"
+msgid "Enable Smooth Scroll"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:300
+msgctxt "theme-options"
+msgid "Smooth scrolling, when using anchors (known as one-pager)."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:306
+msgctxt "theme-options"
+msgid "Show Previous / Next Links"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:307
+msgctxt "theme-options"
+msgid "Show Previous / Next Links for posts, products and portfolios."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:313
+msgctxt "theme-options"
+msgid "Date Format on Posts List"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:314
+msgctxt "theme-options"
+msgid "Choose between the WordPress settings format and the theme format"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:321
+msgctxt "theme-options"
+msgid "Enable Carousel Effect"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:322
+msgctxt "theme-options"
+msgid "Enable Carousel effect on related posts, portfolios and products."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:330
+msgctxt "theme-options"
+msgid "Show Search in Header"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:331
+msgctxt "theme-options"
+msgid "Show search form in header."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:339
+msgctxt "theme-options"
+msgid "Choose whether to use Ajax or ordinary form. Search only in products or in the whole site (only if WooCommerce is activated)."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:347
+msgctxt "theme-options"
+msgid "Enable Breadcrumb"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:348
+msgctxt "theme-options"
+msgid "Show breadcrumb."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:354
+msgctxt "theme-options"
+msgid "Custom CSS"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:355
+msgctxt "theme-options"
+msgid "You can define custom CSS rules here. They will override all other CSS. In some cases you may need to add !important"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:364
+msgctxt "theme-options"
+msgid "Header area"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:369
+msgctxt "theme-options"
+msgid "Logo and Top Menu Positions"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:370
+msgctxt "theme-options"
+msgid "Select how the logo and top menu will appear."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:378
+msgctxt "theme-options"
+msgid "Main Menu Alignment"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:379
+msgctxt "theme-options"
+msgid "Set main menu alignment position."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:385
+#: incl/zass-options-framework/zass-options.php:1136
+#: incl/zass-options-framework/zass-options.php:1482
+#: incl/zass-options-framework/zass-options.php:1550
+#: incl/zass-options-framework/zass-options.php:1630
+#: incl/zass-options-framework/zass-options.php:1740
+msgctxt "theme-options"
+msgid "Left"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:386
+#: incl/zass-options-framework/zass-options.php:1137
+#: incl/zass-options-framework/zass-options.php:1483
+#: incl/zass-options-framework/zass-options.php:1551
+#: incl/zass-options-framework/zass-options.php:1631
+msgctxt "theme-options"
+msgid "Center"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:387
+#: incl/zass-options-framework/zass-options.php:1739
+msgctxt "theme-options"
+msgid "Right"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:391
+msgctxt "theme-options"
+msgid "Header Size"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:392
+#: incl/zass-options-framework/zass-options.php:631
+msgctxt "theme-options"
+msgid "Standard / Fullwidth."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:397
+#: incl/zass-options-framework/zass-options.php:625
+#: incl/zass-options-framework/zass-options.php:636
+#: incl/zass-options-framework/zass-options.php:1162
+msgctxt "theme-options"
+msgid "Standard"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:398
+#: incl/zass-options-framework/zass-options.php:637
+msgctxt "theme-options"
+msgid "Fullwidth"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:402
+msgctxt "theme-options"
+msgid "Sticky Header"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:403
+msgctxt "theme-options"
+msgid "Enable sticky header functionality. (not available in header-left layout)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:409
+msgctxt "theme-options"
+msgid "Left Header Settings"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:410
+msgctxt "theme-options"
+msgid "Select fixed or scrollable left header."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:415
+msgctxt "theme-options"
+msgid "Fixed"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:416
+msgctxt "theme-options"
+msgid "Scrollable"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:420
+msgid "Header Background"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:421
+msgid "Set Header Background image and/or color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:427
+msgctxt "theme-options"
+msgid "Top Menu Bar"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:428
+msgctxt "theme-options"
+msgid "Show the top menu bar"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:435
+msgctxt "theme-options"
+msgid "Top Menu Bar Visible on Mobile"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:436
+msgctxt "theme-options"
+msgid "Will be vsible on mobile devices"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:443
+msgctxt "theme-options"
+msgid "Short Top Header Message"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:444
+msgctxt "theme-options"
+msgid "The message will appear in the top menu bar."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:450
+msgctxt "theme-options"
+msgid "Append Phone Number."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:456
+msgctxt "theme-options"
+msgid "Make phone number a link to dial."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:462
+msgctxt "theme-options"
+msgid "Append Email Address."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:468
+msgctxt "theme-options"
+msgid "Make email address a link to open default mail client."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:474
+msgctxt "theme-options"
+msgid "Collapsible Pre-Header"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:475
+msgctxt "theme-options"
+msgid "Enable Collapsible Pre-Header widget area"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:481
+msgctxt "theme-options"
+msgid "Collapsible Pre-Header Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:487
+msgctxt "theme-options"
+msgid "Collapsible Pre-Header Titles Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:493
+msgctxt "theme-options"
+msgid "Collapsible Pre-Header Titles Border Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:499
+msgctxt "theme-options"
+msgid "Collapsible Pre-Header Links Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:505
+msgctxt "theme-options"
+msgid "Header Top Bar Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:511
+msgctxt "theme-options"
+msgid "Header Top Bar Border Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:517
+msgctxt "theme-options"
+msgid "Header Top Bar Menu Links Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:523
+msgctxt "theme-options"
+msgid "Header Top Bar Menu Links Hover Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:529
+msgctxt "theme-options"
+msgid "Header Top Bar Menu Links Hover Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:535
+msgctxt "theme-options"
+msgid "Main Menu Typography"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:536
+msgctxt "theme-options"
+msgid "Choose Main menu font size and style."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:550
+msgctxt "theme-options"
+msgid "Main Menu Icons Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:556
+msgctxt "theme-options"
+msgid "Main Menu Transform to Uppercase"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:557
+msgctxt "theme-options"
+msgid "Transform main menu top level to uppercase."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:563
+msgctxt "theme-options"
+msgid "Main Menu Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:564
+msgctxt "theme-options"
+msgid "*Note: Only applies for Logo left/Menu below and Logo Center/Menu below header layouts!"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:570
+msgctxt "theme-options"
+msgid "Main Menu Links Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:576
+msgctxt "theme-options"
+msgid "Main Menu Links Hover Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:582
+msgctxt "theme-options"
+msgid "Main Menu Links Hover Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:583
+msgctxt "theme-options"
+msgid "*Note: Also applies for highlighted menu items. Not active for transparent header.!"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:589
+msgctxt "theme-options"
+msgid "Transparent Header Menu Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:595
+msgctxt "theme-options"
+msgid "Transparent Header Menu Hover Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:601
+msgctxt "theme-options"
+msgid "Sub-Menu Color Scheme"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:602
+msgctxt "theme-options"
+msgid "Select color scheme for the sub-menu."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:607
+msgctxt "theme-options"
+msgid "Light"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:608
+msgctxt "theme-options"
+msgid "Dark"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:615
+msgctxt "theme-options"
+msgid "Footer area"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:619
+msgctxt "theme-options"
+msgid "Footer Style"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:620
+msgctxt "theme-options"
+msgid "*Note: Reveal footer is only available in fullwidth layout mode and not available on mobile/touch devices and screens with height lower than 768px for compatibility reasons. Use this feature with extra attention on large footer, because of the fixed footer position, which could prevent the full footer visibility on smaller screens."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:626
+msgctxt "theme-options"
+msgid "Reveal"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:630
+msgctxt "theme-options"
+msgid "Footer Size"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:641
+msgctxt "theme-options"
+msgid "Show Logo in Footer"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:642
+msgctxt "theme-options"
+msgid "Main logo will be displayed in footer, unless General->Footer Logo is selected. In that case \"Footer Logo\" will be displayed."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:648
+msgid "Footer Background"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:649
+msgid "Set Footer Background image and/or color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:655
+msgctxt "theme-options"
+msgid "Footer Titles Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:661
+msgctxt "theme-options"
+msgid "Footer Titles Border Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:667
+msgctxt "theme-options"
+msgid "Footer Menu Links Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:673
+msgctxt "theme-options"
+msgid "Footer Widgets Links Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:679
+msgctxt "theme-options"
+msgid "Footer Text Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:685
+msgctxt "theme-options"
+msgid "Footer Copyright Bar Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:691
+msgctxt "theme-options"
+msgid "Footer Copyright Bar Text Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:697
+msgctxt "theme-options"
+msgid "Footer Copyright Bar Text"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:698
+msgctxt "theme-options"
+msgid "Enter Copyright text. Use %s as wildcard to be replaced by current year."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:708
+msgctxt "theme-options"
+msgid "Common Styles"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:712
+msgctxt "theme-options"
+msgid "Site Design Accent"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:713
+msgctxt "theme-options"
+msgid "Choose preferred global site effect."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:718
+msgctxt "theme-options"
+msgid "None"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:719
+msgctxt "theme-options"
+msgid "Tear-off"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:723
+msgctxt "theme-options"
+msgid "Site Main Accent Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:729
+msgctxt "theme-options"
+msgid "Links Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:735
+msgctxt "theme-options"
+msgid "Links Hover Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:741
+msgctxt "theme-options"
+msgid "Widgets Title Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:747
+msgctxt "theme-options"
+msgid "Default Buttons Style"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:753
+msgid "Classic"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:754
+msgid "Round"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:758
+msgctxt "theme-options"
+msgid "Default Buttons Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:764
+msgctxt "theme-options"
+msgid "Default Buttons Hover Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:770
+msgctxt "theme-options"
+msgid "NEW Label Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:776
+msgctxt "theme-options"
+msgid "SALE Label Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:782
+msgctxt "theme-options"
+msgid "Page Title Scroll/Fade Effect"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:783
+msgctxt "theme-options"
+msgid "Enable fade effect for page title on scroll."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:789
+msgctxt "theme-options"
+msgid "Standard page title color (no background image)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:795
+msgctxt "theme-options"
+msgid "Standard page subtitle color (no background image)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:801
+msgctxt "theme-options"
+msgid "Standard page title background color (no background image)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:807
+msgctxt "theme-options"
+msgid "Standard page title border color (no background image)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:813
+msgctxt "theme-options"
+msgid "Customized page title color (with background image)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:816
+msgctxt "theme-options"
+msgid "Also applies for subtitle and breadcrumb."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:820
+msgctxt "theme-options"
+msgid "Post Date Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:829
+msgctxt "theme-options"
+msgid "Portfolio"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:833
+msgctxt "theme-options"
+msgid "Portfolio Category Layout"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:834
+msgctxt "theme-options"
+msgid "Choose the layout for the portfolio category view."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:839
+msgctxt "theme-options"
+msgid "Grid 2 Columns"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:840
+msgctxt "theme-options"
+msgid "Grid 3 Columns"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:841
+msgctxt "theme-options"
+msgid "Grid 4 Columns"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:842
+msgctxt "theme-options"
+msgid "List"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:843
+msgctxt "theme-options"
+msgid "Masonry Fullwidth"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:844
+msgctxt "theme-options"
+msgid "Masonry Grid"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:848
+msgctxt "theme-options"
+msgid "None-Overlay"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:849
+msgctxt "theme-options"
+msgid "Use none-overlay style for projects in category view."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:855
+msgctxt "theme-options"
+msgid "Portfolio Gaps"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:856
+msgctxt "theme-options"
+msgid "Will there be a gap between projects in category view."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:862
+msgctxt "theme-options"
+msgid "Show Similar Projects"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:863
+msgctxt "theme-options"
+msgid "Display similar projects on single project page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:869
+msgctxt "theme-options"
+msgid "Lightbox"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:870
+msgctxt "theme-options"
+msgid "Show link that opens the featured image in lightbox."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:876
+msgctxt "theme-options"
+msgid "Portfolio Overlay Background Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:882
+msgctxt "theme-options"
+msgid "Portfolio Overlay Text Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:891
+msgctxt "theme-options"
+msgid "Fonts"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:895
+msgctxt "theme-options"
+msgid "Body Font"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:896
+msgctxt "theme-options"
+msgid "Choose font parameters for the body text."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:908
+msgctxt "theme-options"
+msgid "Accent and Headings Google Font Face"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:909
+msgctxt "theme-options"
+msgid "Choose Font Face."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:922
+msgctxt "theme-options"
+msgid "Use selected google font face also for"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:930
+msgctxt "theme-options"
+msgid "Main Menu"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:931
+msgctxt "theme-options"
+msgid "Buttons"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:935
+msgid "Google Font Subsets"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:936
+msgctxt "theme-options"
+msgid "Choose Subsets."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:943
+msgctxt "theme-options"
+msgid "H1 Font Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:944
+msgctxt "theme-options"
+msgid "Choose H1 size, style and color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:955
+msgctxt "theme-options"
+msgid "H2 Font Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:956
+msgctxt "theme-options"
+msgid "Choose H2 size, style and color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:967
+msgctxt "theme-options"
+msgid "H3 Font Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:968
+msgctxt "theme-options"
+msgid "Choose H3 size, style and color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:979
+msgctxt "theme-options"
+msgid "H4 Font Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:980
+msgctxt "theme-options"
+msgid "Choose H4 size, style and color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:991
+msgctxt "theme-options"
+msgid "H5 Font Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:992
+msgctxt "theme-options"
+msgid "Choose H5 size, style and color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1003
+msgctxt "theme-options"
+msgid "H6 Font Options"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1004
+msgctxt "theme-options"
+msgid "Choose H6 size, style and color."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1018
+msgctxt "theme-options"
+msgid "Advanced Backgrounds"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1022
+msgctxt "theme-options"
+msgid "Enable YouTube Video Background Sitewide."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1023
+msgctxt "theme-options"
+msgid "Check to enable below youtube video to be set as background on the whole site. Note that it will override any supersized and ordinary backgrounds."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1029
+#: incl/zass-options-framework/zass-options.php:1356
+#: incl/zass-options-framework/zass-options.php:1672
+msgctxt "theme-options"
+msgid "YouTube Video URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1030
+#: incl/zass-options-framework/zass-options.php:1357
+#: incl/zass-options-framework/zass-options.php:1673
+msgctxt "theme-options"
+msgid "Paste the YouTube URL."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1036
+#: incl/zass-options-framework/zass-options.php:1363
+#: incl/zass-options-framework/zass-options.php:1679
+msgctxt "theme-options"
+msgid "Start Time"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1037
+#: incl/zass-options-framework/zass-options.php:1364
+#: incl/zass-options-framework/zass-options.php:1680
+msgctxt "theme-options"
+msgid "Set the seconds the video should start at."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1044
+#: incl/zass-options-framework/zass-options.php:1371
+#: incl/zass-options-framework/zass-options.php:1687
+msgctxt "theme-options"
+msgid "End Time"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1045
+#: incl/zass-options-framework/zass-options.php:1372
+#: incl/zass-options-framework/zass-options.php:1688
+msgctxt "theme-options"
+msgid "Set the seconds the video should stop at."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1052
+#: incl/zass-options-framework/zass-options.php:1379
+#: incl/zass-options-framework/zass-options.php:1695
+msgctxt "theme-options"
+msgid "Loop"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1053
+#: incl/zass-options-framework/zass-options.php:1380
+#: incl/zass-options-framework/zass-options.php:1696
+msgctxt "theme-options"
+msgid "Loops the movie once ended."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1059
+#: incl/zass-options-framework/zass-options.php:1386
+#: incl/zass-options-framework/zass-options.php:1702
+msgctxt "theme-options"
+msgid "Mute"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1060
+#: incl/zass-options-framework/zass-options.php:1387
+#: incl/zass-options-framework/zass-options.php:1703
+msgctxt "theme-options"
+msgid "Mute the audio."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1066
+msgctxt "theme-options"
+msgid "Enable supersized slider sitewide."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1067
+msgctxt "theme-options"
+msgid "Check to enable below slider to be set as background on the whole site. Note that it will override your current background."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1073
+msgctxt "theme-options"
+msgid "Choose images for the sitewide supersized slider."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1074
+#: incl/zass-options-framework/zass-options.php:1124
+#: incl/zass-options-framework/zass-options.php:1408
+#: incl/zass-options-framework/zass-options.php:1538
+#: incl/zass-options-framework/zass-options.php:1718
+msgctxt "theme-options"
+msgid "Use to manage / upload images."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1088
+msgctxt "theme-options"
+msgid "Shop"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1092
+msgctxt "theme-options"
+msgid "Shop Page Header Style"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1093
+msgctxt "theme-options"
+msgid "Choose the header style for the page set as Shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1101
+msgctxt "theme-options"
+msgid "Shop Page Top Menu"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1102
+msgctxt "theme-options"
+msgid "Choose top menu for the shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1110
+#: incl/zass-options-framework/zass-options.php:1524
+msgctxt "theme-options"
+msgid "Subtitle"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1111
+msgctxt "theme-options"
+msgid "Subtitle for shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1117
+msgctxt "theme-options"
+msgid "Title with Image Background on Shop Page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1118
+msgctxt "theme-options"
+msgid "Use image background for title on shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1131
+#: incl/zass-options-framework/zass-options.php:1545
+msgctxt "theme-options"
+msgid "Title alignment."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1141
+msgctxt "theme-options"
+msgid "Show Refine Products Area"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1142
+msgctxt "theme-options"
+msgid "Show the area with price range and sorting options on product archives"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1148
+msgctxt "theme-options"
+msgid "Show \"My Account\" Icon"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1149
+msgctxt "theme-options"
+msgid "Choose whether to display \"My Account\" icon link in header."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1155
+msgctxt "theme-options"
+msgid "My Account Page Display Style"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1156
+msgctxt "theme-options"
+msgid "Choose the style of the My Account page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1161
+msgctxt "theme-options"
+msgid "Carousel"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1166
+msgctxt "theme-options"
+msgid "Show Shopping Cart"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1167
+msgctxt "theme-options"
+msgid "Choose whether to display shopping cart in header."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1173
+msgctxt "theme-options"
+msgid "Enable AJAX Add to Cart on Single Product Pages"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1174
+msgctxt "theme-options"
+msgid "Use AJAX when adding product to cart on single product pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1180
+msgctxt "theme-options"
+msgid "Add to Cart Color"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1181
+msgctxt "theme-options"
+msgid "Set color for \"Add to Cart\" button on products."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1187
+msgctxt "theme-options"
+msgid "Add to Cart Sound"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1188
+msgctxt "theme-options"
+msgid "Play sound notification when product is added to shopping cart."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1194
+msgctxt "theme-options"
+msgid "Wishlist Counter in Header"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1195
+msgctxt "theme-options"
+msgid "Display wishlist counter in header."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1201
+msgctxt "theme-options"
+msgid "Enable Product Quickview"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1202
+msgctxt "theme-options"
+msgid "Enable Quick view on product listings."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1208
+msgctxt "theme-options"
+msgid "Category Description Position"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1209
+msgctxt "theme-options"
+msgid "Choose position for category description."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1214
+msgctxt "theme-options"
+msgid "Top"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1215
+msgctxt "theme-options"
+msgid "Bottom"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1219
+msgctxt "theme-options"
+msgid "Hover Product Behaviour on Product List"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1220
+msgctxt "theme-options"
+msgid "Choose hover behaviour for product listing."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1225
+msgctxt "theme-options"
+msgid "Zoom"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1226
+msgctxt "theme-options"
+msgid "Image Swap"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1227
+msgctxt "theme-options"
+msgid "No Effect"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1231
+msgctxt "theme-options"
+msgid "Enable Products Hover Effect (Fade)"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1232
+msgctxt "theme-options"
+msgid "When hovering over a product in product list fade rest of the products."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1238
+msgctxt "theme-options"
+msgid "Enable Carousel for Shop Categories"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1239
+msgctxt "theme-options"
+msgid "Enable carousel effect for the listed categories on shop pages (If categories are enabled from WooCommerce settings)."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1245
+msgctxt "theme-options"
+msgid "Columns Number for Shop Categories"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1246
+msgctxt "theme-options"
+msgid "Select the number of columns for the listed categories on shop pages (If categories are enabled from WooCommerce settings)."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1254
+msgctxt "theme-options"
+msgid "Shop Pages Default Product Columns"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1255
+msgctxt "theme-options"
+msgid "Select the default number of product columns on shop/category pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1263
+msgctxt "theme-options"
+msgid "Number of Products per Page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1264
+msgctxt "theme-options"
+msgid "Set the number of products per page for product listings, like shop and product category pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1271
+msgctxt "theme-options"
+msgid "Number of Related Products"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1272
+msgctxt "theme-options"
+msgid "Set the number of related products shown on single product page. Set to -1 to display all."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1279
+msgctxt "theme-options"
+msgid "Show Sidebar on Shop Page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1280
+msgctxt "theme-options"
+msgid "Show sidebar on Shop and category pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1286
+msgctxt "theme-options"
+msgid "Show Sidebar on Product Pages"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1287
+msgctxt "theme-options"
+msgid "Show sidebar on product pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1293
+msgctxt "theme-options"
+msgid "Enable Price Filter on Product Categories"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1294
+msgctxt "theme-options"
+msgid "Show Price Filter."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1301
+msgctxt "theme-options"
+msgid "Price Filter Slider Step"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1302
+msgctxt "theme-options"
+msgid "Set the step at which the slider changes and rounds min and max price boundaries."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1309
+msgctxt "theme-options"
+msgid "Enable Product Per Page on Product Categories"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1310
+msgctxt "theme-options"
+msgid "Limit products on product category pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1316
+msgctxt "theme-options"
+msgid "Use Countdown on Sales"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1317
+msgctxt "theme-options"
+msgid "Show countdown meter for products on sale."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1325
+msgctxt "theme-options"
+msgid "\"NEW\" Label Active Period"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1326
+msgctxt "theme-options"
+msgid "in Days"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1334
+msgctxt "theme-options"
+msgid "Cloud Zoom Settings"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1335
+msgctxt "theme-options"
+msgid "Select to enable Cloud Zoom on Single product gallery."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1343
+msgctxt "theme-options"
+msgid "Enable YouTube video background for Shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1344
+msgctxt "theme-options"
+msgid "Check to enable below youtube video to be set as background on the Shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1350
+msgctxt "theme-options"
+msgid "Enable the video background for the whole shop area. NOTE: It will override all other video backgrounds in the shop area."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1394
+msgctxt "theme-options"
+msgid "Enable supersized slider on Shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1395
+msgctxt "theme-options"
+msgid "Check to enable below slider to be set as background on the Shop page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1401
+msgctxt "theme-options"
+msgid "Enable the slider for the whole shop area. NOTE: It will override all other supersized sliders in the shop area."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1407
+msgctxt "theme-options"
+msgid "Choose images for the Shop page supersized slider."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1423
+msgctxt "theme-options"
+msgid "Events"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1427
+msgctxt "theme-options"
+msgid "Options specific to The Events Calendar plugin."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1431
+msgctxt "theme-options"
+msgid "Top Menu for Events Category View Pages"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1432
+msgctxt "theme-options"
+msgid "Choose top menu for the Main Calendar Page, Calendar Category Pages, Main Events List, Category Events List."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1440
+msgctxt "theme-options"
+msgid "Header Style for Events Category View Pages"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1441
+msgctxt "theme-options"
+msgid "Choose the header style for Main Calendar Page, Calendar Category Pages, Main Events List, Category Events List."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1449
+msgctxt "theme-options"
+msgid "Events Title"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1450
+msgctxt "theme-options"
+msgid "Enter the title for Main Calendar Page, Main Events List. Use empty for default."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1456
+msgctxt "theme-options"
+msgid "Events Subtitle"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1457
+msgctxt "theme-options"
+msgid "Subtitle for Main Calendar Page, Main Events List."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1463
+msgctxt "theme-options"
+msgid "Title with Image Background for Events"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1464
+msgctxt "theme-options"
+msgid "Use image background for title on Main Calendar Page, Calendar Category Pages, Main Events List, Category Events List."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1470
+#: incl/zass-options-framework/zass-options.php:1618
+msgctxt "theme-options"
+msgid "Use to manage / upload images"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1477
+#: incl/zass-options-framework/zass-options.php:1625
+msgctxt "theme-options"
+msgid "Title alignment"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1487
+msgctxt "theme-options"
+msgid "Use Countdown on Events"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1488
+msgctxt "theme-options"
+msgid "Show countdown meter for starting time for an Event. Visible on single event pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1502
+msgctxt "theme-options"
+msgid "bbPress"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1506
+msgctxt "theme-options"
+msgid "Header Style for Forum Root Page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1507
+msgctxt "theme-options"
+msgid "Choose the header style for the forum root page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1515
+msgctxt "theme-options"
+msgid "Forum Root Page Top Menu"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1516
+msgctxt "theme-options"
+msgid "Choose top menu for the forum root page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1525
+msgctxt "theme-options"
+msgid "Subtitle for Forum Root Page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1531
+msgctxt "theme-options"
+msgid "Title with Image Background on Forum Root Page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1532
+msgctxt "theme-options"
+msgid "Use image background for title."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1559
+msgctxt "theme-options"
+msgid "Blog"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1563
+msgctxt "theme-options"
+msgid "Blog Style"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1564
+msgctxt "theme-options"
+msgid "Choose how the posts will appear on the Blog."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1572
+msgctxt "theme-options"
+msgid "Top Menu for Blog page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1573
+msgctxt "theme-options"
+msgid "Choose top menu for Blog page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1581
+msgctxt "theme-options"
+msgid "Header Style for Blog page, Category, Tags and Search"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1582
+msgctxt "theme-options"
+msgid "Choose the header style for Blog page, Category, Tags and Search."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1590
+msgctxt "theme-options"
+msgid "Show Title on the Blog page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1591
+msgctxt "theme-options"
+msgid "If selected, the page set as Blog page will have its title displayed."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1597
+msgctxt "theme-options"
+msgid "Blog Title"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1598
+msgctxt "theme-options"
+msgid "Enter the title of the Blog page as set up in the Settings->Reading."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1604
+msgctxt "theme-options"
+msgid "Blog Subtitle"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1605
+msgctxt "theme-options"
+msgid "Subtitle for blog page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1611
+msgctxt "theme-options"
+msgid "Title with Image Background on Blog page, Category, Tags and Search"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1612
+msgctxt "theme-options"
+msgid "Use image background for title on Blog page, Category, Tags and Search."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1635
+msgctxt "theme-options"
+msgid "Show Related Posts"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1636
+msgctxt "theme-options"
+msgid "Display random posts from the same categories on single post page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1642
+msgctxt "theme-options"
+msgid "Number of Related Posts"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1643
+msgctxt "theme-options"
+msgid "Set the number of related posts shown on single post page. Set to -1 to display all."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1650
+msgctxt "theme-options"
+msgid "Show Author Info on Blog Posts"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1651
+msgctxt "theme-options"
+msgid "If selected, Author section will be displayed below the post."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1657
+msgctxt "theme-options"
+msgid "Show Author Avatar"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1658
+msgctxt "theme-options"
+msgid "If selected, Author avatar will be displayed on posts."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1665
+msgctxt "theme-options"
+msgid "Enable YouTube video background for Blog page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1666
+msgctxt "theme-options"
+msgid "Check to enable below youtube video to be set as background on the Blog page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1710
+msgctxt "theme-options"
+msgid "Enable Supersized Slider on Blog Page"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1711
+msgctxt "theme-options"
+msgid "Check to enable below slider to be set as background on the Blog page."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1717
+msgctxt "theme-options"
+msgid "Choose images for the Blog page supersized slider"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1728
+msgctxt "theme-options"
+msgid "Sidebars"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1732
+msgctxt "theme-options"
+msgid "Sidebars Default Position"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1733
+msgctxt "theme-options"
+msgid "Choose sitewide sidebars position. Can be changed in page/post edit."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1744
+msgctxt "theme-options"
+msgid "Create new custom sidebar"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1745
+msgctxt "theme-options"
+msgid "Enter the name of the custom sidebar."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1751
+msgctxt "theme-options"
+msgid "Sidebar for Blog, Archive and Category Pages"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1752
+msgctxt "theme-options"
+msgid "Select sidebar to be displayed on Blog page and all post category, tag and search pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1760
+msgctxt "theme-options"
+msgid "Sidebar for Portfolio Archive and Category Pages"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1761
+msgctxt "theme-options"
+msgid "Select sidebar to be displayed on all Portfolio Archive and Category Pages."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1774
+msgctxt "theme-options"
+msgid "Sidebar for WooCommerce part"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1775
+msgctxt "theme-options"
+msgid "Select sidebar to be displayed on all WooCommerce pages that can have sidebar"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1789
+msgctxt "theme-options"
+msgid "Sidebar for bbPress part"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1790
+msgctxt "theme-options"
+msgid "Select sidebar to be displayed by default on all bbPress pages. May be overridden on specific forums and topics."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1804
+msgctxt "theme-options"
+msgid "Sidebar for Events Calendar part"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1805
+msgctxt "theme-options"
+msgid "Select sidebar to be displayed by default on all Events Calendar pages. May be overridden on specific Events."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1814
+msgctxt "theme-options"
+msgid "Off Canvas Sidebar"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1815
+msgctxt "theme-options"
+msgid "Select sidebar to be displayed off canvas."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1824
+msgctxt "theme-options"
+msgid "Footer Sidebar"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1825
+msgctxt "theme-options"
+msgid "Select sidebar to be displayed in footer. May be overriden for the specific pages, posts and custom post types."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1837
+msgctxt "theme-options"
+msgid "Social Profiles"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1841
+msgctxt "theme-options"
+msgid "Fill in your social profiles URLs and select where to appear."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1845
+msgctxt "theme-options"
+msgid "Show in Header"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1847
+msgctxt "theme-options"
+msgid "Show profiles in header."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1852
+msgctxt "theme-options"
+msgid "Show in Footer"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1854
+msgctxt "theme-options"
+msgid "Show profiles in footer."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1859
+msgctxt "theme-options"
+msgid "Facebook Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1865
+msgctxt "theme-options"
+msgid "Twitter Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1871
+msgctxt "theme-options"
+msgid "Google+ Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1877
+msgctxt "theme-options"
+msgid "YouTube Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1883
+msgctxt "theme-options"
+msgid "Vimeo Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1889
+msgctxt "theme-options"
+msgid "Dribbble Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1895
+msgctxt "theme-options"
+msgid "LinkedIn Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1901
+msgctxt "theme-options"
+msgid "StumbleUpon Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1907
+msgctxt "theme-options"
+msgid "Flickr Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1913
+msgctxt "theme-options"
+msgid "Instagram Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1919
+msgctxt "theme-options"
+msgid "Pinterest Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1925
+msgctxt "theme-options"
+msgid "VKontakte Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1931
+msgctxt "theme-options"
+msgid "Behance Profile URL"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1940
+msgctxt "theme-options"
+msgid "Import Demo"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1944
+msgid "NOTE THAT THE IMPORT CAN OVERRIDE YOUR DATA AND SETTINGS."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1944
+msgctxt "theme-options"
+msgid "<p><b>Make sure that the required plugins for the corresponding import are installed and activated.</b></p><p>Note also that the demos are using many images and takes longer to import. You may need to increase some of the PHP parameters, described here: %s . If for some reason is not possible to increase <i>max_execution_time</i> and still can't run the import, you may need to run it again, in order to import all the images.</p><p><b>Click the image of the desired demo to import.</b>The import can take several minutes. For best result use fresh WP installation.</p><p>You can use following plugin to reset WordPress: %s .</p>"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1948
+msgctxt "theme-options"
+msgid "Import Zass Demo"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1949
+msgctxt "theme-options"
+msgid "<p><b>Demo Location:</b> %s <br/><b>NOTE:</b> Usually takes less than 3 minutes, but depending on the server it may take up to 10.</p><p><b>Required plugins for the import:</b><br/><b><a target=\"_blank\" href=\"https://wordpress.org/plugins/woocommerce/\">WooCommerce</a></b></p>"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1958
+msgctxt "theme-options"
+msgid "Import Zass Marketplace Demo"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1959
+msgctxt "theme-options"
+msgid "<p><b>Demo Location:</b> %s <br/><b>NOTE:</b> Usually takes less than 3 minutes, but depending on the server it may take up to 10.</p><p><b>Required plugins for the import:</b><br/><b><a target=\"_blank\" href=\"https://wordpress.org/plugins/woocommerce/\">WooCommerce</a></b><br/><b><a target=\"_blank\" href=\"https://wordpress.org/plugins/dc-woocommerce-multi-vendor/\">WC Marketplace</a></b><br/></p>"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1973
+msgctxt "theme-options"
+msgid "Zass Updates"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1980
+#: incl/zass-options-framework/zass-options.php:1986
+msgid "Zass automatic updates are managed by the Envato Market plugin (bundled with the theme)."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1981
+msgctxt "theme-options"
+msgid "Manage your Envato purchased items"
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1987
+msgctxt "theme-options"
+msgid "Please install and activate \"Envato Market\" in order to manage all your WordPress themes and plugins purchased from Envato."
+msgstr ""
+
+#: incl/zass-options-framework/zass-options.php:1988
+msgctxt "theme-options"
+msgid "Install/Activate Envato Market plugin"
+msgstr ""
+
+#. translators: %s: title of menu item which is invalid
+#: incl/ZassMegaMenu.php:89
+msgid "%s (Invalid)"
+msgstr ""
+
+#. translators: %s: title of menu item in draft status
+#: incl/ZassMegaMenu.php:93
+msgid "%s (Pending)"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:116
+msgid "sub item"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:121
+msgid "Column"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:122
+msgid "Mega Menu"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:133
+msgid "Move up"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:144
+msgid "Move down"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:146
+#: incl/ZassMegaMenu.php:148
+msgid "Edit Menu Item"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:157
+msgid "URL"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:164
+msgid "Navigation Label"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:165
+msgid "(Enter \"-\" to hide)"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:171
+msgid "Title Attribute"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:178
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:183
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:189
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:195
+msgid "Description"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:197
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr ""
+
+#: incl/ZassMegaMenu.php:204
+msgid "Custom Menu Label"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:215
+msgid "Label Color"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:225
+msgid "Icon"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:237
+msgid "Highlight menu item"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:253
+msgid "Set as Mega Menu"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:269
+msgid "Use the Description to create a Text Block. It will hide the Navigation Label and display the description instead. (note: dont remove the label text, otherwise WordPress will delete the item)"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:288
+msgid "Move"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:289
+msgid "Up one"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:290
+msgid "Down one"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:293
+msgid "To the top"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:300
+msgid "Original: %s"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:312
+msgid "Remove"
+msgstr ""
+
+#: incl/ZassMegaMenu.php:313
+msgid "Cancel"
+msgstr ""
+
+#: incl/ZassTransferContent.class.php:308
+msgid "There was error with settings file."
+msgstr ""
+
+#. Template Name of the theme
+msgid "Blank page"
+msgstr ""
+
+#: partials/content-zass_portfolio_category.php:7
+msgid "Loading ..."
+msgstr ""
+
+#: partials/content-zass_portfolio_category.php:8
+msgid "All portfolios loaded."
+msgstr ""
+
+#: partials/content-zass_portfolio_category.php:142
+msgid "Portfolio"
+msgstr ""
+
+#: partials/content-zass_portfolio_category.php:198
+msgid "show all"
+msgstr ""
+
+#: partials/content-zass_portfolio_category.php:254
+#: partials/content-zass_portfolio_category.php:263
+#: partials/content-zass_portfolio_category.php:288
+#: single-zass-portfolio.php:333
+msgid "View project"
+msgstr ""
+
+#: partials/content-zass_portfolio_category.php:306
+msgid "No Portfolio found. Sorry!"
+msgstr ""
+
+#: partials/social-profiles.php:8
+msgid "Follow on Facebook"
+msgstr ""
+
+#: partials/social-profiles.php:9
+msgid "Follow on Twitter"
+msgstr ""
+
+#: partials/social-profiles.php:10
+msgid "Follow on Google+"
+msgstr ""
+
+#: partials/social-profiles.php:11
+msgid "Follow on YouTube"
+msgstr ""
+
+#: partials/social-profiles.php:12
+msgid "Follow on Vimeo"
+msgstr ""
+
+#: partials/social-profiles.php:13
+msgid "Follow on Dribbble"
+msgstr ""
+
+#: partials/social-profiles.php:14
+msgid "Follow on LinkedIn"
+msgstr ""
+
+#: partials/social-profiles.php:15
+msgid "Follow on StumbleUpon"
+msgstr ""
+
+#: partials/social-profiles.php:16
+msgid "Follow on Flickr"
+msgstr ""
+
+#: partials/social-profiles.php:17
+msgid "Follow on Instagram"
+msgstr ""
+
+#: partials/social-profiles.php:18
+msgid "Follow on Pinterest"
+msgstr ""
+
+#: partials/social-profiles.php:19
+msgid "Follow on VKontakte"
+msgstr ""
+
+#: partials/social-profiles.php:20
+msgid "Follow on Behance"
+msgstr ""
+
+#: search.php:49
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:4
+#: searchform.php:14
+msgid "Search"
+msgstr ""
+
+#: single-zass-portfolio.php:210
+msgid "Short Description"
+msgstr ""
+
+#: single-zass-portfolio.php:219
+msgid "Details"
+msgstr ""
+
+#: single-zass-portfolio.php:222
+msgid "Collection"
+msgstr ""
+
+#: single-zass-portfolio.php:225
+msgid "Materials"
+msgstr ""
+
+#: single-zass-portfolio.php:228
+msgid "Model"
+msgstr ""
+
+#: single-zass-portfolio.php:252
+msgid "Main Features"
+msgstr ""
+
+#: single-zass-portfolio.php:306
+msgid "Similar projects"
+msgstr ""
+
+#: single.php:142
+msgid "Related posts"
+msgstr ""
+
+#: tribe-events/single-event.php:26
+msgid "All %s"
+msgstr ""
+
+#: tribe-events/single-event.php:46
+msgid "Event starts in"
+msgstr ""
+
+#: tribe-events/single-event.php:55
+#: tribe-events/single-event.php:85
+msgid "%s Navigation"
+msgstr ""
+
+#: woocommerce/cart/cart.php:35
+#: woocommerce/cart/cart.php:99
+msgid "Price"
+msgstr ""
+
+#. translators: %s: Quantity.
+#: woocommerce/cart/cart.php:36
+#: woocommerce/cart/cart.php:105
+#: woocommerce/global/quantity-input.php:28
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:37
+#: woocommerce/cart/cart.php:122
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart.php:60
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:94
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:139
+msgid "Coupon:"
+msgstr ""
+
+#: woocommerce/cart/cart.php:139
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:139
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:146
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/content-single-product-zass-quickview.php:57
+msgid "Placeholder"
+msgstr ""
+
+#: woocommerce/content-widget-reviews.php:31
+msgid "by %s"
+msgstr ""
+
+#. translators: %s: Quantity.
+#: woocommerce/global/quantity-input.php:28
+msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:42
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/loop/add-to-cart.php:38
+msgid "Quick View"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:34
+msgid "Show"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:45
+msgid "Show All"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:55
+msgid "Sort By"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:56
+msgid "Shop order"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:27
+msgid "Sale!"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:31
+msgid "New"
+msgstr ""
+
+#: woocommerce/product-searchform.php:27
+#: woocommerce/product-searchform.php:28
+msgid "Search Products"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:41
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/meta.php:43
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/meta.php:47
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:47
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/single-product/related.php:32
+msgid "Related products"
+msgstr ""

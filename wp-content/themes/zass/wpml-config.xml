@@ -1,0 +1,15 @@
+<wpml-config>
+	<admin-texts>
+		<key name="zass">
+			<key name="top_bar_message" />
+			<key name="copyright_text" />
+			<key name="shop_subtitle" />
+			<key name="forum_subtitle" />
+			<key name="blog_title" />
+			<key name="blog_subtitle" />
+			<key name="map_location_title" />
+		</key>
+	</admin-texts>
+</wpml-config>
+
+

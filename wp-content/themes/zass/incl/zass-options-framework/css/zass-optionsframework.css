@@ -1,0 +1,307 @@
+/*-------------------------------------------------------------------------------------------*/
+/* Options Framework Admin Styles */
+/*-------------------------------------------------------------------------------------------*/
+
+#zass-optionsframework {
+	position:relative;
+	z-index: 0;
+	max-width:780px;
+	background:#fff;
+}
+#zass-optionsframework h3 {
+	cursor: default;
+}
+#zass-optionsframework p {
+	margin-bottom:0;
+	padding-bottom:10px;
+	line-height: 1.4em;
+}
+#zass-optionsframework .section {
+	padding:10px 10px 0;
+}
+#zass-optionsframework .group {
+	padding-bottom:40px;
+}
+#zass-optionsframework .section .heading {
+	padding:10px 0px;
+	margin:0 0 15px;
+	border-bottom: 1px solid #dfdfdf;
+}
+#zass-optionsframework .section .controls {
+	float: left;
+	min-width:350px;
+	width: 54%;
+	padding-right:2%;
+}
+#zass-optionsframework .section .explain {
+	max-width:38%;
+	float: left;
+	font-size: 12px;
+	line-height:16px;
+	color: #777;
+}
+#zass-optionsframework .section-checkbox .controls {
+	width: 98%;
+}
+#zass-optionsframework .section-checkbox .explain {
+	max-width:94%;
+}
+#zass-optionsframework .section-color .controls {
+	min-width:125px;
+	width:125px
+}
+#zass-optionsframework .controls input, #zass-optionsframework .controls select, #zass-optionsframework .controls textarea {
+	margin-bottom:10px;
+	width:100%;
+}
+#zass-optionsframework .section-radio label, #zass-optionsframework .section-multicheck label {
+	float:left;
+	max-width:90%;
+	line-height: 16px;
+	margin-bottom: 5px;
+}
+#zass-optionsframework input.checkbox, #zass-optionsframework input.of-radio {
+	width: 30px;
+	margin-top:2px;
+	float:left;
+	clear:both;
+}
+#zass-optionsframework .controls .of-color {
+	float:left;
+	width: 80px;
+	margin-left:5px;
+	margin-right:5px;
+}
+#zass-optionsframework .controls .of-typography-size {
+	width:80px;
+	margin-left:5px;
+	float:left
+}
+#zass-optionsframework .controls .of-typography-unit {
+	width:50px;
+	margin-left:5px;
+	float:left
+}
+#zass-optionsframework .controls .of-typography-face {
+	width:200px;
+	margin-left:5px;
+	float:left
+}
+#zass-optionsframework .controls .of-typography-style {
+	width:100px;
+	margin-left:5px;
+	margin-right:5px;
+	float:left
+}
+#zass-optionsframework .of-background-properties {
+	clear:both;
+	margin-top: 18px;
+}
+#zass-optionsframework .controls .of-background-repeat {
+	width:125px;
+	margin-right:5px;
+	float:left
+}
+#zass-optionsframework .controls .of-background-position {
+	width:125px;
+	margin-right:5px;
+	float:left
+}
+#zass-optionsframework .controls .of-background-attachment {
+	width:125px;
+	margin-right:5px;
+	float:left
+}
+#zass-optionsframework div.section-background .controls input.upload {
+	width:47%;
+}
+#zass-optionsframework .controls .of-radio-img-img {
+	border:3px solid #f9f9f9;
+	margin:0 5px 10px 0;
+	display:none;
+	cursor:pointer;
+	float:left;
+	height: 140px;
+	width: 140px;
+}
+#zass-optionsframework .controls .of-radio-img-selected {
+	border:3px solid #ccc
+}
+#zass-optionsframework .controls .of-radio-img-img:hover {
+	opacity:.8;
+}
+#zass-optionsframework .controls .of-border-width {
+	width:80px;
+	float:left
+}
+#zass-optionsframework .controls .of-border-style {
+	width:120px;
+	float:left
+}
+#zass-optionsframework .hide {
+	display:none;
+}
+#zass-optionsframework .of-option-image {
+	max-width:340px;
+	margin:3px 0 18px 0;
+}
+#zass-optionsframework .mini .controls select, #zass-optionsframework .section .mini .controls {
+	width: 140px;
+}
+#zass-optionsframework .mini .controls input, #zass-optionsframework .mini .controls {
+	min-width:140px;
+	width: 140px;
+}
+#zass-optionsframework .mini .explain {
+	max-width:74%;
+}
+
+/* Editor */
+
+#zass-optionsframework .section-editor .explain {
+	max-width: 98%;
+	float:none;
+	margin-bottom:5px;
+}
+
+/* Image Uploader */
+
+#zass-optionsframework .controls input.upload {
+	width:80%;
+}
+#zass-optionsframework .controls input.zass_upload_button {
+	float:right;
+	width:60px;
+	border-color:#BBBBBB;
+	cursor:pointer;
+	/* height:16px; */
+}
+#zass-optionsframework .controls input.zass_upload_image_button
+{
+	float:right;
+}
+#zass-optionsframework .controls input.zass_upload_button:hover {
+	border-color:#666666;
+	color:#000;
+}
+#zass-optionsframework .screenshot {
+	float:left;
+	margin-left:1px;
+	position:relative;
+	width:344px;
+	margin-top:3px;
+}
+#zass-optionsframework .screenshot img {
+	background:#FAFAFA;
+	border-color:#ccc #eee #eee #ccc;
+	border-style:solid;
+	border-width:1px;
+	float:left;
+	max-width:334px;
+	padding:4px;
+	margin-bottom:10px;
+}
+#zass-optionsframework .screenshot .mlu_remove {
+	background:url("../images/ico-delete.png") no-repeat;
+	border:medium none;
+	bottom:4px;
+	display:block;
+	float:left;
+	height:16px;
+	padding:0;
+	position:absolute;
+	left:-4px;
+	text-indent:-9999px;
+	width:16px;
+}
+#zass-optionsframework .screenshot .no_image .file_link {
+	margin-left: 20px;
+}
+#zass-optionsframework .screenshot .no_image .mlu_remove {
+	bottom: 0px;
+}
+#zass-optionsframework .reset-button {
+	float:left;
+	cursor:pointer;
+}
+
+/* Bottom Section */
+
+#zass-optionsframework-submit {
+	padding: 7px 10px;
+	border-top: 1px solid #ECECEC;
+	background-color: #F1F1F1;
+	background-image: -moz-linear-gradient(center top , #F9F9F9, #ECECEC);
+}
+#zass-optionsframework .button-primary {
+	float:right;
+}
+
+/* Bottom Section */
+
+#zass-optionsframework .section:before, #zass-optionsframework .section:after {
+	content: "";
+	display: table;
+}
+#zass-optionsframework .section:after {
+	clear: both;
+}
+
+/* Custom classes */
+
+#zass-optionsframework .zass_wider .controls {
+	width: 100%;
+}
+
+#zass-optionsframework .zass_font_preview {
+	clear: both;
+	width: 700px;
+	padding-top: 1px;
+	text-align: center;
+}
+
+#zass-optionsframework #zass_custom_sidebars_list div {
+	height: 20px;
+}
+
+#zass-optionsframework #zass_custom_sidebars_list div a.zass_del_sdbr {
+	background:url("../images/ico-delete.png") no-repeat;
+	float: left;
+	height: 16px;
+	width: 16px;
+	margin-right: 5px;
+}
+
+#zass-optionsframework div.block-start_section .section {padding: 0}
+#zass-optionsframework div.block-start_section .section .heading {
+	border-bottom: none;
+	margin: 0;
+	padding: 0 0 2px;
+}
+
+#zass-optionsframework .import_zass_demo .controls .of-radio-img-img {
+  height: 166px;
+  width: 177px;
+}
+
+div.import_zass_demo span.of-radio-img-img span.zass_import_btn {
+  color: #000000;
+  background: #ccc;
+  padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 35px;
+	left: 5%;
+	position: absolute;
+	opacity: 0.8;
+}
+
+span.zass_import_spinner {
+	height: 173px;
+	width:183px;
+	background: url("../images/ajax-loader.gif") no-repeat scroll center;
+	display: block;
+	position: absolute;
+	opacity: 0.8;
+	z-index: 10000;
+}

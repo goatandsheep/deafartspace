@@ -1,0 +1,5 @@
+{
+    "require": {
+        "php-telegram-bot/telegram-bot-manager": "^1.5"
+    }
+}
