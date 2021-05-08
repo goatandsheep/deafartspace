@@ -15,3 +15,22 @@ function theme_enqueue_styles() {
 		);
 	}
 }
+
+add_filter( 'wpml_sl_blacklist_requests', 'deaf_wpml_sl_blacklist_requests', 10, 2 );
+function deaf_wpml_sl_blacklist_requests( $blacklist, $sitepress ) {
+        $blacklist[] = 'dashboard/storefront';
+        $blacklist[] = 'dashboard/vendor-policies';
+        $blacklist[] = 'dashboard/vendor-bill';
+        $blacklist[] = 'dashboard/products';
+        $blacklist[] = 'dashboard/add-product'; 
+        $blacklist[] = 'dashboard/coupons';
+        $blacklist[] = 'dashboard/add-coupon';   
+        $blacklist[] = 'dashboard/vendor-report';
+        $blacklist[] = 'dashboard/banking-ov'; 
+        $blacklist[] = 'dashboard/vendor-orders';
+        $blacklist[] = 'dashboard/vendor-withdrawal'; 
+        $blacklist[] = 'dashboard/transaction-details';
+        $blacklist[] = 'dashboard/vendor-knowledgebase'; 
+        $blacklist[] = 'dashboard/vendor-tools';           
+    return $blacklist;
+}
