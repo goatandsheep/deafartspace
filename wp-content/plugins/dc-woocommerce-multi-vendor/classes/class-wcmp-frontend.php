@@ -484,7 +484,7 @@ class WCMp_Frontend {
      */
     public function product_archive_vendor_info() {
         global $WCMp;
-        if (wcmp_is_store_page()) {
+        if (wcmp_is_store_page() || 1) {
             $store_id = wcmp_find_shop_page_vendor();
             $vendor = get_wcmp_vendor($store_id);
             if( $vendor ){
