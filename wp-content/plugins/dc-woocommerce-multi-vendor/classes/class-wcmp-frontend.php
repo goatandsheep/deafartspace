@@ -484,7 +484,7 @@ class WCMp_Frontend {
      */
     public function product_archive_vendor_info() {
         global $WCMp;
-        if (wcmp_is_store_page() || 1) {
+        if (wcmp_is_store_page()) {
             $store_id = wcmp_find_shop_page_vendor();
             $vendor = get_wcmp_vendor($store_id);
             if( $vendor ){
@@ -492,8 +492,8 @@ class WCMp_Frontend {
                 $description = $vendor->description;
 
                 $address = $vendor->get_formatted_address();
-                echo 'saeed soltoon';
-                // $WCMp->template->get_template('archive_vendor_info.php', array('vendor_id' => $vendor->id, 'banner' => $vendor->get_image('banner'), 'profile' => $image, 'description' => apply_filters('the_content', $description), 'mobile' => $vendor->phone, 'location' => $address, 'email' => $vendor->user_data->user_email));
+
+                $WCMp->template->get_template('archive_vendor_info.php', array('vendor_id' => $vendor->id, 'banner' => $vendor->get_image('banner'), 'profile' => $image, 'description' => apply_filters('the_content', $description), 'mobile' => $vendor->phone, 'location' => $address, 'email' => $vendor->user_data->user_email));
             }
         }
     }
