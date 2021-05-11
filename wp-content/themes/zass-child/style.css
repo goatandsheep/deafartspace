@@ -12,6 +12,7 @@ Text Domain: zass
 */
 .vendor-item > h3 {
   font-size: 20px;
+  margin-bottom: 8px;
 }
 .vendor-info-wrapper {
   display: flex;
@@ -21,7 +22,7 @@ Text Domain: zass
 }
 
 .vendor-info li {
-  margin-bottom: 3px;
+  margin-bottom: 3px !important;
   font-size: 12px;
 }
 
