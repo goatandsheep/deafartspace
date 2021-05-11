@@ -10,3 +10,21 @@ License: Themeforest Split Licence
 License URI: -
 Text Domain: zass
 */
+.vendor-item > h3 {
+  font-size: 20px;
+}
+.vendor-info-wrapper {
+  display: flex;
+}
+.vendor-info-wrapper a img {
+  width: 85px !important;
+}
+
+.vendor-info li {
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.shortcodes.vendors-list .vendor-info-wrapper .vendor-info .vendor-social-uri {
+  font-size: 14px !important;
+}
