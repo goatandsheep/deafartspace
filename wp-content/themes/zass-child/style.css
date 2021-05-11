@@ -28,3 +28,11 @@ Text Domain: zass
 .shortcodes.vendors-list .vendor-info-wrapper .vendor-info .vendor-social-uri {
   font-size: 14px !important;
 }
+
+.home .vendors-list .vendor-info li:not(.store-rating):not(.store-socials):not(.store-sales){
+  display: none;
+}
+
+.home .vendors-list ~ .page-numbers {
+  display: none;
+}
