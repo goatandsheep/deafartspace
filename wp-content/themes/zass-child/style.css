@@ -37,3 +37,33 @@ Text Domain: zass
 .home .vendors-list ~ .page-numbers {
   display: none;
 }
+
+
+.page-numbers {
+    background-color: #dd4540 !important;
+    color: #fff !important;
+    padding: 5px 10px;    
+}
+
+.page-numbers.current {
+    background-color:orange !important;	
+}
+
+.by-vendor-name {
+	position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 44px;
+    margin-bottom: 0px;
+    z-index: 9;
+}
+
+.by-vendor-name-link {
+	font-weight:bold !important;
+}
+
+.home div.prod_hold .links {
+	padding: 5px !important;
+}
