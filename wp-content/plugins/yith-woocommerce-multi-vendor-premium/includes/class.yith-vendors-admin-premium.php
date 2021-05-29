@@ -1514,7 +1514,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 			global $post_type;
 			$_screen = get_current_screen();
 
-			if ( 'shop_coupon' == $post_type || 'edit-product' == $_screen->id || 'edit-shop_order' == $_screen->id ) {
+			if ( 'zass-portfolio' == $post_type || 'shop_coupon' == $post_type || 'edit-product' == $_screen->id || 'edit-shop_order' == $_screen->id ) {
 				return;
 			}
 
