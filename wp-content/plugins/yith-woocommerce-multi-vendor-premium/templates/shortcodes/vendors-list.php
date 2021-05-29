@@ -102,4 +102,5 @@ if ( ! is_bool( $show_description ) ){
         </li>
     <?php endforeach; ?>
 </ul>
+<?php var_dump($paginate); ?>
 <?php echo paginate_links( $paginate );

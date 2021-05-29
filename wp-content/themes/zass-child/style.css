@@ -119,7 +119,7 @@ Text Domain: zass
     background-color:orange !important;	
 }
 
-.home .by-vendor-name {
+.by-vendor-name {
 	position: absolute;
     display: block;
     left: 0;
@@ -130,11 +130,11 @@ Text Domain: zass
     z-index: 9;
 }
 
-.home .by-vendor-name-link {
+.by-vendor-name-link {
 	font-weight:bold !important;
 }
 
-.home div.prod_hold .links {
+div.prod_hold .links {
 	padding: 5px !important;
 }
 
