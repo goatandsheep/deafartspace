@@ -1261,28 +1261,27 @@ if (!function_exists('zass_latest_projects_shortcode')) {
 	?>
 		<div class="wpb_content_element<?php if ($appear_animation !== '') echo ' ' . sanitize_html_class($appear_animation); ?>">
 			<div class="<?php echo esc_attr($iconbox_styling_classes) ?>">
-				<a href="<?php echo $url ? $url : ''; ?>" target="_blank" title="<?php echo $title ? $title : ''; ?>">
-					<div class="icon_wrapper">
-						<span class="icon_inner" <?php echo ($color ? ' style="' . esc_attr($icon_style_inline) . ':' . esc_attr($color) . ';"' : ''); ?>>
-							<?php if ($type === 'fontawesome') : ?>
-								<i class="<?php echo esc_attr($icon_fontawesome); ?>"></i>
-							<?php elseif ($type === 'etline') : ?>
-								<i class="<?php echo esc_attr($icon_etline); ?>"></i>
+				<a href="<?php echo $url ? $url : ''; ?>" target="_blank" title="<?php echo $title ? $title : ''; ?>"></a>
+				<div class="icon_wrapper">
+					<span class="icon_inner" <?php echo ($color ? ' style="' . esc_attr($icon_style_inline) . ':' . esc_attr($color) . ';"' : ''); ?>>
+						<?php if ($type === 'fontawesome') : ?>
+							<i class="<?php echo esc_attr($icon_fontawesome); ?>"></i>
+						<?php elseif ($type === 'etline') : ?>
+							<i class="<?php echo esc_attr($icon_etline); ?>"></i>
+						<?php endif; ?>
+					</span>
+				</div>
+				<div class="iconbox_content">
+					<?php if ($title) : ?>
+						<h5<?php echo ($titles_color ? ' style="color:' . esc_attr($titles_color) . ';"' : ''); ?>><?php echo esc_html($title) ?></h5>
+						<?php endif; ?>
+						<?php if ($subtitle) : ?>
+							<small<?php echo ($titles_color ? ' style="color:' . esc_attr($titles_color) . ';"' : ''); ?>><?php echo esc_html($subtitle) ?></small>
 							<?php endif; ?>
-						</span>
-					</div>
-					<div class="iconbox_content">
-						<?php if ($title) : ?>
-							<h5<?php echo ($titles_color ? ' style="color:' . esc_attr($titles_color) . ';"' : ''); ?>><?php echo esc_html($title) ?></h5>
-							<?php endif; ?>
-							<?php if ($subtitle) : ?>
-								<small<?php echo ($titles_color ? ' style="color:' . esc_attr($titles_color) . ';"' : ''); ?>><?php echo esc_html($subtitle) ?></small>
-								<?php endif; ?>
-								<div class="iconbox_text_content">
-									<?php echo do_shortcode($content) ?>
-								</div>
-					</div>
-				</a>
+							<div class="iconbox_text_content">
+								<?php echo do_shortcode($content) ?>
+							</div>
+				</div>
 			</div>
 		</div>
 		<?php
