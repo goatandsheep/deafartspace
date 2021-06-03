@@ -64,78 +64,16 @@ Text Domain: zass
 	font-weight:bold !important;
 }
 
-.home div.prod_hold .links {
-	padding: 5px !important;
-}
-
-/*
-Theme Name: Zass Child
-Theme URI: http://althemist.com/zass
-Description: <strong>Zass child theme by theAlThemist</strong> - <br/> Advanced WordPress / WooCommerce theme for handmade artists and artisans:<br/> <a href='http://www.althemist.com'>Other themes by us.</a>
-Version: 1.0.0
-Template: zass
-Author: theAlThemist
-Author URI: http://www.althemist.com
-License: Themeforest Split Licence
-License URI: -
-Text Domain: zass
-*/
-.vendor-item > h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-.vendor-info-wrapper {
-  display: flex;
-}
-.vendor-info-wrapper a img {
-  width: 85px !important;
-}
-
-.vendor-info li {
-  margin-bottom: 3px !important;
-  font-size: 12px;
-}
-
-.shortcodes.vendors-list .vendor-info-wrapper .vendor-info .vendor-social-uri {
-  font-size: 14px !important;
-}
-
-.home .vendors-list .vendor-info li:not(.store-rating):not(.store-socials):not(.store-sales){
-  display: none;
-}
-
-.home .vendors-list ~ .page-numbers {
-  display: none;
-}
-
-
-.page-numbers {
-    background-color: #dd4540 !important;
-    color: #fff !important;
-    padding: 5px 10px;    
-}
-
-.page-numbers.current {
-    background-color:orange !important;	
-}
-
-.by-vendor-name {
-	position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    text-align: center;
-    bottom: 44px;
-    margin-bottom: 0px;
-    z-index: 9;
-}
-
-.by-vendor-name-link {
-	font-weight:bold !important;
-}
-
 div.prod_hold .links {
 	padding: 5px !important;
+}
+
+div.prod_hold .name {
+	font-size:11px !important;
+}
+
+.zass-list-prod-summary {
+  padding: 15px 2px !important;
 }
 
 li.product-category.product:hover img, div.product-category.product:hover img {

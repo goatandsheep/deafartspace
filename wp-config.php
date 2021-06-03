@@ -1,4 +1,14 @@
-<?php
+<?php // hey day
+
+    if(isset($_SERVER['HTTP_X_FORWARDED_PROTO'] )) {
+      if (strpos( $_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
+        $_SERVER['HTTPS']='on';
+      }
+    };
+
+    define( 'WP_MEMORY_LIMIT', '256M' );
+    define( 'WP_MAX_MEMORY_LIMIT', '512M' );
+    define( 'FS_METHOD', 'direct');
 /**
  * The base configuration for WordPress
  *
@@ -20,24 +30,24 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'deaf' );
+define( 'DB_NAME', '223675_42cad70e1988a342a19cbc039fe0f2e0' );
 
 /** MySQL database username */
-define( 'DB_USER', 'preload' );
+define( 'DB_USER', 'easywp_436552' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'Red0Fi!!' );
+define( 'DB_PASSWORD', '2Ftj1stLFhwuNDmUPKA/f7tyWkuPIUGWZb/LUgn58bE=' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'mysql-cluster-3-mysql-master.database.svc.cluster.local:3306' );
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define( 'DB_CHARSET', 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-/**#@+
+/**
  * Authentication Unique Keys and Salts.
  *
  * Change these to different unique phrases!
@@ -46,16 +56,15 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'DOTJEVp^.CG$kY`PEvS@O_TUn43Z+R^5J(~cA}v&A/x<`NvS+s72Ar7wV{nYq+!#' );
-define( 'SECURE_AUTH_KEY',  '^z[]-v1Wf*4P`l=CfXfby26#XG[FG81%Nrz4AoqvitZM?J2;FfK^zhMaa%6>3syf' );
-define( 'LOGGED_IN_KEY',    '@ s`WycSl[%p1Qw4hOBZjt[c(c3^7<UXZ .%(&V5oO;M8<aDys8(M+YeF`8COYHo' );
-define( 'NONCE_KEY',        'd5`S6OQg(R}YU+n9n`;maZPLv]3[<(yF/4oP3;Pg$ed.kxCXx}nSF_A!rS:>-4Wo' );
-define( 'AUTH_SALT',        'jgM~7)Ftm(3s6X$ntb.0-e_$YRySb!&,(xJuU0NMqorOU5:Ph$GTuLPf+q,_D;|V' );
-define( 'SECURE_AUTH_SALT', 'hjSyV,%(J*PFj/yZv*og#.?4mj_+TK#?.{[{oO5?Ly19*Nisz,8;f*n<fj(]4YL&' );
-define( 'LOGGED_IN_SALT',   '8M4X.&O#4ZJhl@,Q$ABP7Sk: SJd!H]$,7gYqw J+rl=`jv6LXqeJl&e4rfQqY++' );
-define( 'NONCE_SALT',       'G@d=|tS}w8&!{|}^aF|B~G&#e-_f<Z,H]8#h{HuT)q0y[r2-Z ?1(]}DKj=p]nfp' );
-
-/**#@-*/
+define( 'AUTH_KEY',          'E]@_N@4}[}V-gs16JWL_a2<k`JPuYfW}%@B(u 52RPmW6M7^`K.x1<m![oOnNc34' );
+define( 'SECURE_AUTH_KEY',   'Qgkq5gAAR$f8M([)0q}j1`Hh>ODq|#Ut{y<D=Y.9A<c]sU}ZRd36DEeJH?,m&4/>' );
+define( 'LOGGED_IN_KEY',     'Ty$)!5hCv)C9qD$3vgxwb %S<6K<xQx4_Ovo(EP;+7w8TMCIIs;CQM1wiae__p/3' );
+define( 'NONCE_KEY',         '$;v<I9.WZNHM(vg}:aC`;4||wa[7FO;636;>{*;*HyU{1[FBEJ >//?=*>6>x%2.' );
+define( 'AUTH_SALT',         '?F]E2Wi,/aQ7*fj(xH-dOO*-Jr_~>0_w;:~(7h_$KlH*+2&c*l=!ibWSa1K8Xt!T' );
+define( 'SECURE_AUTH_SALT',  'GaY2]a[u6Pf4^^@|=]hQMjK?1[h<,mav8NUdzi$eznDN@e)M4t+.L(1!^9Imb/D4' );
+define( 'LOGGED_IN_SALT',    'jlV}_h-V&wFFe dqj{%CT4w#[Jz=O)CvhmB@X$-MGvAXB[NE$qS{HmVM|+Y+Aa^a' );
+define( 'NONCE_SALT',        'ZbCVV.QirSE{r4zS_OJjr!+6P6*=k8*>}#*:#<3o_a1%pfj(8EO1pJ+hxIITkx7S' );
+define( 'WP_CACHE_KEY_SALT', 'VA,uik+YWB-zae|hb7bJ/1c[.D=WNc#!2cgDhx(GHz[t(mg7ixi .6N2sqWGhjiT' );
 
 /**
  * WordPress Database Table prefix.
@@ -65,43 +74,20 @@ define( 'NONCE_SALT',       'G@d=|tS}w8&!{|}^aF|B~G&#e-_f<Z,H]8#h{HuT)q0y[r2-Z ?
  */
 $table_prefix = 'wp_';
 
-/**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
- */
 
-define( 'WP_MEMORY_LIMIT', '256M' );
 
-define( 'WP_DEBUG', false );
-#define( 'WP_DEBUG', true);
-#define( 'WP_DEBUG_LOG', true );
 
 /* That's all, stop editing! Happy publishing. */
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', '/var/www/wptbox/wp-errors.log');
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 
-
-//define('WP_HOME','http://preload.test/');
-//define('WP_SITEURL','http://preload.test/');
-
-//define('FORCE_SSL_ADMIN', true);
-
-if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
-        $_SERVER['HTTPS']='on';
-
-//define('FORCE_SSL_LOGIN', true);
-
-
 /** Sets up WordPress vars and included files. */
-require_once( ABSPATH . 'wp-settings.php' );
+require_once ABSPATH . 'wp-settings.php';
+
+define('WP_HOME', 'https://deafartspace.ca');
+define('WP_SITEURL','https://deafartspace.ca');
