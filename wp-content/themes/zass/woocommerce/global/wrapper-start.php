@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Content wrappers
  *
@@ -59,45 +60,45 @@ if ($title_background_image) {
 // If it is product category - check if it has header image
 $zass_prod_category_header_img_id = 0;
 if (is_product_category()) {
-    $zass_current_cat = $wp_query->get_queried_object();
+	$zass_current_cat = $wp_query->get_queried_object();
 
-    if (isset($zass_current_cat->term_id)) {
-        $zass_prod_category_header_img_id = absint( get_term_meta( $zass_current_cat->term_id, 'zass_term_header_img_id', true ) );
-    }
+	if (isset($zass_current_cat->term_id)) {
+		$zass_prod_category_header_img_id = absint(get_term_meta($zass_current_cat->term_id, 'zass_term_header_img_id', true));
+	}
 }
 ?>
-<?php if ($zass_has_offcanvas_sidebar): ?>
+<?php if ($zass_has_offcanvas_sidebar) : ?>
 	<?php get_sidebar('offcanvas'); ?>
 <?php endif; ?>
 <div id="content" class="content-area <?php echo esc_attr(implode(' ', $sidebar_classes)) ?>">
-	<?php if (is_shop()): ?>
-		<div id="zass_page_title" class="zass_title_holder <?php echo esc_attr(zass_get_option('shop_title_alignment')) ?> <?php if ($show_title_background && $title_background_image): ?>title_has_image<?php endif; ?>">
-			<?php if ($show_title_background && $title_background_image): ?><div class="zass-zoomable-background" style="background-image: url('<?php echo esc_url($title_background_image) ?>');"></div><?php endif; ?>
-		<?php elseif($zass_prod_category_header_img_id): ?>
-		    <?php $zass_prod_category_header_img = wp_get_attachment_image_src($zass_prod_category_header_img_id, 'full'); ?>
-		    <div id="zass_page_title" class="<?php echo implode(" ", array("zass_title_holder", "title_has_image", esc_attr(zass_get_option('shop_title_alignment')))) ?>">
-			<div class="zass-zoomable-background" style="background-image: url('<?php echo esc_url($zass_prod_category_header_img[0]) ?>');"></div>
-		<?php else: ?>
-			<div id="zass_page_title" class="zass_title_holder" >
-			<?php endif; ?>
-
-			<div class="inner fixed">
-				<!-- BREADCRUMB -->
-				<?php woocommerce_breadcrumb() ?>
-				<!-- END OF BREADCRUMB -->
-
-				<!-- TITLE -->
-				<?php if (!is_product() && apply_filters('woocommerce_show_page_title', true)): ?>
-					<h1 class="product_title entry-title heading-title"><?php woocommerce_page_title(); ?></h1>
-					<?php if (is_shop() && $shop_subtitle): ?>
-						<h6><?php echo esc_html($shop_subtitle) ?></h6>
-					<?php endif; ?>
+	<?php if (is_shop() || is_product()) : ?>
+		<div id="zass_page_title" class="zass_title_holder <?php echo esc_attr(zass_get_option('shop_title_alignment')) ?> <?php if ($show_title_background && $title_background_image) : ?>title_has_image<?php endif; ?>">
+			<?php if ($show_title_background && $title_background_image) : ?><div class="zass-zoomable-background" style="background-image: url('<?php echo esc_url($title_background_image) ?>');"></div><?php endif; ?>
+		<?php elseif ($zass_prod_category_header_img_id) : ?>
+			<?php $zass_prod_category_header_img = wp_get_attachment_image_src($zass_prod_category_header_img_id, 'full'); ?>
+			<div id="zass_page_title" class="<?php echo implode(" ", array("zass_title_holder", "title_has_image", esc_attr(zass_get_option('shop_title_alignment')))) ?>">
+				<div class="zass-zoomable-background" style="background-image: url('<?php echo esc_url($zass_prod_category_header_img[0]) ?>');"></div>
+			<?php else : ?>
+				<div id="zass_page_title" class="zass_title_holder">
 				<?php endif; ?>
-				<!-- END OF TITLE -->
-			</div>
 
-		</div>
-		<div id="products-wrapper" class="inner site-main" role="main">
-			<?php if ($zass_has_offcanvas_sidebar): ?>
-				<a class="sidebar-trigger" href="#"><?php echo esc_html__('show', 'zass') ?></a>
-			<?php endif; ?>
+				<div class="inner fixed">
+					<!-- BREADCRUMB -->
+					<?php woocommerce_breadcrumb() ?>
+					<!-- END OF BREADCRUMB -->
+
+					<!-- TITLE -->
+					<?php if (!is_product() && apply_filters('woocommerce_show_page_title', true)) : ?>
+						<h1 class="product_title entry-title heading-title"><?php woocommerce_page_title(); ?></h1>
+						<?php if (is_shop() && $shop_subtitle) : ?>
+							<h6><?php echo esc_html($shop_subtitle) ?></h6>
+						<?php endif; ?>
+					<?php endif; ?>
+					<!-- END OF TITLE -->
+				</div>
+
+				</div>
+				<div id="products-wrapper" class="inner site-main" role="main">
+					<?php if ($zass_has_offcanvas_sidebar) : ?>
+						<a class="sidebar-trigger" href="#"><?php echo esc_html__('show', 'zass') ?></a>
+					<?php endif; ?>
