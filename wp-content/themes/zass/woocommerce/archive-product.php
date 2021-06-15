@@ -35,7 +35,7 @@ if (isset($cat->term_id)) {
 	$image = wp_get_attachment_url($thumbnail_id);
 }
 ?>
-<div id="main" class="fixed box box-common">
+<div id="main" class="fixed box box-common zass-archive-product">
 
 	<?php
 	/**

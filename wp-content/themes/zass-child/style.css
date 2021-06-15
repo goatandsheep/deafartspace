@@ -49,7 +49,7 @@ Text Domain: zass
     background-color:orange !important;	
 }
 
-.by-vendor-name {
+.home .by-vendor-name, .archive .by-vendor-name {
 	position: absolute;
     display: block;
     left: 0;
@@ -60,7 +60,7 @@ Text Domain: zass
     z-index: 9;
 }
 
-.by-vendor-name-link {
+.home .by-vendor-name-link, .archive .by-vendor-name-link {
 	font-weight:bold !important;
 }
 
@@ -93,4 +93,9 @@ li.product-category.product:hover a h2, div.product-category.product:hover a h2 
 
 li.product-category.product h2 mark, div.product-category.product h2 mark {
   display: none;
+}
+
+.zass-iconbox a {
+	text-decoration:none;
+	color:inherit;
 }
