@@ -352,6 +352,16 @@ if ( ! class_exists( 'YITH_Vendors_Frontend_Premium' ) ) {
 
 				$vendor = yith_get_vendor( $term_slug, 'vendor' );
 
+				global $polylang;
+				if( ! empty ( $polylang ) && empty( $vendor->get_owner() ) ){
+					$vendor_ids = pll_get_term_translations( $vendor->id );
+					$vendor_original_id = min( $vendor_ids );
+					$original_vendor = yith_get_vendor( $vendor_original_id, 'vendor' );
+					if( $original_vendor->is_valid() ){
+						$vendor->owner = $original_vendor->get_owner();
+					}
+				}
+
 				if ( 'no' == $vendor->enable_selling ) {
 					return false;
 				}
@@ -426,6 +436,9 @@ if ( ! class_exists( 'YITH_Vendors_Frontend_Premium' ) ) {
 						)
 					)
 				);
+
+
+
 
 				do_action( 'yith_wcmv_before_vendor_header', $args, $vendor );
 				yith_wcpv_get_template( 'store-header', $args, 'woocommerce/loop' );
@@ -974,7 +987,7 @@ if ( ! class_exists( 'YITH_Vendors_Frontend_Premium' ) ) {
 				$vendor  = yith_get_vendor( absint( sanitize_text_field( $report_abuse['vendor_id'] ) ) );
 
 				$subject    = sanitize_text_field( $report_abuse['subject'] );
-				$to         = sanitize_email( get_option( 'woocommerce_email_from_address' ) );
+				$to         = sanitize_email( apply_filters( 'yith_wcmv_report_abuse_email', get_option( 'woocommerce_email_from_address' ) ) );
 				$from_email = sanitize_email( $report_abuse['email'] );
 				$headers    = "From: {$name} <{$from_email}>" . "\r\n";
 

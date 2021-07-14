@@ -214,7 +214,7 @@ if ( ! class_exists( 'YITH_Commissions_List_Table' ) ) {
          * @return string
          */
         public function column_default( $rec, $column_name ) {
-            switch ( $column_name ) {
+        	switch ( $column_name ) {
 
                 case 'commission_id':
                     $order = wc_get_order( $rec->order_id );
@@ -310,11 +310,12 @@ if ( ! class_exists( 'YITH_Commissions_List_Table' ) ) {
                         $order   = $rec->get_order();
 
                         if( $product ){
-                            $product_url = apply_filters( 'yith_wcmv_commissions_list_table_product_url', get_edit_post_link( $product['product_id'] ), $product, $rec );
-                            $to_return = ! empty( $product_url ) ? "<a target='_blank' href='{$product_url}'><strong>{$product['name']}</strong></a>" : "<strong>{$product['name']}</strong>";
+	                        $currency                = yith_wcmv_get_order_currency( $order );
+	                        $product_url             = apply_filters( 'yith_wcmv_commissions_list_table_product_url', get_edit_post_link( $product['product_id'] ), $product, $rec );
+	                        $to_return               = ! empty( $product_url ) ? "<a target='_blank' href='{$product_url}'><strong>{$product['name']}</strong></a>" : "<strong>{$product['name']}</strong>";
 	                        $commission_included_tax = 'yes' == wc_get_order_item_meta( $product->get_id(), '_commission_included_tax', true );
-                            $product_price = wc_price( $order->get_item_total( $product, $commission_included_tax, true ), array( 'currency' => $order->get_currency() ) );
-                            $to_return .= sprintf( ' (%s)', $product_price );
+	                        $product_price           = wc_price( $order->get_item_total( $product, $commission_included_tax ), array( 'currency' => $currency ) );
+	                        $to_return               .= sprintf( ' (%s)', $product_price );
                         }
                     }
                     return $to_return;

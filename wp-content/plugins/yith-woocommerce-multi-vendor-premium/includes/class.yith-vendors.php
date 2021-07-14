@@ -409,7 +409,7 @@ if ( ! class_exists( 'YITH_Vendors' ) ) {
 					"meta_box_cb"       => 'YITH_Vendors_Admin::single_taxonomy_meta_box',
 				)
 			);
-			$taxonomies_object_type = apply_filters( 'yith_wcmv_register_taxonomy_object_type', array( 'product', 'zass-portfolio' ) );
+			$taxonomies_object_type = apply_filters( 'yith_wcmv_register_taxonomy_object_type', array( 'product' ) );
 			register_taxonomy( $this->_taxonomy_name, $taxonomies_object_type, $args );
 			foreach( $taxonomies_object_type as $taxonomy_object_type ){
 				register_taxonomy_for_object_type( $this->_taxonomy_name, $taxonomy_object_type );

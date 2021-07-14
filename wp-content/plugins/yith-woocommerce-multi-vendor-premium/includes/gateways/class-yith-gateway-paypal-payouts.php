@@ -248,7 +248,7 @@ if ( ! class_exists( 'YITH_Vendors_Gateway_Paypal_Payouts' ) ) {
 
 					$payouts_already_created = YITH_Payouts()->get_payouts( array( 'order_id' => $order_id ,'fields' => 'count') );
 
-					
+
 					if ( $payouts_already_created > 0 ){
 						break;
 					}
@@ -605,7 +605,7 @@ if ( ! class_exists( 'YITH_Vendors_Gateway_Paypal_Payouts' ) ) {
 
 			if ( ! isset( $payment_mode['commission'] ) ) {
 
-				$payment_mode ['commission'] = __( 'Commission Payment', 'yith-paypal-payouts-for-woocommerce' );
+				$payment_mode ['commission'] = __( 'Commission Payment', 'yith-woocommerce-product-vendors' );
 			}
 
 			return $payment_mode;
@@ -614,7 +614,7 @@ if ( ! class_exists( 'YITH_Vendors_Gateway_Paypal_Payouts' ) ) {
 
 		public function commission_column_name( $columns ) {
 
-			$columns['order'] = __( 'Commission ID', 'yith-woocommerce-multi-vendor' );
+			$columns['order'] = __( 'Commission ID', 'yith-woocommerce-product-vendors' );
 
 			return $columns;
 		}

@@ -198,37 +198,41 @@ if ( ! class_exists( 'YITH_Commissions_List_Table_Premium' ) ) {
          * @since 1.0
          * @author Andrea Grillo <andrea.grillo@yithemes.com>
          */
-        public function vendor_dropdown(){
-            $vendor_id         = ! empty( $_REQUEST['vendor_id'] ) ? $_REQUEST['vendor_id'] : '';
-            $vendor            = yith_get_vendor( $vendor_id, 'vendor' );
-            $vendor_display    = $vendor->is_valid() ? $vendor->name . '(#' . $vendor->id . ')' : '';
-            $reset_args        = ! empty( $_REQUEST['page'] ) ? array( 'page' => $_REQUEST['page'] ) : array();
-            $reset_button      = apply_filters( 'yith_wcmv_commissions_list_table_reset_filter_url', esc_url( add_query_arg( $reset_args, admin_url( 'admin.php' ) ) ) );
-            $select2_args =  array(
-                'class'             => 'wc-product-search',
-                'id'                => 'vendor_id',
-                'name'              => 'vendor_id',
-                'data-placeholder'  => __( 'Search for a vendor&hellip;', 'yith-woocommerce-product-vendors' ),
-                'data-action'       => 'yith_json_search_vendors',
-                'data-allow_clear'  => true,
-                'data-selected'     => array( $vendor_id => $vendor_display ),
-                'data-multiple'     => false,
-                'value'             => $vendor_id,
-                'style'             => 'width: 50%;'
-            );
+		public function vendor_dropdown() {
+			$vendor_id      = ! empty( $_REQUEST['vendor_id'] ) ? $_REQUEST['vendor_id'] : '';
+			$vendor         = yith_get_vendor( $vendor_id, 'vendor' );
+			$vendor_display = $vendor->is_valid() ? $vendor->name . '(#' . $vendor->id . ')' : '';
+			$reset_args     = ! empty( $_REQUEST['page'] ) ? array( 'page' => esc_html( $_REQUEST['page'] ) ) : array();
+			$reset_button   = apply_filters( 'yith_wcmv_commissions_list_table_reset_filter_url', esc_url( add_query_arg( $reset_args, admin_url( 'admin.php' ) ) ) );
+			$select2_args   = array(
+				'class'            => 'wc-product-search',
+				'id'               => 'vendor_id',
+				'name'             => 'vendor_id',
+				'data-placeholder' => __( 'Search for a vendor&hellip;', 'yith-woocommerce-product-vendors' ),
+				'data-action'      => 'yith_json_search_vendors',
+				'data-allow_clear' => true,
+				'data-selected'    => array( $vendor_id => $vendor_display ),
+				'data-multiple'    => false,
+				'value'            => $vendor_id,
+				'style'            => 'width: 50%;'
+			);
 
-            ?>
-            <div class="data_search_wrapper">
-                <div id="vendor_data_search" class="panel woocommerce_options_panel yith-wpv-commissions">
-                    <div class="options_group">
-                        <?php yit_add_select2_fields( $select2_args ) ?>
-                        <?php submit_button( __( 'Filter', 'yith-woocommerce-product-vendors' ), 'button', 'filter_action', false, array( 'id' => 'post-query-submit' ) ); ?>
-                        <a href="<?php echo $reset_button ?>" class="button-primary" style="margin: 1px 8px 0 0;"><?php _e( 'Reset', 'yith-woocommerce-product-vendors' )?></a>
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
+			?>
+			<div class="data_search_wrapper">
+				<div id="vendor_data_search" class="panel woocommerce_options_panel yith-wpv-commissions">
+					<div class="options_group">
+						<?php
+						if ( ! $vendor->has_limited_access() ) {
+							yit_add_select2_fields( $select2_args );
+						}
+						submit_button( __( 'Filter', 'yith-woocommerce-product-vendors' ), 'button', 'filter_action', false, array( 'id' => 'post-query-submit' ) ); ?>
+						<a href="<?php echo $reset_button ?>" class="button-primary"
+						   style="margin: 1px 8px 0 0;"><?php _e( 'Reset', 'yith-woocommerce-product-vendors' ) ?></a>
+					</div>
+				</div>
+			</div>
+			<?php
+		}
 
 	    /**
 	     * Month Dropdown filter

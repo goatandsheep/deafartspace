@@ -122,23 +122,24 @@ if ( !class_exists( 'YITH_Vendor_Shipping_Admin' ) ) {
         /**
          * @param $vendor
          */
-        public function print_shipping_table( $vendor , $wc_country_obj ) {
-
-            yith_wcpv_get_template( 'vendor-admin-shipping-table', array( 'vendor' => $vendor , 'wc_country' => $wc_country_obj ), 'admin/vendor-panel' );
+        public function print_shipping_table( $vendor , $wc_country_obj, $currency = '' ) {
+			$currency = empty( $currency ) ? get_option('woocommerce_currency') : $currency;
+            yith_wcpv_get_template( 'vendor-admin-shipping-table', array( 'vendor' => $vendor , 'wc_country' => $wc_country_obj, 'shop_currency' => $currency ), 'admin/vendor-panel' );
         }
 
         /**
          * @param $index
          * @param $zone
          */
-        public function print_line_option( $index, $zone , $continents = null , $allowed_countries = null , $shipping_methods = null ) {
-            $args = array(
-                'index'             => $index ,
-                'zone'              => $zone ,
-                'continents'        => $continents ,
-                'allowed_countries' => $allowed_countries ,
-                'shipping_methods'  => $shipping_methods
-            );
+        public function print_line_option( $index, $zone , $continents = null , $allowed_countries = null , $shipping_methods = null, $currency = '' ) {
+			$args = array(
+				'index'             => $index,
+				'zone'              => $zone,
+				'continents'        => $continents,
+				'allowed_countries' => $allowed_countries,
+				'shipping_methods'  => $shipping_methods,
+				'shop_currency'     => empty( $currency ) ? get_option('woocommerce_currency') : $currency,
+		);
 
             yith_wcpv_get_template( 'vendor-admin-shipping-table-row', $args, 'admin/vendor-panel' );
 
@@ -287,6 +288,7 @@ if ( !class_exists( 'YITH_Vendor_Shipping_Admin' ) ) {
          * @param $index
          */
         private function print_form_settings( $method_id , $index ) {
+        	printf( '%s: %s', esc_html_e( 'Base currency', 'yith-woocommerce-product-vendors' ), get_option('woocommerce_currency') );
             switch ($method_id) {
 
                 case 'flat_rate':

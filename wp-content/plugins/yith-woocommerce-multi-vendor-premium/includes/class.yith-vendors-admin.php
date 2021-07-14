@@ -193,6 +193,9 @@ if ( ! class_exists( 'YITH_Vendors_Admin' ) ) {
 			 * Skip duplicate term name check in vendor name translation
 			 */
 			add_action( 'wp_ajax_wpml_save_term', array( $this, 'wpml_save_term_action' ), 5 );
+
+			/* Filter products list during ajax call */
+			add_filter( 'woocommerce_json_search_found_products', array( $this, 'json_filter_report_products' ) );
 		}
 
 		/**
@@ -1088,14 +1091,17 @@ if ( ! class_exists( 'YITH_Vendors_Admin' ) ) {
 			$wpml_vendor    = null;
 
 			/* WPML Support */
-			global $sitepress, $pagenow;
+			global $sitepress, $pagenow, $polylang;
 			if ( $vendor->is_valid() ) {
 				if ( isset( $sitepress ) ) {
 					$vendor_id   = yit_wpml_object_id( $vendor->id, YITH_Vendors()->get_taxonomy_name(), true );
 					$wpml_vendor = get_term_by( 'id', $vendor_id, $vendor->term->taxonomy );
 					$vendor_id   = $wpml_vendor->term_id;
+				} else if( $polylang ) {
+					$vendor_id = isset( $vendor->term->term_id ) ? $vendor->term->term_id : $vendor_id;
 				} else {
 					$vendor_id = $vendor->id;
+
 				}
 			} elseif ( isset( $sitepress ) && $vendor->is_super_user() && 'post-new.php' == $pagenow && ! empty( $_GET['trid'] ) ) {
 				$original_product_id = SitePress::get_original_element_id_by_trid( $_GET['trid'] );
@@ -2202,7 +2208,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin' ) ) {
 				}
 
 				if( ! $find ){
-					$page_title = $menu_title = esc_html__( 'Orders', 'yith_woocommerce_product_vendors' );
+					$page_title = $menu_title = apply_filters('yith_wcmv_orders_menu_title', esc_html__( 'Orders', 'yith-woocommerce-product-vendors' ));
 					$capability = 'edit_shop_orders';
 					add_menu_page( $page_title, $menu_title, $capability, $menu_slug, '', 'dashicons-cart', 56 );
 				}
@@ -2229,6 +2235,32 @@ if ( ! class_exists( 'YITH_Vendors_Admin' ) ) {
 					remove_menu_page( $page );
 				}
 			}
+		}
+
+		/**
+		 * Set product reports by vendor
+		 *
+		 * @param $products The products array to filter
+		 *
+		 * @since    3.7.11
+		 * @author   Andrea Grillo <andrea.grillo@yithemes.com>
+		 * @return array The new query args
+		 */
+		public function json_filter_report_products( $products ) {
+			$vendor           = yith_get_vendor( 'current', 'user' );
+			$filtered_product = array();
+
+			if ( $vendor->is_valid() && $vendor->has_limited_access() ) {
+				$post_types = array( 'post_type' => array( 'product', 'product_variation' ) );
+				foreach ( $vendor->get_products( $post_types ) as $product_id ) {
+					if ( isset( $products[ $product_id ] ) ) {
+						$filtered_product[ $product_id ] = $products[ $product_id ];
+					}
+				}
+				$products = $filtered_product;
+			}
+
+			return $products;
 		}
 	}
 }

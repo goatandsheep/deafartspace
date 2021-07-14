@@ -106,7 +106,7 @@ $total_commissions_amount = 0; ?>
 				do_action( 'woocommerce_order_item_meta_end', $item_id, $item, $order );
 
 			?></td>
-			<td style="text-align:center; vertical-align:middle; border: 1px solid #eee;"><?php echo ! empty( $products_from_item->get_sku() ) ? $products_from_item->get_sku() : '-'; ?></td>
+			<td style="text-align:center; vertical-align:middle; border: 1px solid #eee;"><?php echo $_product instanceof WC_Product && ! empty( $_product->get_sku() ) ? $_product->get_sku() : '-'; ?></td>
 			<td style="text-align:center; vertical-align:middle; border: 1px solid #eee;"><?php echo $item['qty']; ?></td>
             <?php
 			$total = 'split' == get_option( 'yith_wpv_commissions_tax_management', 'website' ) ?  ($item->get_total() + $item->get_total_tax() ) : $item->get_total();

@@ -250,7 +250,7 @@ if ( ! class_exists( 'YITH_Vendor_Quick_Info_Widget' ) ) {
 			if ( $this->check_form() ) {
 				/* === Sanitize Form Value === */
 				$vendor = yith_get_vendor( absint( sanitize_text_field( $_POST['quick_info']['vendor_id'] ) ) );
-				$to     = sanitize_email( $vendor->store_email );
+				$to     = apply_filters( 'yith_wcmv_recipient_vendor_quick_info', sanitize_email( $vendor->store_email ), $vendor );
 
 				if ( empty( $to ) ) {
 					$vendor_owner = get_user_by( 'id', absint( $vendor->get_owner() ) );

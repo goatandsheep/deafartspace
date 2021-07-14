@@ -156,7 +156,7 @@ if ( ! class_exists( 'YITH_Vendor_Coupons' ) ) {
 						)
 					);
 
-					do_action( 'woocommerce_coupon_options' );
+					do_action( 'woocommerce_coupon_options', $coupon->get_id(), $coupon );
 
 				?>
 					</div>

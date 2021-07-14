@@ -536,7 +536,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 				esc_html( YITH_Vendors()->get_singular_label( 'ucfirst' ) )
 			);
 
-			$args = array(
+			$args = apply_filters('yith_wcmv_vendor_settings_args', array(
 				'create_menu_page' => false,
 				'parent_slug'      => '',
 				'page_title'       => $page_title,
@@ -549,7 +549,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 				'options-path'     => YITH_WPV_PATH . 'plugin-options/vendor',
 				'icon_url'         => 'dashicons-id-alt',
 				'position'         => 30
-			);
+			));
 
 			/* === Fixed: not updated theme/old plugin framework  === */
 			if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
@@ -570,7 +570,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 		 *
 		 * @author Andrea Grillo <andrea.grillo@yithemes.com>
 		 */
-		public function add_wp_editor( $value = '', $args = array(), $add_remove_scripts = false ) {
+		public function add_wp_editor( $value = '', $args = array(), $add_remove_scripts = false, $editor_id = '' ) {
 			$default = array(
 				'wpautop'       => false,
 				'media_buttons' => 'yes' == get_option( 'yith_wpv_vendors_option_editor_media', 'no' ) ? true : false,
@@ -588,7 +588,11 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 				wc_enqueue_js( $remove_script );
 			}
 
-			wp_editor( wp_kses_post( $value, 'UTF-8' ), 'yithvendorstoredescription', $args );
+			if( empty( $editor_id ) ){
+				$editor_id = 'yithvendorstoredescription';
+			}
+
+			wp_editor( wp_kses_post( $value, 'UTF-8' ), $editor_id, $args );
 			wc_enqueue_js( $inline_script );
 		}
 
@@ -621,7 +625,13 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 
 			yith_wcpv_get_template( 'taxonomy-upload-field', $args, 'admin' );
 
-			$this->add_upload_field_script( $args );
+			if( apply_filters( 'yith_wcmv_add_upload_fields_scritp', true, $args ) ){
+				$this->add_upload_field_script( $args );
+			}
+
+			else{
+				do_action( 'yith_wcmv_add_custom_upload_fields_scritp', $args );
+			}
 		}
 
 		/**
@@ -760,7 +770,10 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 					break;
 
 				case 'owner':
-					$owner     = get_user_by( 'id', $vendor->get_owner() );
+					$owner = $vendor->get_owner();
+
+
+					$owner     = get_user_by( 'id', $owner );
 					$edit_link = esc_url( get_edit_term_link( $term_id, $this->_taxonomy_name, 'product' ) );
 
 					return $owner instanceof WP_User ? sprintf( '<a href="%s" target="_blank">%s</a>', get_edit_user_link( $owner->ID ), $owner->display_name ) : sprintf( '<a href="%s" class="set-an-owner">%s</a>', $edit_link, __( 'Set an owner', 'yith-woocommerce-product-vendors' ) );
@@ -986,7 +999,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 							'data-selected'    => $this->format_vendor_admins_for_select2( $vendor ),
 							'data-multiple'    => true,
 							'value'            => implode( ',', array_diff( $vendor->get_admins(), array( $vendor->get_owner() ) ) )
-						)
+						),
 					);
 					break;
 
@@ -1007,6 +1020,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 
 				case 'yith_wpv_edit_vendor_shipping':
 					$template = 'vendor-admin-shipping';
+					$args['shop_currency'] = get_woocommerce_currency_symbol();
 					break;
 			}
 
@@ -1514,7 +1528,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 			global $post_type;
 			$_screen = get_current_screen();
 
-			if ( 'zass-portfolio' == $post_type || 'shop_coupon' == $post_type || 'edit-product' == $_screen->id || 'edit-shop_order' == $_screen->id ) {
+			if ( 'shop_coupon' == $post_type || 'edit-product' == $_screen->id || 'edit-shop_order' == $_screen->id ) {
 				return;
 			}
 
@@ -1522,7 +1536,6 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 
 			$allowed_post_types = apply_filters( 'yith_wpv_vendors_allowed_post_types', array(
 				'product',
-				'zass-portfolio',
 				'shop_coupon',
 			) );
 
@@ -1768,7 +1781,6 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 						'index.php',
 						'separator1',
 						'edit.php?post_type=product',
-						'edit.php?post_type=zass-portfolio',
 						'edit.php?post_type=shop_coupon',
 						'edit.php?post_type=shop_order',
 						'profile.php',
@@ -1851,56 +1863,37 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 		public function count_comments( $stats, $post_id ) {
 			$vendor = yith_get_vendor( 'current', 'user' );
 
-			if ( $vendor->is_valid() && $vendor->has_limited_access() ) {
-				remove_filter( 'wp_count_comments', array( 'WC_Comments', 'wp_count_comments' ), 10, 2 );
-
-				global $wpdb;
-
-				if ( 0 === $post_id ) {
-
-					$count = wp_cache_get( 'comments-0', 'counts' );
-					if ( false !== $count ) {
-						return $count;
-					}
-
-					$sql = sprintf( "
-                         SELECT comment_approved, COUNT( * ) AS num_comments
-                         FROM {$wpdb->comments}
-                         WHERE comment_type != '%s'
-                         AND comment_post_ID in ( '%s' )
-                         GROUP BY comment_approved", 'order_note', implode( "','", $vendor->get_products() ) );
-
-					$count = $wpdb->get_results( $sql, ARRAY_A );
-
-					$total    = 0;
-					$approved = array(
-						'0'            => 'moderated',
-						'1'            => 'approved',
-						'spam'         => 'spam',
-						'trash'        => 'trash',
-						'post-trashed' => 'post-trashed'
-					);
-
-					foreach ( (array) $count as $row ) {
-						// Don't count post-trashed toward totals
-						if ( 'post-trashed' != $row['comment_approved'] && 'trash' != $row['comment_approved'] ) {
-							$total += $row['num_comments'];
-						}
-						if ( isset( $approved[ $row['comment_approved'] ] ) ) {
-							$stats[ $approved[ $row['comment_approved'] ] ] = $row['num_comments'];
+			if( $vendor->is_valid() ){
+				$comment_count = array(
+					'approved'            => 0,
+					'awaiting_moderation' => 0,
+					'spam'                => 0,
+					'trash'               => 0,
+					'post-trashed'        => 0,
+					'total_comments'      => 0,
+					'all'                 => 0,
+				);
+				$products = $vendor->get_products();
+				remove_filter( 'wp_count_comments', array( $this, 'count_comments' ), 20, 2 );
+				foreach ( $products as $product ){
+					$comments = get_comment_count( $product );
+					foreach ( $comments as $status => $number ){
+						if( isset( $comment_count[ $status ] ) ){
+							$comment_count[ $status ] = (int) $comment_count[ $status ] + (int) $number;
 						}
 					}
-
-					$stats['total_comments'] = $total;
-					foreach ( $approved as $key ) {
-						if ( empty( $stats[ $key ] ) ) {
-							$stats[ $key ] = 0;
-						}
-					}
-
-					$stats = (object) $stats;
-					wp_cache_set( 'comments-0', $stats, 'counts' );
 				}
+				add_filter( 'wp_count_comments', array( $this, 'count_comments' ), 20, 2 );
+
+				$comment_count['moderated'] = $comment_count['awaiting_moderation'];
+				unset( $comment_count['awaiting_moderation'] );
+				$comment_count_obj = new stdClass();
+
+				foreach ( $comment_count as $status => $count ){
+					$comment_count_obj->{$status} = $count;
+				}
+
+				$stats = $comment_count_obj;
 			}
 
 			return $stats;
@@ -2225,7 +2218,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 
 				$no_owner_shop = $no_owner_vat = 0;
 				foreach ( $vendors as $vendor ) {
-					$vendor_owner_id = $vendor->owner;
+					$vendor_owner_id = $vendor->get_owner();
 					empty( $vendor_owner_id ) && $no_owner_shop ++;
 					YITH_Vendors()->is_vat_require() && empty( $vendor->vat ) && $no_owner_vat ++;
 				}
@@ -2665,9 +2658,10 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 				$last_privacy_modified = YITH_Vendors()->get_last_modified_data_privacy_policy();
 				$last_terms_modified   = strtotime( $last_terms_modified );
 				$last_privacy_modified = strtotime( $last_privacy_modified );
+
 				if ( $is_terms && $is_privacy ) {
 					if ( 'disable_now' == $action ) {
-						$message = sprintf( __( 'The %s and %s have been modified and your profile has been disabled for sale. To reactivate it, please accept our terms of service and privacy policy again from this page', 'yith-woocommerce-multi-vendor' ), $terms_page->post_title, $privacy_page->post_title );
+						$message = sprintf( __( 'The %s and %s have been modified and your profile has been disabled for sale. To reactivate it, please accept our terms of service and privacy policy again from this page', 'yith-woocommerce-product-vendors' ), $terms_page->post_title, $privacy_page->post_title );
 
 						$message = sprintf( '%s <a href="%s">%s</a>', $message, $endpoint_url, $endpoint_url );
 					} elseif ( 'disable_after' == $action ) {
@@ -2681,7 +2675,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 						$datetime2 = new DateTime( date( 'Y-m-d', $max_last_modified ) );
 						$interval  = $datetime1->diff( $datetime2 );
 
-						$message = sprintf( __( 'The %s and %s have been modified and your profile will be disabled in %s days. To reactivate it, please accept our terms of service and privacy policy again from this page', 'yith-woocommerce-multi-vendor' ), $terms_page->post_title, $privacy_page->post_title, $interval->d );
+						$message = sprintf( __( 'The %s and %s have been modified and your profile will be disabled in %s days. To reactivate it, please accept our terms of service and privacy policy again from this page', 'yith-woocommerce-product-vendors' ), $terms_page->post_title, $privacy_page->post_title, $interval->d );
 
 						$message = sprintf( '%s <a href="%s">%s</a>', $message, $endpoint_url, $endpoint_url );
 					}
@@ -2690,14 +2684,14 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 					$submessage = '';
 					if ( $is_terms ) {
 						$page_title = $terms_page->post_title;
-						$submessage = _x( 'terms of service','[Part of] The terms and conditions has been modified and your profile will be disabled in 30 days. To reactivate it, please accept our terms of service again from this page','yith-woocommerce-multi-vendor' );
+						$submessage = _x( 'terms of service','[Part of] The terms and conditions has been modified and your profile will be disabled in 30 days. To reactivate it, please accept our terms of service again from this page','yith-woocommerce-product-vendors' );
 					} elseif ( $is_privacy ) {
 						$page_title = $privacy_page->post_title;
-						$submessage = _x( 'privacy policy','[Part of] The privacy policy has been modified and your profile will be disabled in 30 days. To reactivate it, please accept our privacy policy again from this page','yith-woocommerce-multi-vendor' );
+						$submessage = _x( 'privacy policy','[Part of] The privacy policy has been modified and your profile will be disabled in 30 days. To reactivate it, please accept our privacy policy again from this page','yith-woocommerce-product-vendors' );
 					}
 					if ( $page_title ) {
 						if ( 'disable_now' == $action ) {
-							$message = sprintf( __( 'The %s have been modified and your profile has been disabled for sale.To reactivate it, please accept our terms of service again from this page ', 'yith-woocommerce-multi-vendor' ), $page_title );
+							$message = sprintf( __( 'The %s have been modified and your profile has been disabled for sale.To reactivate it, please accept our terms of service again from this page ', 'yith-woocommerce-product-vendors' ), $page_title );
 
 							$message = sprintf( '%s <a href="%s">%s</a>', $message, $endpoint_url, $endpoint_url );
 						} elseif ( 'disable_after' == $action ) {
@@ -2711,7 +2705,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 							$datetime2 = new DateTime( date( 'Y-m-d', $max_last_modified ) );
 							$interval  = $datetime1->diff( $datetime2 );
 
-							$message = _x('The %s has been modified and your profile will be disabled in %s days. To reactivate it, please accept our %s again from this page','The terms of service or privacy policy has been modified and your profile will be disabled in 30 days. To reactivate it, please accept our terms of serve or privacy policy again from this page','yith-woocommerce-multi-vendor');
+							$message = _x('The %s has been modified and your profile will be disabled in %s days. To reactivate it, please accept our %s again from this page','The terms of service or privacy policy has been modified and your profile will be disabled in 30 days. To reactivate it, please accept our terms of serve or privacy policy again from this page','yith-woocommerce-product-vendors');
 							$message = sprintf( $message, $page_title, $interval->d,$submessage );
 
 							$message = sprintf( '%s <a href="%s">%s</a>', $message, $endpoint_url, $endpoint_url );
@@ -2762,7 +2756,7 @@ if ( ! class_exists( 'YITH_Vendors_Admin_Premium' ) ) {
 				}
 
 				if( ! $find )	{
-					$page_title = $menu_title = esc_html__( 'Sales reports', 'yith_woocommerce_product_vendors' );
+					$page_title = $menu_title = esc_html__( 'Sales reports', 'yith-woocommerce-product-vendors' );
 					$capability = 'view_woocommerce_reports';
 					$slug = add_query_arg( array( 'page' => $menu_slug ), 'admin.php' );
 					add_menu_page($page_title, $menu_title, $capability, $slug, '', null, '55.6' );

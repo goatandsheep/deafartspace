@@ -418,6 +418,21 @@ function yith_vendors_update_db_1_1_14() {
 	}
 }
 
+//Add support to YITH Product Vendors db version 1.1.13
+function yith_vendors_update_db_1_1_15() {
+	$vendors_db_option = get_option( 'yith_product_vendors_db_version', '1.0.0' );
+	if ( $vendors_db_option && version_compare( $vendors_db_option, '1.1.15', '<' ) ) {
+		global $wpdb;
+
+		$sql = "ALTER TABLE `{$wpdb->prefix}yith_vendors_commissions` CHANGE `amount` `amount` DOUBLE(15,10) NOT NULL, CHANGE `amount_refunded` `amount_refunded` DOUBLE(15,10) NOT NULL DEFAULT '0.0000000000'";
+		$wpdb->query( $sql );
+
+		$sql = "ALTER TABLE `{$wpdb->prefix}yith_vendors_payments` CHANGE `amount` `amount` DOUBLE(15,10) NOT NULL DEFAULT '0.0000000000'";
+		$wpdb->query( $sql );
+
+		update_option( 'yith_product_vendors_db_version', '1.1.15' );
+	}
+}
 
 add_action( 'admin_init', 'yith_vendors_update_db_1_0_1' );
 add_action( 'admin_init', 'yith_vendors_update_db_1_0_2' );
@@ -442,6 +457,7 @@ add_action( 'admin_init', 'yith_vendors_update_db_1_1_10' );
 add_action( 'admin_init', 'yith_vendors_update_db_1_1_11' );
 add_action( 'admin_init', 'yith_vendors_update_db_1_1_12', 99 ); //Execute it after create taxonomy
 add_action( 'admin_init', 'yith_vendors_update_db_1_1_14' );
+add_action( 'admin_init', 'yith_vendors_update_db_1_1_15' );
 
 /**
  * Plugin Version Update

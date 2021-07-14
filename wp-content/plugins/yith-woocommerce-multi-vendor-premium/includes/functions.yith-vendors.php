@@ -119,8 +119,9 @@ if ( !function_exists( 'yith_wcmv_get_wpml_vendor_id' ) ) {
      */
     function yith_wcmv_get_wpml_vendor_id( $vendor_id, $id_type = 'original_language' ) {
         /**
-         * WPML Support
+         * WPML Support & Polylang Support
          */
+	    global $polylang;
 	    $has_wpml = apply_filters( 'wpml_setting', false, 'setup_complete' );
 	    if( $has_wpml ){
 		    $type    = apply_filters( 'wpml_element_type', YITH_Vendors()->get_taxonomy_name() );
@@ -142,6 +143,11 @@ if ( !function_exists( 'yith_wcmv_get_wpml_vendor_id' ) ) {
 				    $vendor_id = $vendor->element_id;
 			    }
 		    }
+	    }
+
+	    elseif( ! empty ( $polylang ) ){
+		    $vendor_ids = pll_get_term_translations( $vendor_id );
+		    $vendor_id  = min( $vendor_ids );
 	    }
 
 	    return $vendor_id;
@@ -249,8 +255,10 @@ if( ! function_exists( 'yith_wcmv_get_order_currency' ) ){
      * @return string order currency
      */
     function yith_wcmv_get_order_currency( $order ){
-        $get_currency = YITH_Vendors()->is_wc_2_7_or_greather ? 'get_currency' : 'get_order_currency';
-        return $order->$get_currency();
+	    if ( method_exists( 'YITH_WCMCS_Currency_Handler', 'change_currency' ) ) {
+		    YITH_WCMCS_Currency_Handler::get_instance()->change_currency( $order->get_currency() );
+	    }
+        return $order->get_currency();
     }
 }
 
@@ -404,3 +412,13 @@ if ( ! function_exists( 'yith_wcmv_aelia_get_order_exchange_rate' ) ) {
 }
 
 
+if( ! function_exists( 'yith_wcmcs_apply_currency_filters' ) ){
+	function yith_wcmcs_apply_currency_filters( $filters ){
+		global $pagenow;
+		if( 'admin.php' === $pagenow && ! empty( $_GET['page'] ) && 'yith_vendor_commissions' === esc_html( $_GET['page'] ) ){
+			$filters = true;
+		}
+		return $filters;
+	}
+	add_filter( 'yith_wcmcs_apply_currency_filters', 'yith_wcmcs_apply_currency_filters' );
+}

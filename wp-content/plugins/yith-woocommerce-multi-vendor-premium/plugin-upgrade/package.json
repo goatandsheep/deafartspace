@@ -1,6 +1,6 @@
 {
   "name": "yith-plugin-upgrade",
-  "version": "4.1.5",
+  "version": "4.2.2",
   "description": "YITH Plugin Upgrade Framework",
   "main": "Gruntfile.js",
   "scripts": {

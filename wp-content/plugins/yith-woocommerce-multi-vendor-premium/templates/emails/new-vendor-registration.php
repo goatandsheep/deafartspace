@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <h2>
     <a href="<?php echo $vendor->get_url( 'admin' ); ?>">
-        <?php _e( 'Vendor detail', 'yith-woocommerce-product-vendors ') ?>
+        <?php _e( 'Vendor detail', 'yith-woocommerce-product-vendors') ?>
     </a>
 </h2>
 

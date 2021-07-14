@@ -84,6 +84,7 @@ if ( ! is_bool( $show_description ) ){
 		                                <?php $uri = str_replace( 'http://', '', $uri ); ?>
 		                                <?php $uri = str_replace( 'https://', '', $uri ); ?>
 		                                <?php $uri = ( $uri != '#yith-live-chat' ? '//' . $uri : $uri ); ?>
+		                                <?php $uri = trim( $uri ); ?>
                                         <a class="vendor-social-uri" href="<?php echo $uri ?>" target="_blank">
                                             <i class="<?php echo $socials_list['social_fields'][ $social ]['icon'] ?>"></i>
                                         </a>
@@ -102,5 +103,4 @@ if ( ! is_bool( $show_description ) ){
         </li>
     <?php endforeach; ?>
 </ul>
-<?php var_dump($paginate); ?>
 <?php echo paginate_links( $paginate );

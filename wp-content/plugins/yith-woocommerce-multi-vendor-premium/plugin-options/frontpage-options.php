@@ -513,7 +513,7 @@ return array(
 	        'options' => array(
 	        	'no'     => _x( 'Disabled', 'admin option', 'yith-woocommerce-product-vendors' ),
 	        	'header' => _x( 'Show in Header Area', 'admin option', 'yith-woocommerce-product-vendors' ),
-	        	'social' => _x( 'Shwo in Socials Area', 'admin option', 'yith-woocommerce-product-vendors' ),
+	        	'social' => _x( 'Show in Socials Area', 'admin option', 'yith-woocommerce-product-vendors' ),
 	        ),
             'default' => 'no'
         ),

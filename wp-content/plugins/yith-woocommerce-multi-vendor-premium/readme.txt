@@ -2,15 +2,57 @@
 
 Contributors: yithemes
 Tags: product vendors, vendors, vendor, multi store, multi vendor, multi seller, woocommerce product vendors, woocommerce multi vendor, commission rate, seller, shops, vendor shop, vendor system, woo vendors, wc vendors, e-commerce, yit, yith, yithemes
-Requires at least: 5.3
-Tested up to: 5.6
-Stable tag: 3.7.7
+Requires at least: 5.4
+Tested up to: 5.7
+Stable tag: 3.7.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Multi vendor e-commerce is a new idea of e-commerce platform that is becoming more and more popular in the web.
 
 == Changelog ==
+
+= 3.7.11 - Released on 10 June 2021 =
+
+* New: support for WooCommerce 5.4
+* Update: YITH plugin framework
+
+= 3.7.10 - Released on 12 May 2021 =
+
+* New: support for WooCommerce 5.3
+* New: send order information when a commission is paid with stripe connect
+* Update: YITH plugin framework
+* Fix: vendor can't add products on their quotes
+* Fix: wrong currency for vendor shipping method
+* Dev: action yith_wcmv_add_custom_upload_fields_scritp to use a custom upload script
+* Dev: filter yith_wcmv_add_custom_upload_fields_scritp to skip to load the plugin upload script
+* Dev: filter yith_wcmv_report_abuse_email to change the report abuse email
+
+= 3.7.9 - Released on 19 April 2021 =
+
+* New: support for WooCommerce 5.2
+* Update: YITH plugin framework
+* Tweak: base currency information in vendor shipping panel
+* Tweak: prevent to add an empty space in vendor store URL
+* Fix: shipping cost sync from parent order to child order
+* Fix: remove the underline in vendor store URL
+* Fix: wrong comments count on vendors' dashboard
+* Fix: new order email to vendor will be sent for parent order
+* Fix: filter commissions by vendor are shown on vendor dashboard
+* Fix: hardcoded strings
+* Dev: yith_wcmv_get_allowed_countries hook to filter allowed countries in vendor shipping panel
+* Dev: yith_wcmv_get_continents hook to filter the continents in vendor shipping panel
+* Dev: yith_wcmv_load_shipping_methods hook to filter the shipping methods in vendor shipping panel
+* Dev: new filter 'yith_wcmv_recipient_vendor_quick_info'
+
+= 3.7.8 - Released on 09 March 2021 =
+
+* New: support for WordPress 5.7
+* New: support for WooCommerce 5.1
+* Update: YITH plugin framework
+* Fix: Unable to sync the refunded order status from child-order to parent-order
+* Fix: Corrected default value in the vendor list shortcode
+* Fix: Corrected pagination in the vendor list shortcode
 
 = 3.7.7 - Released on 09 February 2021 =
 

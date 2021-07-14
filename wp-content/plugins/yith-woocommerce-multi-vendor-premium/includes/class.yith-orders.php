@@ -664,7 +664,6 @@ if ( ! class_exists( 'YITH_Orders' ) ) {
 			$parent_order = wc_get_order( $parent_order_id );
 
 			$vendor_id = 0;
-
 			if ( ! empty( $suborder_ids ) ) {
 				foreach ( $suborder_ids as $suborder_id ) {
 					$suborder               = wc_get_order( $suborder_id );
@@ -677,7 +676,6 @@ if ( ! class_exists( 'YITH_Orders' ) ) {
 					foreach ( $child_items as $child_items_id ) {
 						$parent_item_id = wc_get_order_item_meta( $child_items_id, '_parent_line_item_id', true );
 						$parent_item_id = absint( is_array( $parent_item_id ) ? array_shift( $parent_item_id ) : $parent_item_id );
-
 						foreach ( $_post as $meta_key => $meta_value ) {
 							//TODO: Shipping Cost
 
@@ -873,16 +871,38 @@ if ( ! class_exists( 'YITH_Orders' ) ) {
 						$suborder                        = wc_get_order( $suborder_id );
 						$child_items                     = array_keys( $suborder->get_items() );
 						$_post['items']['order_item_id'] = $child_items;
+
+
 						foreach ( $child_items as $child_item_id ) {
 							$parent_item_id = self::get_parent_item_id( $suborder, $child_item_id );
 							foreach ( $_post['items'] as $meta_key => $meta_value ) {
 								if ( ! in_array( $meta_key, array(
 										'order_item_id',
-										'_order_total'
-									) ) && isset( $_post['items'][ $meta_key ][ $parent_item_id ] )
+										'_order_total',
+									) ) && isset( $_post['items'][ $meta_key ] )
 								) {
-									$_post['items'][ $meta_key ][ $child_item_id ] = $_post['items'][ $meta_key ][ $parent_item_id ];
-									unset( $_post['items'][ $meta_key ][ $parent_item_id ] );
+									if( isset( $_post['items'][ $meta_key ][ $parent_item_id ] ) ){
+										$_post['items'][ $meta_key ][ $child_item_id ] = $_post['items'][ $meta_key ][ $parent_item_id ];
+										unset( $_post['items'][ $meta_key ][ $parent_item_id ] );
+									}
+
+									else{
+										if ( class_exists( 'YITH_Vendor_Shipping' ) && 'shipping_method_id' === $meta_key ) {
+											foreach ( $_post['items'][ $meta_key ] as $key => $parent_shipping_id ) {
+												$child_shipping_id = self::get_child_item_id( $parent_shipping_id );
+												if( ! empty( $child_shipping_id ) ){
+													$shipping = $suborder->get_item( $child_shipping_id );
+													if( $shipping instanceof WC_Order_Item_Shipping && isset( $_post['items']['shipping_cost'][ $parent_shipping_id ] ) ){
+														$shipping->set_total( $_post['items']['shipping_cost'][ $parent_shipping_id ] );
+														$suborder->add_meta_data( '_shipping_commissions_processed', 'no', true );
+														$suborder->save_meta_data();
+														$shipping->save();
+														YITH_Vendor_Shipping::register_commissions( $suborder_id );
+													}
+												}
+											}
+										}
+									}
 								}
 							}
 
@@ -928,7 +948,6 @@ if ( ! class_exists( 'YITH_Orders' ) ) {
 
 						// Add order total
 						$_post['items']['_order_total'] = $order_total;
-
 						// Save order items
 						wc_save_order_items( $suborder_id, $_post['items'] );
 					}
@@ -1921,7 +1940,7 @@ if ( ! class_exists( 'YITH_Orders' ) ) {
 						$parent_order = wc_get_order( $parent_order_id );
 						printf(
 							'<strong>#%s</strong>',
-							esc_html( $parent_order->get_order_number() )
+							esc_html( $parent_order instanceof WC_Order ? $parent_order->get_order_number() : '<span class="na">&ndash;</span>' )
 						);
 
 						do_action( 'yith_wcmv_after_parent_order_details', $parent_order );
@@ -2362,9 +2381,8 @@ if ( ! class_exists( 'YITH_Orders' ) ) {
 
 			foreach ( $product_ids as $product_id ) {
 
-				$product       = wc_get_product( $product_id );
-				$get_downloads = YITH_Vendors()->is_wc_2_7_or_greather ? 'get_downloads' : 'get_files';
-				$files         = $product instanceof WC_Product ? $product->$get_downloads() : array();
+				$product = wc_get_product( $product_id );
+				$files   = $product instanceof WC_Product ? $product->get_downloads() : array();
 
 				if ( $parent_order_id == 0 ) {
 					$vendor        = yith_get_vendor( $product_id, 'product' );

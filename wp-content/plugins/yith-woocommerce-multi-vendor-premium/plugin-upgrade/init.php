@@ -1,7 +1,7 @@
 <?php
 /**
  * Framework Name: YITH License & Upgrade Framework
- * Version:  4.1.14
+ * Version:  4.2.2
  * Author: YITHEMES
  * Text Domain: yith-plugin-upgrade-fw
  * Domain Path: /languages/

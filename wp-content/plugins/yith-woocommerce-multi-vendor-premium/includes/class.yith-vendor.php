@@ -465,11 +465,12 @@ if ( ! class_exists ( 'YITH_Vendor' ) ) {
         public function get_owner () {
             $args  = array (
                 'meta_key'     => self::$_usermetaOwner,
-                'meta_value'   => yith_wcmv_get_wpml_vendor_id( $this->id, 'current_language' ),
+                'meta_value'   => yith_wcmv_get_wpml_vendor_id( $this->id, 'original_language' ),
                 'meta_compare' => '=',
                 'fields'       => 'ids',
                 'number'       => 1,
             );
+
             $owner = get_users ( $args );
 
             return ! empty( $owner ) ? array_shift ( $owner ) : 0;

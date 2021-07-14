@@ -83,7 +83,6 @@ if ( ! class_exists( 'YITH_WC_Email_New_Order' ) ) :
 			 */
 			if( ! wp_get_post_parent_id( $order_id ) ){
 				$suborder_ids = apply_filters( 'yith_wcmv_order_action_new_order_to_vendor', 'woocommerce_order_action_new_order_to_vendor' )  == current_action() ? YITH_Orders::get_suborder( $order_id ) : array();
-				$suborder_ids[] = $order_id;
 			}
 
 			else{
@@ -99,7 +98,7 @@ if ( ! class_exists( 'YITH_WC_Email_New_Order' ) ) :
 
 				$this->vendor = yith_get_vendor( get_post_field( 'post_author', yit_get_prop( $this->object, 'id' ) ), 'user' );
 
-				if( ! $this->vendor->is_valid() ){
+				if( ! $this->vendor->is_valid() || $this->object->get_created_via() !== 'yith_wcmv_vendor_suborder' ){
 					return false;
 				}
 

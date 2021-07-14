@@ -1,5 +1,9 @@
 /* === Banner for License not enabled === */
 
+.yith-plugins_page_yith_plugins_activation #yith-license-notice{
+  margin-left: 0;
+}
+
 #yith-license-notice{
   display: table;
   padding: 15px;

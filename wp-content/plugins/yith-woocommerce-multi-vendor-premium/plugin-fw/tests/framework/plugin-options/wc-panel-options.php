@@ -35,7 +35,7 @@ foreach ( $options as $key => $values ) {
 
 $fields[ $prefix . 'general-options-end' ] = array(
 	'type' => 'sectionend',
-	'id'   => 'yith-fl-test-general-options',
+	'id'   => 'general-options',
 );
 
 return array(

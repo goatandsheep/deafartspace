@@ -48,19 +48,25 @@ $vendor_shipping_location_from = !empty( $vendor->shipping_location_from ) ? $ve
         </div>
 
         <div class="form-field">
-            <label for="vendor_shipping_default_price"><?php  _e( 'Default Shipping Price:', 'yith-woocommerce-product-vendors' ) ?></label>
+            <label for="vendor_shipping_default_price">
+				<?php printf( '%s (%s):', _e( 'Default Shipping Price', 'yith-woocommerce-product-vendors' ), $shop_currency ); ?>
+			</label>
             <input id="vendor_shipping_default_price" type="number" placeholder="0.00"  name="yith_vendor_data[shipping_default_price]" step="any" min="0" class="regular-text" value="<?php echo $vendor_shipping_default_price; ?>" />
             <span class="description"><?php _e( 'The default shipping price for each product in the cart.', 'yith-woocommerce-product-vendors' ); ?></span>
         </div>
 
         <div class="form-field">
-            <label for="vendor_shipping_product_additional_price"><?php  _e( 'Per Product Additional Price:', 'yith-woocommerce-product-vendors' ) ?></label>
+            <label for="vendor_shipping_product_additional_price">
+				<?php printf( '%s (%s):', _e( 'Per Product Additional Price', 'yith-woocommerce-product-vendors' ), $shop_currency ); ?>
+			</label>
             <input id="vendor_shipping_product_additional_price" type="number" placeholder="0.00"  name="yith_vendor_data[shipping_product_additional_price]" step="any" min="0" class="regular-text" value="<?php echo $vendor_shipping_product_additional_price; ?>" />
             <span class="description"><?php _e( 'Additional price for each product if product quantity in cart is equal or greater than 2.', 'yith-woocommerce-product-vendors' ); ?></span>
         </div>
 
         <div class="form-field">
-            <label for="vendor_shipping_product_qty_price"><?php  _e( 'Per Qty Product Additional Price:', 'yith-woocommerce-product-vendors' ) ?></label>
+            <label for="vendor_shipping_product_qty_price">
+				<?php printf( '%s (%s):', _e( 'Per Qty Product Additional Price', 'yith-woocommerce-product-vendors' ), $shop_currency ); ?>
+			</label>
             <input id="vendor_shipping_product_qty_price" type="number" placeholder="0.00"  name="yith_vendor_data[shipping_product_qty_price]" step="any" min="0" class="regular-text" value="<?php echo $vendor_shipping_product_qty_price; ?>" />
             <span class="description"><?php _e( 'The additional price from the second product of the same type', 'yith-woocommerce-product-vendors' ); ?></span>
         </div>

@@ -15,6 +15,12 @@ $zass_show_title_background = 0;
 $zass_title_background_image = '';
 $zass_title_alignment = 'left_title';
 
+$author_name = get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
+$author_username = get_the_author_meta( 'display_name' );
+// $author_id = get_the_author_meta('ID');
+// $vendor = yith_get_vendor( $author_id, 'user' );
+// $vendor_url = $vendor->get_url( 'frontend' );
+
 if (isset($zass_page_options['zass_show_title_page']) && trim($zass_page_options['zass_show_title_page'][0]) != '') {
 	$zass_show_title_page = $zass_page_options['zass_show_title_page'][0];
 }
@@ -218,6 +224,7 @@ $zass_sidebar_classes[] =  apply_filters('zass_left_sidebar_position_class', '')
 										<div class="project-details">
 											<h4><?php esc_html_e('Details', 'zass') ?></h4>
 											<ul class="simple-list-underlined">
+												<li><strong>Posted by:</strong> <a href="/author/<?php echo $author_username ?>"><?php echo $author_name ?></a></li>
 												<?php if ($zass_collection): ?>
 													<li><strong><?php esc_html_e('Collection', 'zass') ?>:</strong> <?php echo esc_html($zass_collection) ?></li>
 												<?php endif; ?>

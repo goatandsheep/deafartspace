@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: YITH WooCommerce Multi Vendor\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/yith-woocommerce-"
 "multi-vendor.premium\n"
-"POT-Creation-Date: 2021-02-09 09:28:24+00:00\n"
-"PO-Revision-Date: 2020-10-24 12:15:01+0000\n"
+"POT-Creation-Date: 2021-06-10 13:38:42+00:00\n"
+"PO-Revision-Date: 2021-04-19 14:29:52+0000\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,9 +75,9 @@ msgstr "Verwerken"
 
 #: includes/class.yith-commissions.php:279
 #: includes/class.yith-commissions.php:280
-#: includes/class.yith-commissions.php:1319 includes/class.yith-reports.php:116
+#: includes/class.yith-commissions.php:1319 includes/class.yith-reports.php:115
 #: includes/class.yith-vendors-admin-premium.php:490
-#: includes/class.yith-vendors-admin.php:213
+#: includes/class.yith-vendors-admin.php:216
 #: includes/reports/class.yith-report-sale-commissions.php:223
 #: plugin-options/accounts-privacy-options.php:56
 msgid "Commissions"
@@ -119,27 +119,27 @@ msgstr "Order &ndash; %s"
 msgid "Error %d: Unable to create order. Please try again."
 msgstr "Fout %d: Niet in staat een order te creëeren. Probeert u het nogmaals."
 
-#: includes/class.yith-orders.php:1038
+#: includes/class.yith-orders.php:1057
 msgid "Delete note"
 msgstr "Verwijder notitie"
 
-#: includes/class.yith-orders.php:1139
+#: includes/class.yith-orders.php:1158
 msgid "Item #%s stock reduced from %s to %s."
 msgstr "Item #%s voorraad afgenomen van %s naar %s."
 
-#: includes/class.yith-orders.php:1143
+#: includes/class.yith-orders.php:1162
 msgid "Item #%s stock increased from %s to %s."
 msgstr "Item #%s voorraad toegenomen van %s naar %s."
 
-#: includes/class.yith-orders.php:1822
+#: includes/class.yith-orders.php:1841
 msgid "commission_id"
 msgstr "commissie_id"
 
-#: includes/class.yith-orders.php:1823
+#: includes/class.yith-orders.php:1842
 msgid "status"
 msgstr "status"
 
-#: includes/class.yith-orders.php:1991
+#: includes/class.yith-orders.php:2010
 msgid ""
 "Note: from this box you can monitor the status of suborders associated to "
 "individual vendors."
@@ -147,13 +147,13 @@ msgstr ""
 "Opmerking: vanuit deze box kunt u de statussen van de sub-orders ,"
 "gerelateerd aan individuele verkopers, monitoren."
 
-#: includes/class.yith-orders.php:2041
-#: includes/lib/class.yith-commissions-list-table.php:345
+#: includes/class.yith-orders.php:2060
+#: includes/lib/class.yith-commissions-list-table.php:346
 #: templates/admin/commission-view.php:221
 msgid "Vendor deleted"
 msgstr "Verkoper verwijderd"
 
-#: includes/class.yith-orders.php:2057
+#: includes/class.yith-orders.php:2076
 msgid ""
 "Pass this ID over to the website administrator for any communication related "
 "to this order"
@@ -161,32 +161,32 @@ msgstr ""
 "Geef deze ID aan de website administrator, voor alle communicatie omtrent "
 "deze order"
 
-#: includes/class.yith-orders.php:2402
+#: includes/class.yith-orders.php:2420
 msgid "File %d"
 msgstr "Bestand %d"
 
-#: includes/class.yith-reports.php:119
+#: includes/class.yith-reports.php:118
 msgid "Sale Commissions"
 msgstr "Verkoop Commissies"
 
-#: includes/class.yith-reports.php:131
+#: includes/class.yith-reports.php:130
 msgid "Vendors"
 msgstr "Verkopers"
 
-#: includes/class.yith-reports.php:134
+#: includes/class.yith-reports.php:133
 msgid "Vendor Sales"
 msgstr "Omzet verkoper"
 
-#: includes/class.yith-reports.php:141
+#: includes/class.yith-reports.php:140
 msgid "Registered Vendors"
 msgstr "Geregistreerde Verkopers"
 
-#: includes/class.yith-reports.php:148
+#: includes/class.yith-reports.php:147
 msgid "Commissions by Vendor"
 msgstr "Commissies door Verkoper"
 
-#: includes/class.yith-reports.php:189
-#: includes/class.yith-vendors-admin-premium.php:1361
+#: includes/class.yith-reports.php:188
+#: includes/class.yith-vendors-admin-premium.php:1375
 #: includes/lib/class.yith-commissions-list-table.php:70
 #: templates/admin/commission-view.php:184
 #: templates/emails/commission-detail-table.php:32
@@ -194,27 +194,27 @@ msgstr "Commissies door Verkoper"
 msgid "Date"
 msgstr "Datum"
 
-#: includes/class.yith-reports.php:192
+#: includes/class.yith-reports.php:191
 msgid "Export CSV"
 msgstr "Export CSV"
 
-#: includes/class.yith-reports.php:467
+#: includes/class.yith-reports.php:442
 msgid "Year"
 msgstr "Jaar"
 
-#: includes/class.yith-reports.php:468
+#: includes/class.yith-reports.php:443
 msgid "Last Month"
 msgstr "Afgelopen Maand"
 
-#: includes/class.yith-reports.php:469
+#: includes/class.yith-reports.php:444
 msgid "This Month"
 msgstr "Deze Maand"
 
-#: includes/class.yith-reports.php:470
+#: includes/class.yith-reports.php:445
 msgid "Last 7 Days"
 msgstr "Afgelopen 7 Dagen"
 
-#: includes/class.yith-reports.php:532
+#: includes/class.yith-reports.php:507
 #: includes/lib/class.yith-commissions-list-table-premium.php:211
 msgid "Search for a vendor&hellip;"
 msgstr "Zoeken naar verkoper&hellip;"
@@ -259,52 +259,52 @@ msgstr "Algemeen"
 msgid "Payments"
 msgstr "Betalingen"
 
-#: includes/class.yith-vendors-admin-premium.php:606
+#: includes/class.yith-vendors-admin-premium.php:610
 msgid "Header image"
 msgstr "Header afbeelding"
 
-#: includes/class.yith-vendors-admin-premium.php:638
+#: includes/class.yith-vendors-admin-premium.php:648
 msgid "Choose an image"
 msgstr "Kies een afbeelding"
 
-#: includes/class.yith-vendors-admin-premium.php:639
+#: includes/class.yith-vendors-admin-premium.php:649
 msgid "Use image"
 msgstr "Gebruik afbeelding"
 
-#: includes/class.yith-vendors-admin-premium.php:704
-#: includes/class.yith-vendors-admin-premium.php:1353
+#: includes/class.yith-vendors-admin-premium.php:714
+#: includes/class.yith-vendors-admin-premium.php:1367
 #: includes/lib/class.yith-commissions-list-table.php:59
 msgid "ID"
 msgstr "ID"
 
-#: includes/class.yith-vendors-admin-premium.php:705
+#: includes/class.yith-vendors-admin-premium.php:715
 msgid "Registration date"
 msgstr "Registratie datum"
 
-#: includes/class.yith-vendors-admin-premium.php:706
+#: includes/class.yith-vendors-admin-premium.php:716
 #: plugin-options/frontpage-options.php:171
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: includes/class.yith-vendors-admin-premium.php:707
+#: includes/class.yith-vendors-admin-premium.php:717
 #: plugin-options/frontpage-options.php:164
 msgid "Terms and conditions"
 msgstr "Algemene Voorwaarden"
 
-#: includes/class.yith-vendors-admin-premium.php:708
+#: includes/class.yith-vendors-admin-premium.php:718
 #: templates/emails/plain/new-vendor-detail-table.php:19
 msgid "Owner"
 msgstr "Eigenaar"
 
-#: includes/class.yith-vendors-admin-premium.php:709
+#: includes/class.yith-vendors-admin-premium.php:719
 msgid "Enable"
 msgstr "Inschakelen"
 
-#: includes/class.yith-vendors-admin-premium.php:710
-#: includes/class.yith-vendors-admin-premium.php:1001
-#: includes/class.yith-vendors-admin-premium.php:2217
-#: includes/class.yith-vendors-admin.php:628
-#: includes/class.yith-vendors-frontend-premium.php:706
+#: includes/class.yith-vendors-admin-premium.php:720
+#: includes/class.yith-vendors-admin-premium.php:1014
+#: includes/class.yith-vendors-admin-premium.php:2212
+#: includes/class.yith-vendors-admin.php:631
+#: includes/class.yith-vendors-frontend-premium.php:719
 #: includes/class.yith-vendors-privacy-premium.php:39
 #: plugin-options/frontpage-options.php:13
 #: plugin-options/frontpage-options.php:501
@@ -316,54 +316,54 @@ msgstr "Inschakelen"
 msgid "VAT/SSN"
 msgstr "BTW/SSN"
 
-#: includes/class.yith-vendors-admin-premium.php:711
-#: includes/class.yith-vendors-admin-premium.php:1409
+#: includes/class.yith-vendors-admin-premium.php:721
+#: includes/class.yith-vendors-admin-premium.php:1423
 #: templates/admin/add-product-vendors-taxonomy-premium.php:61
 msgid "Commission"
 msgstr "Commissie"
 
-#: includes/class.yith-vendors-admin-premium.php:712
+#: includes/class.yith-vendors-admin-premium.php:722
 msgid "Items"
 msgstr "Items"
 
-#: includes/class.yith-vendors-admin-premium.php:713
-#: includes/class.yith-vendors-admin-premium.php:1363
+#: includes/class.yith-vendors-admin-premium.php:723
+#: includes/class.yith-vendors-admin-premium.php:1377
 #: includes/lib/class.yith-commissions-list-table.php:72
 #: templates/admin/commission-view.php:52
 msgid "Actions"
 msgstr "Acties"
 
-#: includes/class.yith-vendors-admin-premium.php:766
+#: includes/class.yith-vendors-admin-premium.php:779
 msgid "Set an owner"
 msgstr "Stel een eigenaar in"
 
-#: includes/class.yith-vendors-admin-premium.php:796
+#: includes/class.yith-vendors-admin-premium.php:809
 msgid "Edit extra info"
 msgstr "Bewerk extra info"
 
-#: includes/class.yith-vendors-admin-premium.php:870
-#: includes/class.yith-vendors-admin-premium.php:1103
+#: includes/class.yith-vendors-admin-premium.php:883
+#: includes/class.yith-vendors-admin-premium.php:1117
 msgid "Approve"
 msgstr "Goedkeuren"
 
-#: includes/class.yith-vendors-admin-premium.php:874
-#: includes/class.yith-vendors-admin-premium.php:1104
+#: includes/class.yith-vendors-admin-premium.php:887
+#: includes/class.yith-vendors-admin-premium.php:1118
 #: templates/admin/add-product-vendors-taxonomy-premium.php:40
 #: templates/admin/edit-product-vendors-taxonomy-premium.php:143
 msgid "Enable sales"
 msgstr "Verkopen inschakelen"
 
-#: includes/class.yith-vendors-admin-premium.php:876
-#: includes/class.yith-vendors-admin-premium.php:1105
+#: includes/class.yith-vendors-admin-premium.php:889
+#: includes/class.yith-vendors-admin-premium.php:1119
 msgid "Disable sales"
 msgstr "Verkopen uitschakelen"
 
-#: includes/class.yith-vendors-admin-premium.php:984
-#: includes/class.yith-vendors-admin.php:676
+#: includes/class.yith-vendors-admin-premium.php:997
+#: includes/class.yith-vendors-admin.php:679
 msgid "Search for a shop admins&hellip;"
 msgstr "Zoeken naar shop admins&hellip;"
 
-#: includes/class.yith-vendors-admin-premium.php:1101
+#: includes/class.yith-vendors-admin-premium.php:1115
 msgid ""
 "Are you sure? If you click \"YES\" you change skip review option for each "
 "vendor"
@@ -371,7 +371,7 @@ msgstr ""
 "Weet u het zeker? Als u \"JA\" kiest, kunt u de review optie voor elke "
 "verkoper overslaan"
 
-#: includes/class.yith-vendors-admin-premium.php:1102
+#: includes/class.yith-vendors-admin-premium.php:1116
 msgid ""
 "If you continue, the commission will be paid automatically to the vendor via "
 "%gateway_name%. Do you want to continue?"
@@ -379,7 +379,7 @@ msgstr ""
 "Als u doorgaat, zal de commissie automatisch betaalt worden aan de verkoper "
 "via %gateway_name%.. Wilt u doorgaan?"
 
-#: includes/class.yith-vendors-admin-premium.php:1354
+#: includes/class.yith-vendors-admin-premium.php:1368
 #: includes/lib/class.yith-commissions-list-table.php:60
 #: templates/admin/commission-view.php:180
 #: templates/emails/commission-detail-table.php:27
@@ -387,12 +387,12 @@ msgstr ""
 msgid "Status"
 msgstr "Status"
 
-#: includes/class.yith-vendors-admin-premium.php:1355
+#: includes/class.yith-vendors-admin-premium.php:1369
 #: includes/lib/class.yith-commissions-list-table.php:61
 msgid "Order"
 msgstr "Order"
 
-#: includes/class.yith-vendors-admin-premium.php:1356
+#: includes/class.yith-vendors-admin-premium.php:1370
 #: includes/lib/class.yith-commissions-list-table.php:62
 #: templates/emails/commission-detail-table.php:57
 #: templates/emails/plain/commission-detail-table.php:42
@@ -401,18 +401,18 @@ msgstr "Order"
 msgid "Product"
 msgstr "Product"
 
-#: includes/class.yith-vendors-admin-premium.php:1357
+#: includes/class.yith-vendors-admin-premium.php:1371
 #: includes/lib/class.yith-commissions-list-table.php:63
 #: templates/admin/commission-view.php:605
 msgid "Rate"
 msgstr "Rating"
 
-#: includes/class.yith-vendors-admin-premium.php:1358
+#: includes/class.yith-vendors-admin-premium.php:1372
 #: includes/lib/class.yith-commissions-list-table.php:67
 msgid "User"
 msgstr "Gebruiker"
 
-#: includes/class.yith-vendors-admin-premium.php:1360
+#: includes/class.yith-vendors-admin-premium.php:1374
 #: templates/emails/commission-detail-table.php:37
 #: templates/emails/commissions-bulk-table.php:28
 #: templates/emails/plain/commission-detail-table.php:29
@@ -420,17 +420,17 @@ msgstr "Gebruiker"
 msgid "Amount"
 msgstr "Bedrag"
 
-#: includes/class.yith-vendors-admin-premium.php:1362
+#: includes/class.yith-vendors-admin-premium.php:1376
 #: includes/lib/class.yith-commissions-list-table.php:71
 #: templates/admin/commission-view.php:188
 msgid "Last update"
 msgstr "Laatste update"
 
-#: includes/class.yith-vendors-admin-premium.php:1434
+#: includes/class.yith-vendors-admin-premium.php:1448
 msgid "Product commission"
 msgstr "Product commissie"
 
-#: includes/class.yith-vendors-admin-premium.php:1436
+#: includes/class.yith-vendors-admin-premium.php:1450
 msgid ""
 "You can set a specific commission for a single product. Keep this field "
 "blank or zero to use the vendor commission"
@@ -438,7 +438,7 @@ msgstr ""
 "U kunt een specifieke commissie instellen voor een single product. Laat dit "
 "veld leeg of op 0, om de verkopers commissie te gebruiken"
 
-#: includes/class.yith-vendors-admin-premium.php:1533
+#: includes/class.yith-vendors-admin-premium.php:1547
 msgid ""
 "You do not have sufficient permissions to access this page. %1$sClick here "
 "to return in your dashboard%2$s."
@@ -446,7 +446,7 @@ msgstr ""
 "U heeft geen recht om deze pagina te betreden. %1$sKliek hier om terug te "
 "keren naar uw dashboard%2$s."
 
-#: includes/class.yith-vendors-admin-premium.php:1550
+#: includes/class.yith-vendors-admin-premium.php:1564
 msgid ""
 "You are not allowed to create more than %1$s products. %2$sClick here to "
 "return in your admin area%3$s."
@@ -454,7 +454,7 @@ msgstr ""
 "Het is niet toegestaan om meer dan %1$s producten te creëren. %2$sKlik hier "
 "om terug te keren naar uw admin area%3$s."
 
-#: includes/class.yith-vendors-admin-premium.php:1707
+#: includes/class.yith-vendors-admin-premium.php:1721
 msgid ""
 "You do not have permission to edit this post. %1$sClick here to view your "
 "dashboard%2$s."
@@ -462,8 +462,8 @@ msgstr ""
 "U heeft geen recht om deze post te bewerken. %1$sKlik hier om uw dashboard "
 "te bekijken%2$s."
 
-#: includes/class.yith-vendors-admin-premium.php:1729
-#: includes/class.yith-vendors-admin.php:490
+#: includes/class.yith-vendors-admin-premium.php:1743
+#: includes/class.yith-vendors-admin.php:493
 msgid ""
 "You do not have permission to edit this product. %1$sClick here to view and "
 "edit your products%2$s."
@@ -471,7 +471,7 @@ msgstr ""
 "U heeft geen recht om dit product te bewerken. %1$sKlik hier om uw producten "
 "te bekijken en bewerken%2$s."
 
-#: includes/class.yith-vendors-admin-premium.php:1735
+#: includes/class.yith-vendors-admin-premium.php:1749
 msgid ""
 "You do not have permission to edit this coupon. %1$sClick here to view and "
 "edit your coupons%2$s."
@@ -479,8 +479,8 @@ msgstr ""
 "U heeft geen recht om deze coupon te bewerken. %1$sKlik hier om uw coupons "
 "te bekijken en bewerken%2$s."
 
-#: includes/class.yith-vendors-admin-premium.php:1745
-#: includes/class.yith-vendors-admin-premium.php:1747
+#: includes/class.yith-vendors-admin-premium.php:1759
+#: includes/class.yith-vendors-admin-premium.php:1761
 msgid ""
 "You do not have permission to edit this order. %1$sClick here to view your "
 "orders%2$s."
@@ -488,7 +488,7 @@ msgstr ""
 "U heeft geen recht om deze order te bewerken. %1$sKlik hier om uw orders te "
 "bekijken%2$s."
 
-#: includes/class.yith-vendors-admin-premium.php:1834
+#: includes/class.yith-vendors-admin-premium.php:1848
 msgid ""
 "You do not have permission to edit this review. %1$sClick here to view and "
 "edit your product reviews%2$s."
@@ -496,31 +496,31 @@ msgstr ""
 "U heeft geen recht om deze review te bewerken. %1$sKlik hier om uw product "
 "reviews te bekijken en bewerken%2$s."
 
-#: includes/class.yith-vendors-admin-premium.php:1959
+#: includes/class.yith-vendors-admin-premium.php:1954
 msgid "Recent reviews"
 msgstr "Recente reviews"
 
-#: includes/class.yith-vendors-admin-premium.php:1968
+#: includes/class.yith-vendors-admin-premium.php:1963
 msgid "Recent comments"
 msgstr "Recente opmerkingen"
 
-#: includes/class.yith-vendors-admin-premium.php:2080
+#: includes/class.yith-vendors-admin-premium.php:2075
 msgid "out of 5"
 msgstr "van de 5"
 
-#: includes/class.yith-vendors-admin-premium.php:2082
+#: includes/class.yith-vendors-admin-premium.php:2077
 msgid "reviewed by"
 msgstr "gereviewd door"
 
-#: includes/class.yith-vendors-admin-premium.php:2088
+#: includes/class.yith-vendors-admin-premium.php:2083
 msgid "There are no product reviews yet."
 msgstr "Er zijn nog geen product reviews."
 
-#: includes/class.yith-vendors-admin-premium.php:2237
+#: includes/class.yith-vendors-admin-premium.php:2232
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: includes/class.yith-vendors-admin-premium.php:2237
+#: includes/class.yith-vendors-admin-premium.php:2232
 msgid ""
 "vendor shops have no owner set. Please, set an owner for each vendor shop in "
 "order to enable them"
@@ -528,40 +528,40 @@ msgstr ""
 "webwinkel van verkoper heeft geen eigenaar ingesteld. Stel een eigenaar in "
 "voor iedere webwinkel, om ze in te kunnen schakelen"
 
-#: includes/class.yith-vendors-admin-premium.php:2243
-#: includes/class.yith-vendors-admin-premium.php:2275
+#: includes/class.yith-vendors-admin-premium.php:2238
+#: includes/class.yith-vendors-admin-premium.php:2270
 msgid "Go to Vendor page to fix it."
 msgstr "Ga naar Verkopers pagina om het op te lossen."
 
-#: includes/class.yith-vendors-admin-premium.php:2266
-#: includes/class.yith-vendors-admin-premium.php:2299
+#: includes/class.yith-vendors-admin-premium.php:2261
+#: includes/class.yith-vendors-admin-premium.php:2294
 msgid "Warning: "
 msgstr "Waarschuwing: "
 
-#: includes/class.yith-vendors-admin-premium.php:2300
+#: includes/class.yith-vendors-admin-premium.php:2295
 msgid ""
 "Please, set the VAT/SSN field to complete your profile in \"Vendor profile\""
 msgstr ""
 "Stel alstublieft het BTW/SSN veld in voor het completeren van uw profiel in "
 "\"Verkopers profiel\""
 
-#: includes/class.yith-vendors-admin-premium.php:2306
+#: includes/class.yith-vendors-admin-premium.php:2301
 msgid "Go to Vendor details page to fix it."
 msgstr "Ga naar Verkopers details pagina om het op te lossen."
 
-#: includes/class.yith-vendors-admin-premium.php:2329
+#: includes/class.yith-vendors-admin-premium.php:2324
 msgid "Become a vendor"
 msgstr "Wordt een verkoper"
 
-#: includes/class.yith-vendors-admin-premium.php:2336
+#: includes/class.yith-vendors-admin-premium.php:2331
 msgid "Terms and Conditions for Vendors"
 msgstr "Algemene Voorwaarden voor Verkopers"
 
-#: includes/class.yith-vendors-admin-premium.php:2343
+#: includes/class.yith-vendors-admin-premium.php:2338
 msgid "Privacy Policy for Vendors"
 msgstr "Privacy Policy voor verkopers"
 
-#: includes/class.yith-vendors-admin-premium.php:2372
+#: includes/class.yith-vendors-admin-premium.php:2367
 msgid ""
 "The description is not prominent by default; however, some themes may show "
 "it."
@@ -569,7 +569,7 @@ msgstr ""
 "De beschrijving is niet prominent door default; maar sommige theme zullen "
 "het weergeven."
 
-#: includes/class.yith-vendors-admin-premium.php:2424
+#: includes/class.yith-vendors-admin-premium.php:2419
 msgid ""
 "<div class=\"wp-die-message\">You are not allowed to create more than %1$s "
 "products. %2$sClick here to return in your admin area%3$s.</div>"
@@ -577,15 +577,15 @@ msgstr ""
 "<div class=\"wp-die-message\">Je mag niet meer dan %1$s producten aanmaken. "
 "%2$sKlik hier om terug te keren naar je beheerders sectie%3$s.</div>"
 
-#: includes/class.yith-vendors-admin-premium.php:2514
+#: includes/class.yith-vendors-admin-premium.php:2509
 msgid "Cheatin&#8217; uh?"
 msgstr "Cheatin&#8217; uh?"
 
-#: includes/class.yith-vendors-admin-premium.php:2515
+#: includes/class.yith-vendors-admin-premium.php:2510
 msgid "Sorry, you are not allowed to edit comments."
 msgstr "Sorry, u heeft geen recht om opmerkingen te bewerken."
 
-#: includes/class.yith-vendors-admin-premium.php:2668
+#: includes/class.yith-vendors-admin-premium.php:2664
 msgid ""
 "The %s and %s have been modified and your profile has been disabled for "
 "sale. To reactivate it, please accept our terms of service and privacy "
@@ -595,7 +595,7 @@ msgstr ""
 "       Om dit te herstellen, accepteer ons privacy beleid opnieuw, vanaf "
 "deze pagina"
 
-#: includes/class.yith-vendors-admin-premium.php:2682
+#: includes/class.yith-vendors-admin-premium.php:2678
 msgid ""
 "The %s and %s have been modified and your profile will be disabled in %s "
 "days. To reactivate it, please accept our terms of service and privacy "
@@ -606,7 +606,7 @@ msgstr ""
 "       Om dit te herstellen, accepteer ons privacy beleid opnieuw, vanaf "
 "deze pagina"
 
-#: includes/class.yith-vendors-admin-premium.php:2698
+#: includes/class.yith-vendors-admin-premium.php:2694
 msgid ""
 "The %s have been modified and your profile has been disabled for sale.To "
 "reactivate it, please accept our terms of service again from this page "
@@ -615,19 +615,19 @@ msgstr ""
 "       Om dit te herstellen, accepteer onze servicevoorwaarden opnieuw, "
 "vanaf deze pagina"
 
-#: includes/class.yith-vendors-admin-premium.php:2763
+#: includes/class.yith-vendors-admin-premium.php:2759
 msgid "Sales reports"
-msgstr ""
+msgstr "Verkooprapporten"
 
-#: includes/class.yith-vendors-admin.php:215
+#: includes/class.yith-vendors-admin.php:218
 msgid "Accounts & Privacy"
 msgstr "Accounts & Privacy"
 
-#: includes/class.yith-vendors-admin.php:216
+#: includes/class.yith-vendors-admin.php:219
 msgid "Premium Version"
 msgstr "Premium Versie"
 
-#: includes/class.yith-vendors-admin.php:497
+#: includes/class.yith-vendors-admin.php:500
 msgid ""
 "You do not have permission to edit this order. %1$sClick here to view and "
 "edit your orders%2$s."
@@ -635,204 +635,204 @@ msgstr ""
 "U heeft geen recht om deze order te bewerken. %1$sKlik hier om uw orders te "
 "bekijken en bewerken%2$s."
 
-#: includes/class.yith-vendors-admin.php:633
-#: includes/class.yith-vendors-admin.php:667
+#: includes/class.yith-vendors-admin.php:636
+#: includes/class.yith-vendors-admin.php:670
 msgid "Search for a customer&hellip;"
 msgstr "Zoek naar een klant&hellip;"
 
-#: includes/class.yith-vendors-admin.php:719
-#: includes/class.yith-vendors-admin.php:741
-#: includes/class.yith-vendors-admin.php:1956
+#: includes/class.yith-vendors-admin.php:722
+#: includes/class.yith-vendors-admin.php:744
+#: includes/class.yith-vendors-admin.php:1962
 msgid "A vendor with this name already exists."
 msgstr "Er bestaat al een verkoper met deze naam."
 
-#: includes/class.yith-vendors-admin.php:720
+#: includes/class.yith-vendors-admin.php:723
 msgid "Vendor name already exists"
 msgstr "Naam verkoper bestaat al"
 
-#: includes/class.yith-vendors-admin.php:747
-#: includes/class.yith-vendors-admin.php:1961
+#: includes/class.yith-vendors-admin.php:750
+#: includes/class.yith-vendors-admin.php:1967
 msgid "You can't associate more vendor shops with the same shop owner."
 msgstr ""
 "U kunt niet meer verkopers´winkels toewijzen met dezelfde winkeleigenaar."
 
-#: includes/class.yith-vendors-admin.php:1115
-#: includes/class.yith-vendors-admin.php:2122
+#: includes/class.yith-vendors-admin.php:1121
+#: includes/class.yith-vendors-admin.php:2128
 #: templates/woocommerce/admin/products/bulk-set-vendor.php:8
 msgid "No %s"
 msgstr "No %s"
 
-#: includes/class.yith-vendors-admin.php:1341
+#: includes/class.yith-vendors-admin.php:1347
 msgid "Visit Store"
 msgstr "Bezoek webwinkel"
 
-#: includes/class.yith-vendors-admin.php:1529
+#: includes/class.yith-vendors-admin.php:1535
 msgid "None"
 msgstr "Geen"
 
-#: includes/class.yith-vendors-admin.php:1560
+#: includes/class.yith-vendors-admin.php:1566
 msgid "Roles"
 msgstr "Rollen"
 
-#: includes/class.yith-vendors-admin.php:1743
+#: includes/class.yith-vendors-admin.php:1749
 msgid "Plugin documentation"
 msgstr "Plugin Documentatie"
 
-#: includes/class.yith-vendors-admin.php:1750
+#: includes/class.yith-vendors-admin.php:1756
 msgid "Discover the premium version"
 msgstr "Ontdek de premium versie"
 
-#: includes/class.yith-vendors-admin.php:1755
+#: includes/class.yith-vendors-admin.php:1761
 msgid "Free Vs Premium"
 msgstr "Free Vs Premium"
 
-#: includes/class.yith-vendors-admin.php:1760
+#: includes/class.yith-vendors-admin.php:1766
 msgid "Premium live demo"
 msgstr "Premium live demo"
 
-#: includes/class.yith-vendors-admin.php:1765
+#: includes/class.yith-vendors-admin.php:1771
 msgid "WordPress support forum"
 msgstr "WordPress support forum"
 
-#: includes/class.yith-vendors-admin.php:1770
-#: includes/class.yith-vendors-admin.php:1782
+#: includes/class.yith-vendors-admin.php:1776
+#: includes/class.yith-vendors-admin.php:1788
 msgid "Changelog"
 msgstr "Wijzigingenlogboek"
 
-#: includes/class.yith-vendors-admin.php:1777
+#: includes/class.yith-vendors-admin.php:1783
 msgid "Support platform"
 msgstr "Support platform"
 
-#: includes/class.yith-vendors-admin.php:1782
+#: includes/class.yith-vendors-admin.php:1788
 msgid "current version"
 msgstr "huidige versie"
 
-#: includes/class.yith-vendors-admin.php:1787
+#: includes/class.yith-vendors-admin.php:1793
 msgid "PayPal sandbox test accounts"
 msgstr "PayPal sandbox test accounts"
 
-#: includes/class.yith-vendors-admin.php:1792
+#: includes/class.yith-vendors-admin.php:1798
 msgid "Enable PayPal MassPay"
 msgstr "PayPal MassPay inschakelen"
 
-#: includes/class.yith-vendors-admin.php:1951
+#: includes/class.yith-vendors-admin.php:1957
 msgid "Option Saved"
 msgstr "Optie opgeslagen"
 
-#: includes/class.yith-vendors-admin.php:2205
+#: includes/class.yith-vendors-admin.php:2211
 msgid "Orders"
-msgstr ""
+msgstr "Bestellingen"
 
-#: includes/class.yith-vendors-frontend-premium.php:554
+#: includes/class.yith-vendors-frontend-premium.php:567
 msgid "Abuse reported correctly."
 msgstr "Misbruik gerapporteerd."
 
-#: includes/class.yith-vendors-frontend-premium.php:555
+#: includes/class.yith-vendors-frontend-premium.php:568
 msgid "All fields are mandatory."
 msgstr "Alle velden zijn verplicht."
 
-#: includes/class.yith-vendors-frontend-premium.php:556
+#: includes/class.yith-vendors-frontend-premium.php:569
 msgid "Your request could not be processed. Please try again"
 msgstr ""
 "Uw verzoek kon niet worden verwerkt. Probeert u het alstublieft nogmaals"
 
-#: includes/class.yith-vendors-frontend-premium.php:627
-#: includes/class.yith-vendors-frontend-premium.php:636
-#: includes/class.yith-vendors-frontend-premium.php:641
-#: includes/class.yith-vendors-frontend-premium.php:644
-#: includes/class.yith-vendors-frontend-premium.php:650
+#: includes/class.yith-vendors-frontend-premium.php:640
+#: includes/class.yith-vendors-frontend-premium.php:649
 #: includes/class.yith-vendors-frontend-premium.php:654
-#: includes/class.yith-vendors-frontend-premium.php:659
-#: includes/class.yith-vendors-frontend-premium.php:664
-#: includes/class.yith-vendors-frontend-premium.php:669
-#: includes/class.yith-vendors-frontend-premium.php:674
+#: includes/class.yith-vendors-frontend-premium.php:657
+#: includes/class.yith-vendors-frontend-premium.php:663
+#: includes/class.yith-vendors-frontend-premium.php:667
+#: includes/class.yith-vendors-frontend-premium.php:672
 #: includes/class.yith-vendors-frontend-premium.php:677
-#: includes/class.yith-vendors-frontend-premium.php:683
-#: includes/class.yith-vendors-frontend-premium.php:689
+#: includes/class.yith-vendors-frontend-premium.php:682
+#: includes/class.yith-vendors-frontend-premium.php:687
+#: includes/class.yith-vendors-frontend-premium.php:690
+#: includes/class.yith-vendors-frontend-premium.php:696
+#: includes/class.yith-vendors-frontend-premium.php:702
 msgid "Error"
 msgstr "Fout"
 
-#: includes/class.yith-vendors-frontend-premium.php:708
+#: includes/class.yith-vendors-frontend-premium.php:721
 msgid "The First name field is mandatory"
 msgstr "Het voornaam is verplicht"
 
-#: includes/class.yith-vendors-frontend-premium.php:709
+#: includes/class.yith-vendors-frontend-premium.php:722
 msgid "The Last name field is mandatory"
 msgstr "Het achternaam is verplicht"
 
-#: includes/class.yith-vendors-frontend-premium.php:710
+#: includes/class.yith-vendors-frontend-premium.php:723
 msgid "The Store address field is mandatory"
 msgstr "Het addres van de webwinkel is verplicht"
 
-#: includes/class.yith-vendors-frontend-premium.php:711
+#: includes/class.yith-vendors-frontend-premium.php:724
 msgid "The Email field is mandatory"
 msgstr "Het e-mail adres is verlicht"
 
-#: includes/class.yith-vendors-frontend-premium.php:712
+#: includes/class.yith-vendors-frontend-premium.php:725
 msgid "The Email address entered is not valid"
 msgstr "Een ongeldig e-mail adres"
 
-#: includes/class.yith-vendors-frontend-premium.php:713
+#: includes/class.yith-vendors-frontend-premium.php:726
 msgid "The PayPal Email field is mandatory"
 msgstr "Het PayPal e-mail veld is verplicht"
 
-#: includes/class.yith-vendors-frontend-premium.php:714
+#: includes/class.yith-vendors-frontend-premium.php:727
 msgid "The PayPal Email address entered is not valid"
 msgstr "Een ongeldig PayPal e-mail adres"
 
-#: includes/class.yith-vendors-frontend-premium.php:715
+#: includes/class.yith-vendors-frontend-premium.php:728
 msgid "The Telephone field is mandatory"
 msgstr "Het telefoonnummer is verplicht"
 
-#: includes/class.yith-vendors-frontend-premium.php:722
+#: includes/class.yith-vendors-frontend-premium.php:735
 msgid "Insert the vendor name"
 msgstr "Voer verkopers naam in"
 
-#: includes/class.yith-vendors-frontend-premium.php:723
+#: includes/class.yith-vendors-frontend-premium.php:736
 msgid "A vendor with this name already exists"
 msgstr "Er bestaat al een verkoper met deze naam"
 
-#: includes/class.yith-vendors-frontend-premium.php:724
+#: includes/class.yith-vendors-frontend-premium.php:737
 msgid "Please, read and accept the terms & conditions"
 msgstr "Lees en acepteer de algemene voorwaarden alstublieft"
 
-#: includes/class.yith-vendors-frontend-premium.php:725
+#: includes/class.yith-vendors-frontend-premium.php:738
 msgid "Please, read and accept the privacy policy"
 msgstr "Lees en accepteer de Privacy Policy a.u.b."
 
-#: includes/class.yith-vendors-frontend-premium.php:726
+#: includes/class.yith-vendors-frontend-premium.php:739
 msgid "Please, no spam here"
 msgstr "Geen spam hier"
 
-#: includes/class.yith-vendors-frontend-premium.php:937
+#: includes/class.yith-vendors-frontend-premium.php:950
 msgid "Report"
 msgstr "Rapport"
 
-#: includes/class.yith-vendors-frontend-premium.php:981
+#: includes/class.yith-vendors-frontend-premium.php:994
 msgid "User %s (%s) is reporting an abuse on the following product:"
 msgstr "Gebruiker %s (%s) meldt misbruik van het volgende product:"
 
-#: includes/class.yith-vendors-frontend-premium.php:983
+#: includes/class.yith-vendors-frontend-premium.php:996
 msgid "Product details: %s (ID: #%s)"
 msgstr "Product details: %s (ID: #%s)"
 
-#: includes/class.yith-vendors-frontend-premium.php:987
+#: includes/class.yith-vendors-frontend-premium.php:1000
 msgid "Vendor shop: %s (ID: #%s)"
 msgstr "Verkopers webwinkel: %s (ID: #%s)"
 
-#: includes/class.yith-vendors-frontend-premium.php:991
+#: includes/class.yith-vendors-frontend-premium.php:1004
 msgid "Message: %s"
 msgstr "Bericht: %s"
 
-#: includes/class.yith-vendors-frontend-premium.php:994
+#: includes/class.yith-vendors-frontend-premium.php:1007
 msgid "Product page: %s"
 msgstr "Product pagina: %s"
 
-#: includes/class.yith-vendors-frontend-premium.php:998
+#: includes/class.yith-vendors-frontend-premium.php:1011
 msgid "Vendor Account details: %s"
 msgstr "Verkopers Account details: %s"
 
-#: includes/class.yith-vendors-frontend-premium.php:1036
+#: includes/class.yith-vendors-frontend-premium.php:1049
 msgid "Item sold"
 msgstr "Item verkocht"
 
@@ -960,6 +960,13 @@ msgid ""
 "(IBAN and PayPal email address), information related to commissions and "
 "payments made. "
 msgstr ""
+"Gegevens die nodig zijn om een ​​winkel te starten: winkelnaam en -"
+"beschrijving, headerafbeelding, winkellogo, adres, e-mailadres, "
+"telefoonnummer, btw/SSN nummer, juridische opmerkingen, links naar sociale "
+"netwerken (Facebook, Twitter, Linkedin, Youtube, Vimeo, Instagram, "
+"Pinterest, Flickr, Behance, Tripadvisor), betalingsinformatie (IBAN- en "
+"PayPal-e-mailadres), informatie met betrekking tot commissies en gedane "
+"betalingen."
 
 #: includes/class.yith-vendors-premium.php:612
 msgid "Who on our team has access"
@@ -1046,6 +1053,13 @@ msgid ""
 "TripAdvisor), payment information (IBAN and PayPal email), information about "
 "commissions and issued payments."
 msgstr ""
+"De informatie die nodig is om een ​​marktplaats te starten, is de volgende: "
+"winkelnaam en -beschrijving, headerafbeelding, winkellogo, adres, e-mail, "
+"telefoonnummer, BTW/SSN nummer, juridische opmerkingen, links naar sociale "
+"netwerken (Facebook, Twitter, LinkedIn, YouTube, Vimeo, Instagram, "
+"Pinterest, Flickr, Behance, TripAdvisor), betalingsinformatie (IBAN en "
+"PayPal-e-mailadres), informatie met betrekking tot commissies en gedane "
+"betalingen."
 
 #: includes/class.yith-vendors-privacy-premium.php:91
 #: includes/class.yith-vendors-privacy.php:506
@@ -1197,7 +1211,7 @@ msgstr "[{site_title}] Geannuleerde order ({order_number})"
 #: includes/emails/class-yith-wc-email-cancelled-order.php:174
 #: includes/emails/class-yith-wc-email-commissions-paid.php:115
 #: includes/emails/class-yith-wc-email-commissions-unpaid.php:113
-#: includes/emails/class-yith-wc-email-new-order.php:185
+#: includes/emails/class-yith-wc-email-new-order.php:184
 #: includes/emails/class-yith-wc-email-new-vendor-registration.php:114
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:137
 #: includes/emails/class-yith-wc-email-vendor-commissions-bulk-action.php:153
@@ -1213,7 +1227,7 @@ msgstr "Inschakelen/uitschakelen"
 #: includes/emails/class-yith-wc-email-cancelled-order.php:176
 #: includes/emails/class-yith-wc-email-commissions-paid.php:117
 #: includes/emails/class-yith-wc-email-commissions-unpaid.php:115
-#: includes/emails/class-yith-wc-email-new-order.php:187
+#: includes/emails/class-yith-wc-email-new-order.php:186
 #: includes/emails/class-yith-wc-email-new-vendor-registration.php:116
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:139
 msgid "Enable this email notification"
@@ -1222,7 +1236,7 @@ msgstr "Schakel deze e-mail notificatie in"
 #: includes/emails/class-yith-wc-email-cancelled-order.php:180
 #: includes/emails/class-yith-wc-email-commissions-paid.php:128
 #: includes/emails/class-yith-wc-email-commissions-unpaid.php:126
-#: includes/emails/class-yith-wc-email-new-order.php:191
+#: includes/emails/class-yith-wc-email-new-order.php:190
 #: includes/emails/class-yith-wc-email-new-vendor-registration.php:127
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:150
 #: includes/emails/class-yith-wc-email-vendor-commissions-bulk-action.php:159
@@ -1232,7 +1246,7 @@ msgid "Subject"
 msgstr "Onderwerp"
 
 #: includes/emails/class-yith-wc-email-cancelled-order.php:182
-#: includes/emails/class-yith-wc-email-new-order.php:193
+#: includes/emails/class-yith-wc-email-new-order.php:192
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:152
 msgid ""
 "This controls the email subject line. Leave blank to use the default "
@@ -1244,7 +1258,7 @@ msgstr ""
 #: includes/emails/class-yith-wc-email-cancelled-order.php:187
 #: includes/emails/class-yith-wc-email-commissions-paid.php:135
 #: includes/emails/class-yith-wc-email-commissions-unpaid.php:133
-#: includes/emails/class-yith-wc-email-new-order.php:198
+#: includes/emails/class-yith-wc-email-new-order.php:197
 #: includes/emails/class-yith-wc-email-new-vendor-registration.php:134
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:157
 #: includes/emails/class-yith-wc-email-vendor-commissions-bulk-action.php:166
@@ -1253,7 +1267,7 @@ msgid "Email Heading"
 msgstr "E-mail hoofd"
 
 #: includes/emails/class-yith-wc-email-cancelled-order.php:189
-#: includes/emails/class-yith-wc-email-new-order.php:200
+#: includes/emails/class-yith-wc-email-new-order.php:199
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:159
 msgid ""
 "This controls the main heading contained within the email notification. "
@@ -1265,7 +1279,7 @@ msgstr ""
 #: includes/emails/class-yith-wc-email-cancelled-order.php:194
 #: includes/emails/class-yith-wc-email-commissions-paid.php:142
 #: includes/emails/class-yith-wc-email-commissions-unpaid.php:140
-#: includes/emails/class-yith-wc-email-new-order.php:205
+#: includes/emails/class-yith-wc-email-new-order.php:204
 #: includes/emails/class-yith-wc-email-new-vendor-registration.php:141
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:164
 #: includes/emails/class-yith-wc-email-vendor-commissions-bulk-action.php:173
@@ -1274,28 +1288,28 @@ msgid "Email type"
 msgstr "E-mail type"
 
 #: includes/emails/class-yith-wc-email-cancelled-order.php:196
-#: includes/emails/class-yith-wc-email-new-order.php:207
+#: includes/emails/class-yith-wc-email-new-order.php:206
 #: includes/emails/class-yith-wc-email-product-set-in-pending-review.php:166
 msgid "Choose email format."
 msgstr "Kies e-mail formaat."
 
 #: includes/emails/class-yith-wc-email-cancelled-order.php:202
-#: includes/emails/class-yith-wc-email-new-order.php:213
+#: includes/emails/class-yith-wc-email-new-order.php:212
 msgid "Order id"
 msgstr "Order id"
 
 #: includes/emails/class-yith-wc-email-cancelled-order.php:204
-#: includes/emails/class-yith-wc-email-new-order.php:215
+#: includes/emails/class-yith-wc-email-new-order.php:214
 msgid "Show parent order id instead of vendor suborder id"
 msgstr "Toon bovenliggend order id, in plaats van verkopers sub-order id"
 
 #: includes/emails/class-yith-wc-email-cancelled-order.php:208
-#: includes/emails/class-yith-wc-email-new-order.php:219
+#: includes/emails/class-yith-wc-email-new-order.php:218
 msgid "CC to Admin"
 msgstr "CC naar administrator"
 
 #: includes/emails/class-yith-wc-email-cancelled-order.php:210
-#: includes/emails/class-yith-wc-email-new-order.php:221
+#: includes/emails/class-yith-wc-email-new-order.php:220
 msgid "Send a copy of this email to website admin"
 msgstr "Stuur een kopie van deze e-mail naar de websitebeheerder"
 
@@ -1879,6 +1893,11 @@ msgstr ""
 "href=\"%s\" target=\"_blank\">YITH Plugins > Multi Vendor > Gateways ></a> "
 "<b>Stripe Connect</b> sectie."
 
+#: includes/gateways/class-yith-gateway-stripe-connect.php:533
+#, fuzzy
+msgid "Commission for order %d"
+msgstr "Commissie tarief (%)"
+
 #: includes/gateways/class-yith-gateway-stripe-connect.php:581
 msgid "Payment correctly issued to the gateway"
 msgstr "Betaling juist uitgegeven aan de gateway"
@@ -1916,34 +1935,34 @@ msgstr "Alle"
 msgid "Search for a product&hellip;"
 msgstr "Zoeken naar een product&hellip;"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:225
+#: includes/lib/class.yith-commissions-list-table-premium.php:228
 msgid "Filter"
 msgstr "Filter"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:226
+#: includes/lib/class.yith-commissions-list-table-premium.php:230
 #: includes/reports/class.yith-report-commissions-by-vendor.php:157
 #: includes/reports/class.yith-report-vendors-sales.php:156
 msgid "Reset"
 msgstr "Resetten"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:300
-#: includes/lib/class.yith-commissions-list-table.php:368
+#: includes/lib/class.yith-commissions-list-table-premium.php:304
+#: includes/lib/class.yith-commissions-list-table.php:369
 msgid "View"
 msgstr "Bekijken"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:318
+#: includes/lib/class.yith-commissions-list-table-premium.php:322
 msgid "Change status to"
 msgstr "Verander status naar"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:344
+#: includes/lib/class.yith-commissions-list-table-premium.php:348
 msgid "Via"
 msgstr "Via"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:364
+#: includes/lib/class.yith-commissions-list-table-premium.php:368
 msgid "Order status:"
 msgstr "Order status:"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:408
+#: includes/lib/class.yith-commissions-list-table-premium.php:412
 #: includes/lib/class.yith-commissions-list-table.php:69
 msgid "IBAN/BIC"
 msgstr "IBAN/BIC"
@@ -1969,29 +1988,29 @@ msgstr "Order verwijderd"
 msgid "Guest"
 msgstr "Gast"
 
-#: includes/lib/class.yith-commissions-list-table.php:331
+#: includes/lib/class.yith-commissions-list-table.php:332
 #: templates/admin/commission-view.php:210
 msgid "User deleted"
 msgstr "Gebruiker verwijderd"
 
-#: includes/lib/class.yith-commissions-list-table.php:374
-#: includes/lib/class.yith-commissions-list-table.php:392
+#: includes/lib/class.yith-commissions-list-table.php:375
+#: includes/lib/class.yith-commissions-list-table.php:393
 #: templates/admin/commission-view.php:191
 msgid "Y/m/d g:i:s A"
 msgstr "J/m/d g:i:s A"
 
-#: includes/lib/class.yith-commissions-list-table.php:381
-#: includes/lib/class.yith-commissions-list-table.php:399
+#: includes/lib/class.yith-commissions-list-table.php:382
+#: includes/lib/class.yith-commissions-list-table.php:400
 #: templates/admin/commission-view.php:192
 msgid "%s ago"
 msgstr "%s geleden"
 
-#: includes/lib/class.yith-commissions-list-table.php:384
-#: includes/lib/class.yith-commissions-list-table.php:401
+#: includes/lib/class.yith-commissions-list-table.php:385
+#: includes/lib/class.yith-commissions-list-table.php:402
 msgid "Y/m/d"
 msgstr "J/m/d"
 
-#: includes/lib/class.yith-commissions-list-table.php:459
+#: includes/lib/class.yith-commissions-list-table.php:460
 msgid "No commissions found."
 msgstr "Geen commissies gevonden."
 
@@ -2698,21 +2717,25 @@ msgstr "Aantal items verkocht"
 msgid "Sales amount"
 msgstr "Omzetbedrag"
 
-#: includes/shipping/class.yith-wcmv-shipping-admin.php:150
+#: includes/shipping/class.yith-wcmv-shipping-admin.php:151
 #: templates/admin/vendor-panel/vendor-admin-shipping-table.php:53
 #: templates/admin/vendor-panel/vendor-admin-shipping-table.php:79
 msgid "Add shipping method"
 msgstr "Voeg verzendmethode toe"
 
-#: includes/shipping/class.yith-wcmv-shipping-admin.php:150
+#: includes/shipping/class.yith-wcmv-shipping-admin.php:151
 msgid "Save changes to continue adding shipping methods to this zone"
 msgstr ""
 "Sla wijziginen op om door te gaan met toevoegen van verzendmethodes in deze "
 "zone"
 
-#: includes/shipping/class.yith-wcmv-shipping-admin.php:167
+#: includes/shipping/class.yith-wcmv-shipping-admin.php:168
 msgid "No shipping methods offered to this zone."
 msgstr "Geen verzendmethodes aangeboden in deze zone."
+
+#: includes/shipping/class.yith-wcmv-shipping-admin.php:291
+msgid "Base currency"
+msgstr "Basis valuta"
 
 #: includes/widgets/class.yith-vendor-quick-info.php:38
 msgid "Quick Info"
@@ -4524,19 +4547,19 @@ msgstr "Verzenden inschakelen:"
 msgid "Enable shipping cost"
 msgstr "Verzendkosten inschakelen"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:51
-msgid "Default Shipping Price:"
-msgstr "Standaard verzendkosten:"
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:52
+msgid "Default Shipping Price"
+msgstr "Standaard verzendkosten"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:53
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:55
 msgid "The default shipping price for each product in the cart."
 msgstr "De standaard verzendksoten voor elk product in de winkelwagen."
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:57
-msgid "Per Product Additional Price:"
-msgstr "Toegevoegde prijs per product:"
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:60
+msgid "Per Product Additional Price"
+msgstr "Toegevoegde prijs per product"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:59
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:63
 msgid ""
 "Additional price for each product if product quantity in cart is equal or "
 "greater than 2."
@@ -4544,55 +4567,55 @@ msgstr ""
 "Extra prijs voor elk product als de producthoeveelheid in het winkelwagentje "
 "gelijk is aan of groter is dan 2."
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:63
-msgid "Per Qty Product Additional Price:"
-msgstr "Per Qty product toegevoegde prijs:"
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:68
+msgid "Per Qty Product Additional Price"
+msgstr "Per Qty product toegevoegde prijs"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:65
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:71
 msgid "The additional price from the second product of the same type"
 msgstr "De extra prijs van het tweede product van hetzelfde type"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:69
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:75
 msgid "Processing Time"
 msgstr "Bewerkingstijd"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:75
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:81
 msgid "The time required before sending the product for delivery"
 msgstr "De tijd die nodig is voordat het product verzonden wordt"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:79
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:85
 msgid "Shipping Policy:"
 msgstr "Verzend beleid:"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:82
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:88
 msgid "You terms, conditions and instructions about shipping"
 msgstr "Uw algemene voorwaarden en instructies betreffende verzenden"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:86
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:92
 msgid "Refund Policy:"
 msgstr "Restitutiebeleid:"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:89
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:95
 msgid "You terms, conditions and instructions about refund"
 msgstr "Uw algemene voorwaarden en instructies betreffende restitutie"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:93
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:99
 msgid "Shipping From"
 msgstr "Verzenden van"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:95
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:101
 msgid "- Select a location -"
 msgstr "- Selecteer locatie -"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:100
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:106
 msgid "Location from where the product are shipped for delivery"
 msgstr "Locatie vanwaar de producten worden verstuurd"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:106
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:112
 msgid "Save Shipping Settings"
 msgstr "Verzend instellingen opslaan"
 
-#: templates/admin/vendor-panel/vendor-admin-shipping.php:107
+#: templates/admin/vendor-panel/vendor-admin-shipping.php:113
 msgid "Add shipping zone"
 msgstr "Voeg verzendzone toe"
 
@@ -4898,7 +4921,7 @@ msgstr "door"
 #. translators: %s means vendor
 #: templates/woocommerce/myaccount/my-vendor-dashboard.php:17
 msgid "My %s Dashboard"
-msgstr ""
+msgstr "Mijn %s dashboard"
 
 #: templates/woocommerce/myaccount/my-vendor-dashboard.php:23
 msgid ""
@@ -4912,11 +4935,11 @@ msgstr ""
 msgid "I read and accept the terms and conditions"
 msgstr "Ik heb de algemene voorwaarden gelezen en geaccepteerd"
 
-#: templates/woocommerce/myaccount/terms-of-service.php:78
+#: templates/woocommerce/myaccount/terms-of-service.php:77
 msgid "I read and accept the vendor privacy policy"
 msgstr "Ik heb de verkoper privacy policy gelezen en geaccepteerd"
 
-#: templates/woocommerce/myaccount/terms-of-service.php:89
+#: templates/woocommerce/myaccount/terms-of-service.php:88
 msgid "Save"
 msgstr "Opslaan"
 
@@ -5149,13 +5172,12 @@ msgctxt "Single order label"
 msgid "Amount to pay"
 msgstr "Te betalen bedrag"
 
-#: includes/class.yith-orders-premium.php:492
-#: includes/class.yith-orders-premium.php:501
+#: includes/class.yith-orders-premium.php:489
 msgctxt "Order note"
 msgid "Sync with vendor's suborders: "
 msgstr "Sync met suborders van verkoper: "
 
-#: includes/class.yith-orders.php:634 includes/class.yith-orders.php:1045
+#: includes/class.yith-orders.php:634 includes/class.yith-orders.php:1064
 msgctxt "Order note"
 msgid "Updated by admin: "
 msgstr "Bijgewerkt door beheerder:"
@@ -5165,47 +5187,47 @@ msgctxt "Order date parsed by strftime"
 msgid "%b %d, %Y @ %I:%M %p"
 msgstr "%b %d, %Y @ %I:%M %p"
 
-#: includes/class.yith-orders.php:1869
+#: includes/class.yith-orders.php:1888
 msgctxt "Admin: Order table column"
 msgid "Suborders"
 msgstr "Sub-orders"
 
-#: includes/class.yith-orders.php:1875
+#: includes/class.yith-orders.php:1894
 msgctxt "Admin: Order table column"
 msgid "Vendor"
 msgstr "Verkoper"
 
-#: includes/class.yith-orders.php:1883
+#: includes/class.yith-orders.php:1902
 msgctxt "Admin: Order table column"
 msgid "Parent Order"
 msgstr "Hoofdbestelling"
 
-#: includes/class.yith-orders.php:1949 includes/class.yith-orders.php:2040
+#: includes/class.yith-orders.php:1968 includes/class.yith-orders.php:2059
 msgctxt "Order table details"
 msgid "in"
 msgstr "in"
 
-#: includes/class.yith-orders.php:1991
+#: includes/class.yith-orders.php:2010
 msgctxt "Admin: Single order page. Suborder details box"
 msgid "Suborders"
 msgstr "Sub-orders"
 
-#: includes/class.yith-orders.php:1997
+#: includes/class.yith-orders.php:2016
 msgctxt "Admin: Single order page. Parent order details box"
 msgid "Parent order"
 msgstr "Bovenliggende order"
 
-#: includes/class.yith-orders.php:2008
+#: includes/class.yith-orders.php:2027
 msgctxt "Admin: Single order page. Parent order details box"
 msgid "Parent order id"
 msgstr "Bovenliggende order id"
 
-#: includes/class.yith-orders.php:2052
+#: includes/class.yith-orders.php:2071
 msgctxt "Admin: single order page. Link to parent order"
 msgid "Return to main order"
 msgstr "Ga terug naar hoofd order"
 
-#: includes/class.yith-orders.php:2593
+#: includes/class.yith-orders.php:2611
 #: includes/class.yith-vendors-admin-premium.php:492
 msgctxt "Admin menu name"
 msgid "Orders"
@@ -5422,56 +5444,56 @@ msgid "Filter products by category"
 msgstr "Producten filteren op categorie"
 
 #: includes/class.yith-vendors-admin-premium.php:535
-#: includes/class.yith-vendors-admin.php:543
+#: includes/class.yith-vendors-admin.php:546
 msgctxt "Menu item: Vendor Profile. %s means \"Vendor\""
 msgid "%s Profile"
 msgstr "%s profiel"
 
-#: includes/class.yith-vendors-admin-premium.php:2185
+#: includes/class.yith-vendors-admin-premium.php:2180
 msgctxt "Order details: Product sold by"
 msgid "Sold by"
 msgstr "Verkocht door"
 
-#: includes/class.yith-vendors-admin-premium.php:2254
+#: includes/class.yith-vendors-admin-premium.php:2249
 msgctxt "part of: vendor shops have no VAT/SSN set"
 msgid "vendor shops have no"
 msgstr "winkels van verkopers hebben geen"
 
-#: includes/class.yith-vendors-admin-premium.php:2256
+#: includes/class.yith-vendors-admin-premium.php:2251
 msgctxt "part of: vendor shops have no VAT/SSN set"
 msgid "set"
 msgstr "ingesteld"
 
-#: includes/class.yith-vendors-admin-premium.php:2260
+#: includes/class.yith-vendors-admin-premium.php:2255
 msgctxt "part of: Please, set VAT/SSN field for each vendor shop"
 msgid "Please, set"
 msgstr "Stel alstublieft"
 
-#: includes/class.yith-vendors-admin-premium.php:2262
+#: includes/class.yith-vendors-admin-premium.php:2257
 msgctxt "part of: Please, set VAT/SSN field for each vendor shop"
 msgid "field for each vendor shop"
 msgstr "veld in voor de webwinkel van iedere verkoper"
 
-#: includes/class.yith-vendors-admin-premium.php:2293
+#: includes/class.yith-vendors-admin-premium.php:2288
 msgctxt ""
 "part of: Please, set the VAT/SSN field to complete your profile in \"Vendor "
 "profile\""
 msgid "Please, set the"
 msgstr "Stel alstublieft het"
 
-#: includes/class.yith-vendors-admin-premium.php:2295
+#: includes/class.yith-vendors-admin-premium.php:2290
 msgctxt ""
 "part of: Please, set the VAT/SSN field to complete your profile in \"Vendor "
 "profile\""
 msgid "field to complete your profile in \"Vendor profile\""
 msgstr "veld in, voor het completeren van uw profiel in \"Verkopers profiel\""
 
-#: includes/class.yith-vendors-admin-premium.php:2363
+#: includes/class.yith-vendors-admin-premium.php:2358
 msgctxt "Taxonomy Description"
 msgid "Description"
 msgstr "Beschrijving"
 
-#: includes/class.yith-vendors-admin-premium.php:2691
+#: includes/class.yith-vendors-admin-premium.php:2687
 msgctxt ""
 "[Part of] The terms and conditions has been modified and your profile will "
 "be disabled in 30 days. To reactivate it, please accept our terms of service "
@@ -5479,7 +5501,7 @@ msgctxt ""
 msgid "terms of service"
 msgstr "servicevoorwaarden"
 
-#: includes/class.yith-vendors-admin-premium.php:2694
+#: includes/class.yith-vendors-admin-premium.php:2690
 msgctxt ""
 "[Part of] The privacy policy has been modified and your profile will be "
 "disabled in 30 days. To reactivate it, please accept our privacy policy "
@@ -5487,7 +5509,7 @@ msgctxt ""
 msgid "privacy policy"
 msgstr "Privacy beleid"
 
-#: includes/class.yith-vendors-admin-premium.php:2712
+#: includes/class.yith-vendors-admin-premium.php:2708
 msgctxt ""
 "The terms of service or privacy policy has been modified and your profile "
 "will be disabled in 30 days. To reactivate it, please accept our terms of "
@@ -5500,53 +5522,53 @@ msgstr ""
 "       Om dit te herstellen, accepteer onze servicevoorwaarden opnieuw %s "
 "vanaf deze pagina"
 
-#: includes/class.yith-vendors-frontend-premium.php:718
+#: includes/class.yith-vendors-frontend-premium.php:731
 msgctxt "[frontend]: part of sentence. e.g.: The VAT/SSN field is mandatory"
 msgid "The"
 msgstr "Het"
 
-#: includes/class.yith-vendors-frontend-premium.php:720
+#: includes/class.yith-vendors-frontend-premium.php:733
 msgctxt "[frontend]: part of sentence. e.g.: The VAT/SSN field is mandatory"
 msgid "field is mandatory"
 msgstr "veld is verplicht"
 
-#: includes/class.yith-vendors-frontend-premium.php:1065
+#: includes/class.yith-vendors-frontend-premium.php:1078
 msgctxt "Cart details: Product sold by"
 msgid "Sold by"
 msgstr "Verkocht door"
 
-#: includes/class.yith-vendors-frontend-premium.php:1187
+#: includes/class.yith-vendors-frontend-premium.php:1200
 #: plugin-options/frontpage-options.php:113
 msgctxt "[Single Product Page]: Tab name for shipping information"
 msgid "Shipping Info"
 msgstr "Verzend informatie"
 
-#: includes/class.yith-vendors-frontend-premium.php:1242
+#: includes/class.yith-vendors-frontend-premium.php:1255
 msgctxt "[single Product Page]: Shipping tab subtitle"
 msgid "Processing Time"
 msgstr "Bewerkingstijd"
 
-#: includes/class.yith-vendors-frontend-premium.php:1246
+#: includes/class.yith-vendors-frontend-premium.php:1259
 msgctxt "[single Product Page]: Shipping tab subtitle"
 msgid "Shipping policy"
 msgstr "Verzend beleid"
 
-#: includes/class.yith-vendors-frontend-premium.php:1247
+#: includes/class.yith-vendors-frontend-premium.php:1260
 msgctxt "[single Product Page]: Shipping tab subtitle"
 msgid "Refund policy"
 msgstr "Restitutiebeleid"
 
-#: includes/class.yith-vendors-frontend-premium.php:1243
+#: includes/class.yith-vendors-frontend-premium.php:1256
 msgctxt "[part of]: Ready to ship in x business day"
 msgid "Ready to ship in"
 msgstr "Klaar om te verzenden in"
 
-#: includes/class.yith-vendors-frontend-premium.php:1244
+#: includes/class.yith-vendors-frontend-premium.php:1257
 msgctxt "[part of]: Ready to ship in x business day From Italy"
 msgid "from"
 msgstr "van"
 
-#: includes/class.yith-vendors-frontend-premium.php:1245
+#: includes/class.yith-vendors-frontend-premium.php:1258
 msgctxt "[part of]: Shipping from Italy"
 msgid "Shipping from"
 msgstr "Verzenden van"
@@ -5724,7 +5746,7 @@ msgctxt "[Note]: Payed By Gateway"
 msgid "Paid via"
 msgstr "Betaald via"
 
-#: includes/lib/class.yith-commissions-list-table-premium.php:374
+#: includes/lib/class.yith-commissions-list-table-premium.php:378
 msgctxt "Order status"
 msgid "Trashed"
 msgstr "In de prullenbak"
@@ -5846,8 +5868,8 @@ msgstr "Weergeef in de buurt van de header"
 
 #: plugin-options/frontpage-options.php:516
 msgctxt "admin option"
-msgid "Shwo in Socials Area"
-msgstr "Weergeef in de buurt van sociale media "
+msgid "Show in Socials Area"
+msgstr "Sociale media in omgeving weergeven"
 
 #: plugin-options/gateways-options.php:16
 msgctxt "[Admin] Option disabled"

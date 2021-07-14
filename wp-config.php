@@ -88,7 +88,7 @@ $table_prefix = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 
-define( 'WP_MEMORY_LIMIT', '256M' );
+define( 'WP_MEMORY_LIMIT', '1024M' );
 
 define( 'WP_DEBUG', false );
 #define( 'WP_DEBUG', true);
@@ -107,7 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //define('FORCE_SSL_ADMIN', true);
 
-if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
         $_SERVER['HTTPS']='on';
 
 //define('FORCE_SSL_LOGIN', true);

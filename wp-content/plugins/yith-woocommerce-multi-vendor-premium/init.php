@@ -5,11 +5,13 @@
 *Description: <code><strong>YITH WooCommerce Multi Vendor</strong></code> turns your website into a real marketplace, where it's your partners who will add new products independently and you earn a percentage commission on every sale. Take advantage of this great opportunity to increase your earnings in a simple way and for good. <a href="https://yithemes.com/" target="_blank">Get more plugins for your e-commerce shop on <strong>YITH</strong></a>
 *Author: YITH
 *Text Domain: yith-woocommerce-product-vendors
-*Version: 3.7.7
+*Version: 3.7.11
 *Author URI: https://yithemes.com/
 *
-* WC requires at least: 4.2
-* WC tested up to: 5.0
+* Requires at least: 5.4
+* Tested up to: 5.7
+* WC requires at least: 4.5
+* WC tested up to: 5.4
 */
 
 /*
@@ -80,8 +82,8 @@ if( ! function_exists( 'yith_wcmv_load_textdomain' ) ){
 
 add_action( 'init', 'yith_wcmv_load_textdomain' );
 
-! defined( 'YITH_WPV_VERSION' )         && define( 'YITH_WPV_VERSION', '3.7.7' );
-! defined( 'YITH_WPV_DB_VERSION' )      && define( 'YITH_WPV_DB_VERSION', '1.1.14' );
+! defined( 'YITH_WPV_VERSION' )         && define( 'YITH_WPV_VERSION', '3.7.11' );
+! defined( 'YITH_WPV_DB_VERSION' )      && define( 'YITH_WPV_DB_VERSION', '1.1.15' );
 ! defined( 'YITH_WPV_SLUG' )            && define( 'YITH_WPV_SLUG', 'yith-woocommerce-product-vendors' );
 ! defined( 'YITH_WPV_SECRET_KEY' )      && define( 'YITH_WPV_SECRET_KEY', '6NBH2Snt7DFU4J02vtgl' );
 ! defined( 'YITH_WPV_FILE' )            && define( 'YITH_WPV_FILE', __FILE__ );

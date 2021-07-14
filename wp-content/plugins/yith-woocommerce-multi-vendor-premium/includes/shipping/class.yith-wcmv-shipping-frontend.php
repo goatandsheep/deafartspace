@@ -480,11 +480,12 @@ if ( ! class_exists( 'YITH_Vendor_Shipping_Frontend' ) ) {
 			 * Aelia Currency Switcher Support
 			 */
 			if ( class_exists( 'WC_Aelia_CurrencySwitcher' ) ) {
-				$aelia_obj       = $GLOBALS[ WC_Aelia_CurrencySwitcher::$plugin_slug ];
-				$base_currency   = is_callable( array( $aelia_obj, 'base_currency' ) ) ? $aelia_obj->base_currency() : get_woocommerce_currency();
-				$current_country = is_callable( array( $aelia_obj, 'get_selected_currency' ) ) ? $aelia_obj->get_selected_currency() : get_woocommerce_currency();
-				$total_cost      = apply_filters( 'wc_aelia_cs_convert', $total_cost, $base_currency, $current_country );
+				$base_currency    = get_option( 'woocommerce_currency' );
+				$current_currency = get_woocommerce_currency();
+				$total_cost       = apply_filters( 'wc_aelia_cs_convert', $total_cost, $base_currency, $current_currency );
 			}
+
+			$total_cost = apply_filters( 'yith_wcmcs_convert_price', $total_cost );
 
 			if ( $enable_current_rate ) {
 				// Create rate object
@@ -547,6 +548,10 @@ if ( ! class_exists( 'YITH_Vendor_Shipping_Frontend' ) ) {
 					if ( true === $check ) {
 
 						if ( isset( $shipping_method[ $product_shipping_class_id ] ) ) {
+							if( empty( $shipping_class_costs[ $product_shipping_class_id ]['qty'] ) ){
+								$shipping_class_costs[ $product_shipping_class_id ]['qty'] = 0;
+							}
+
 							$shipping_class_costs[ $product_shipping_class_id ]['cost']       = $shipping_method[ $product_shipping_class_id ];
 							$shipping_class_costs[ $product_shipping_class_id ]['qty']        += $product['quantity'];
 							$shipping_class_costs[ $product_shipping_class_id ]['line_total'] = $product['line_total'];
@@ -639,10 +644,9 @@ if ( ! class_exists( 'YITH_Vendor_Shipping_Frontend' ) ) {
 				 * Aelia Currency Switcher Support
 				 */
 				elseif ( class_exists( 'WC_Aelia_CurrencySwitcher' ) ) {
-					$aelia_obj                      = $GLOBALS[ WC_Aelia_CurrencySwitcher::$plugin_slug ];
-					$base_currency                  = is_callable( array( $aelia_obj, 'base_currency' ) ) ? $aelia_obj->base_currency() : get_woocommerce_currency();
-					$current_country                = is_callable( array( $aelia_obj, 'get_selected_currency' ) ) ? $aelia_obj->get_selected_currency() : get_woocommerce_currency();
-					$shipping_method['min_amount']  = apply_filters( 'wc_aelia_cs_convert', $shipping_method['min_amount'], $base_currency, $current_country );
+					$base_currency    = get_option( 'woocommerce_currency' );
+					$current_currency = get_woocommerce_currency();
+					$shipping_method['min_amount']  = apply_filters( 'wc_aelia_cs_convert', $shipping_method['min_amount'], $base_currency, $current_currency );
 				}
 
 				$min_amount         = wc_format_decimal( $shipping_method['min_amount'], wc_get_price_decimals() );

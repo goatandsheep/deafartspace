@@ -1,0 +1,798 @@
+# Translation of Plugins - All-in-One WP Migration - Stable (latest release) in Persian
+# This file is distributed under the same license as the Plugins - All-in-One WP Migration - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-08-26 11:07:26+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: fa\n"
+"Project-Id-Version: Plugins - All-in-One WP Migration - Stable (latest release)\n"
+
+#: lib/view/backups/index.php:51 lib/view/backups/backups-list.php:46
+msgid "Refreshing backup list..."
+msgstr "تازه کردن فهرست پشتیبان..."
+
+#: lib/view/import/import-permissions.php:34
+msgid "<h3>Site could not be imported</h3><p>Please make sure that storage directory <strong>%s</strong> has read and write permissions.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a></p>"
+msgstr "<h3>امکان وارد کردن سایت وجود ندارد</h3><p>لطفا اطمینان حاصل کنید پوشه ذخیره سازی <strong>%s</strong>دسترسی خواندن و نوشتن را دارد.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">جزییات فنی</a></p>"
+
+#: lib/view/export/export-permissions.php:34
+msgid "<h3>Site could not be exported</h3><p>Please make sure that storage directory <strong>%s</strong> has read and write permissions.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a></p>"
+msgstr "<h3>امکان تهیه خروجی از سایت وجود ندارد</h3><p>لطفا اطمینان حاصل کنید پوشه ذخیره سازی <strong>%s</strong>دسترسی خواندن و نوشتن را دارد.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">جزییات فنی</a></p>"
+
+#: lib/view/backups/backups-permissions.php:34
+msgid "<h3>Site could not be restored</h3><p>Please make sure that storage directory <strong>%s</strong> has read and write permissions.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a></p>"
+msgstr "<h3>امکان بازیابی سایت وجود ندارد</h3><p>لطفا اطمینان حاصل کنید پوشه ذخیره سازی <strong>%s</strong> مجوز خواندن و نوشتن را داشته باشد.</p><p><a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">جزییات فنی</a></p>"
+
+#: lib/view/main/missing-role-capability-notice.php:34
+msgid "All-in-One WP Migration: Your current profile role does not have Export/Import capabilities enabled. <a href=\"https://help.servmask.com/knowledgebase/how-to-add-import-and-export-capabilities-to-wordpress-users/\" target=\"_blank\">Technical details</a>"
+msgstr "همه نوع مهاجرت وردپرسی در یکجا: نقش کاربری کنونی شما قابلیت های وارد کردن/خروجی گرفتن را ندارد. <a href=\"https://help.servmask.com/knowledgebase/how-to-add-import-and-export-capabilities-to-wordpress-users/\" target=\"_blank\">جزییات فنی</a>"
+
+#: lib/view/backups/backups-list.php:100
+msgid "Delete backup"
+msgstr "حذف پشتیبان"
+
+#: lib/view/backups/backups-list.php:96
+msgid "Restore backup"
+msgstr "بازیابی پشتیبان"
+
+#: lib/view/backups/backups-list.php:92
+msgid "Download backup"
+msgstr "بارگیری پشتیبان"
+
+#: lib/view/import/button-file.php:31
+msgid "To choose a file please go inside the link and click on the browse button."
+msgstr "برای انتخاب یک پرونده لطفا به لینک بروید و بر روی دکمه مرور کلیک کنید."
+
+#: lib/controller/class-ai1wm-main-controller.php:878
+#: lib/controller/class-ai1wm-main-controller.php:1060
+msgid "Finish"
+msgstr "پایان"
+
+#: lib/controller/class-ai1wm-main-controller.php:1073
+msgid "\"Restore\" functionality is available in a <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">paid extension</a>.<br />You could also download the backup and then use \"Import from file\"."
+msgstr "قابلیت \"بازیابی\" در یک <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">نسخه پولی</a> قابل دسترس است. <br /> شما همچنین می توانید پشتیبان را دانلود کنید و سپس از \"وارد کردن از پوشه\" استفاده کنید."
+
+#: lib/view/backups/backups-list.php:64
+msgid "Click to set a label for this backup"
+msgstr "جهت اختصاص برچسب برای این پشتیبان کلیک کنید"
+
+#: lib/model/export/class-ai1wm-export-download.php:64
+msgid "<a href=\"%s\" class=\"ai1wm-button-green ai1wm-emphasize ai1wm-button-download\" title=\"%s\" download=\"%s\"><span>Download %s</span><em>Size: %s</em></a>"
+msgstr "<a href=\"%s\" class=\"ai1wm-button-green ai1wm-emphasize ai1wm-button-download\" title=\"%s\" download=\"%s\"><span>دانلود %s</span><em>Size: %s</em></a>"
+
+#: lib/controller/class-ai1wm-export-controller.php:83
+msgid "Unable to export: %s"
+msgstr "ناتوان در خروجی گرفتن: %s"
+
+#: lib/controller/class-ai1wm-import-controller.php:74
+#: lib/controller/class-ai1wm-import-controller.php:82
+msgid "Unable to import. Error code: %s. %s"
+msgstr "امکان وارد کردن وجود ندارد. کد خطا: %s. %s"
+
+#: lib/controller/class-ai1wm-import-controller.php:91
+msgid "Unable to import: %s"
+msgstr "ناتوان در وارد کردن: %s"
+
+#: lib/model/import/class-ai1wm-import-confirm.php:48
+msgid "The import process will overwrite your website including the database, media, plugins, and themes. Are you sure to proceed?"
+msgstr "در فرآیند وارد کردن تارنمای شما و اجزایی از قبیل پایگاه‌داده، رسانه‌ها، افزونه‌ها، و قالب‌ها بازنویسی خواهد شد. از ادامه دادن مطمئن هستید؟"
+
+#: lib/model/import/class-ai1wm-import-validate.php:115
+msgid "Please make sure that your file was exported using <strong>All-in-One WP Migration</strong> plugin. <a href=\"https://help.servmask.com/knowledgebase/invalid-backup-file/\" target=\"_blank\">Technical details</a>"
+msgstr "لطفاً اطمینان حاصل نمایید که پرونده شما با استفاده از افزونه <strong>All-in-One WP Migration</strong> خروجی گرفته شده است. <a href=\"https://help.servmask.com/knowledgebase/invalid-backup-file/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: lib/model/import/class-ai1wm-import-validate.php:92
+msgid "The archive file is corrupted. Follow <a href=\"https://help.servmask.com/knowledgebase/corrupted-archive/\" target=\"_blank\">this article</a> to resolve the problem."
+msgstr "پرونده بایگانی خراب شده. برای حل مشکل <a href=\"https://help.servmask.com/knowledgebase/corrupted-archive/\" target=\"_blank\">این نوشته</a> را دنبال کنید. "
+
+#: lib/model/import/class-ai1wm-import-validate.php:37
+msgid "Your PHP is 32-bit. In order to import your file, please change your PHP version to 64-bit and try again. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
+msgstr "نسخه PHP شما 32 بیتی می‌باشد. جهت وارد کردن پرونده، لطفاً نسخه PHP خود را به 64 بیتی تغییر دهید و مجدد تلاش نمایید. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: lib/model/import/class-ai1wm-import-confirm.php:71
+msgid "<i class=\"ai1wm-import-info\">Your backup is from a PHP 5 but the site that you are importing to is PHP 7. This could cause the import to fail. <a href=\"https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/\" target=\"_blank\">Technical details</a></i>"
+msgstr "<i class=\"ai1wm-import-info\">پشتیبان شما از سایتی با نسخه PHP 5 تهیه شده است اما سایتی که در حال وارد کردن به آن هستید PHP7  می باشد. این مساله ممکن است موجب شود وارد کردن دچار شکست گردد. <a href=\"https://help.servmask.com/knowledgebase/migrate-wordpress-from-php-5-to-php-7/\" target=\"_blank\">جزئیات فنی</a></i>"
+
+#: lib/model/import/class-ai1wm-import-confirm.php:54
+msgid "The import process will overwrite your website including the database, media, plugins, and themes. Please ensure that you have a backup of your data before proceeding to the next step."
+msgstr "فرآیند وارد کردن تارنمای شما و اجزایی از قبیل پایگاه‌داده‌ها، رسانه‌ها، افزونه‌ها و قالب‌ها را بازنویسی خواهد کرد. لطفاً پیش از رفتن به مرحله بعد از این که از داده‌های خود پشتیبان تهیه کرده‌اید اطمینان حاصل نمائید. "
+
+#: lib/model/class-ai1wm-compatibility.php:55
+msgid "<strong>%s</strong> is not the latest version. You must <a href=\"%s\">update the plugin</a> before you can use it. <br />"
+msgstr "<strong>%s</strong> آخرین نسخه نمی‌باشد. شما باید  <a href=\"%s\">افزونه را به روز نمایید</a> پیش از اینکه از آن استفاده کنید. <br />"
+
+#: lib/controller/class-ai1wm-main-controller.php:910
+msgid "The file that you are trying to import is over the maximum upload file size limit of <strong>%s</strong>.<br />You can remove this restriction by purchasing our <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">Unlimited Extension</a>."
+msgstr "فایلی که قصد وارد نمودن آن را دارید متجاوز است از محدوده مجاز بارگذاری  <strong>%s</strong>.<br />شما می‌توانید محدودیت را با خرید افزونه ما برطرف نمایید <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">افزونه بی‌نهایت</a>."
+
+#: lib/model/import/class-ai1wm-import-upload.php:55
+#: lib/controller/class-ai1wm-main-controller.php:903
+msgid "The file type that you have tried to upload is not compatible with this plugin. Please ensure that your file is a <strong>.wpress</strong> file that was created with the All-in-One WP migration plugin. <a href=\"https://help.servmask.com/knowledgebase/invalid-backup-file/\" target=\"_blank\">Technical details</a>"
+msgstr "نوع فایلی که قصد بارگذاری آن را دارید با این افزونه هماهنگ نیست.   لطفاً مطمئن شوید که فایل شما یک <strong>.wpress</strong> است. فایلی که توسط افزونه \"همه نوع مهاجرت وردپرس در یک جا\" ساخته شده باشد. <a href=\"https://help.servmask.com/knowledgebase/invalid-backup-file/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: lib/view/import/pro.php:36
+msgid "or"
+msgstr "یا"
+
+#: lib/model/import/class-ai1wm-import-upload.php:79
+msgid "The file is too large for this server."
+msgstr "اندازه فایل برای این سرور بسیار بزرگ است."
+
+#: lib/controller/class-ai1wm-main-controller.php:898
+msgid "<a href=\"https://import.wp-migration.com\" target=\"_blank\">Get unlimited</a>"
+msgstr "<a href=\"https://import.wp-migration.com\" target=\"_blank\">نسخه بدون محدودیت را بگیرید</a>"
+
+#: lib/controller/class-ai1wm-main-controller.php:894
+msgid "<a href=\"https://help.servmask.com/2018/10/27/how-to-increase-maximum-upload-file-size-in-wordpress/\" target=\"_blank\">How-to: Increase maximum upload file size</a> or "
+msgstr "<a href=\"https://help.servmask.com/2018/10/27/how-to-increase-maximum-upload-file-size-in-wordpress/\" target=\"_blank\">چگونه: بیشینه حجم بارگذاری را افزایش دهیم</a> یا "
+
+#: lib/view/import/pro.php:35
+msgid "How-to: Increase maximum upload file size"
+msgstr "چگونگی: افزایش حداکثر اندازه فایل برای بارگزاری"
+
+#: lib/view/import/pro.php:32
+msgid "Maximum upload file size: <strong>%s</strong>."
+msgstr "بیشینه اندازه فایل برای بارگزاری: <strong>%s</strong>."
+
+#: lib/controller/class-ai1wm-main-controller.php:889
+msgid "Your file exceeds the maximum upload size for this site: <strong>%s</strong><br />%s%s"
+msgstr "فایل‌های شما از بیشینه حجم بارگذاری این سایت تجاوز می‌کنند: <strong>%s</strong><br />%s%s"
+
+#: lib/view/import/import-buttons.php:39
+msgid "Drag & Drop a backup to import it"
+msgstr "کشیدن و رها کردن یک فایل پشتیان برای وارد نمودن آن"
+
+#: lib/model/export/class-ai1wm-export-database.php:79
+#: lib/model/export/class-ai1wm-export-database.php:175
+msgid "Exporting database...<br />%d%% complete<br />%s records saved"
+msgstr "خروجی گرفتن از پایگاه داده... <br />%d%% انجام شد<br />%s اسناد ذخیره شدند"
+
+#: lib/controller/class-ai1wm-main-controller.php:255
+msgid "All-in-One WP Migration Command"
+msgstr "دستور افزونه تمام انتقال‌های وردپرس در یکجا "
+
+#: lib/controller/class-ai1wm-main-controller.php:1072
+msgid "Restoring a backup is available via Unlimited extension. <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">Get it here</a>"
+msgstr "بازیابی پشتیبان از طریق افزونه بی‌محدودیت امکان‌پذیر است. <a href=\"https://servmask.com/products/unlimited-extension\" target=\"_blank\">از اینجا تهیه کنید</a>"
+
+#: lib/controller/class-ai1wm-main-controller.php:747
+#: lib/controller/class-ai1wm-main-controller.php:1044
+msgid "Preparing to export..."
+msgstr "اماده‌سازی برای خروجی گرفتن..."
+
+#: lib/controller/class-ai1wm-main-controller.php:753
+#: lib/controller/class-ai1wm-main-controller.php:877
+#: lib/controller/class-ai1wm-main-controller.php:1050
+#: lib/controller/class-ai1wm-main-controller.php:1061
+msgid "Close"
+msgstr "بستن"
+
+#: lib/controller/class-ai1wm-main-controller.php:754
+#: lib/controller/class-ai1wm-main-controller.php:1051
+msgid "Stop export"
+msgstr "توقف خروجی گرفتن"
+
+#: lib/view/backups/backups-list.php:82
+msgid "%s ago"
+msgstr "%s قبل"
+
+#: lib/controller/class-ai1wm-main-controller.php:882
+#: lib/controller/class-ai1wm-main-controller.php:1065
+msgid "Continue"
+msgstr "ادامه"
+
+#: lib/controller/class-ai1wm-main-controller.php:666
+#: lib/controller/class-ai1wm-main-controller.php:758
+#: lib/controller/class-ai1wm-main-controller.php:887
+#: lib/controller/class-ai1wm-main-controller.php:1070
+msgid "Thanks for submitting your request!"
+msgstr "از ثبت درخواست شما سپاسگزاریم!"
+
+#: lib/controller/class-ai1wm-main-controller.php:664
+#: lib/controller/class-ai1wm-main-controller.php:756
+#: lib/controller/class-ai1wm-main-controller.php:885
+#: lib/controller/class-ai1wm-main-controller.php:1068
+msgid "How may we help you?"
+msgstr "چگونه می‌توانیم کمکتان کنیم؟"
+
+#: lib/controller/class-ai1wm-main-controller.php:752
+#: lib/controller/class-ai1wm-main-controller.php:1049
+msgid "Please wait, stopping the export..."
+msgstr "لطفا صبر کنید، متوقف کردن تهیه خروجی... "
+
+#: lib/controller/class-ai1wm-main-controller.php:746
+#: lib/controller/class-ai1wm-main-controller.php:1043
+msgid "You are about to stop exporting your website, are you sure?"
+msgstr "شما در حال متوقف کردن خروجی گرفتن از سایت هستید، مطمئنید؟"
+
+#: lib/controller/class-ai1wm-main-controller.php:879
+#: lib/controller/class-ai1wm-main-controller.php:1062
+msgid "Stop import"
+msgstr "توقف وارد کردن"
+
+#: lib/controller/class-ai1wm-main-controller.php:663
+#: lib/controller/class-ai1wm-main-controller.php:755
+#: lib/controller/class-ai1wm-main-controller.php:884
+#: lib/controller/class-ai1wm-main-controller.php:1067
+msgid "Leave plugin developers any feedback here"
+msgstr "برای توسعه دهندگان افزونه بازخورد خود را درج نمائید"
+
+#: lib/controller/class-ai1wm-main-controller.php:665
+#: lib/controller/class-ai1wm-main-controller.php:757
+#: lib/controller/class-ai1wm-main-controller.php:886
+#: lib/controller/class-ai1wm-main-controller.php:1069
+msgid "Thanks for submitting your feedback!"
+msgstr "از ثبت بازخورد شما سپاسگزاریم. "
+
+#: lib/controller/class-ai1wm-main-controller.php:875
+#: lib/controller/class-ai1wm-main-controller.php:1058
+msgid "Unable to stop the import. Refresh the page and try again"
+msgstr "امکان توقف وارد کردن پشتییبان وجود ندارد. برگه را تازه و دوباره سعی کنید"
+
+#: lib/controller/class-ai1wm-main-controller.php:750
+#: lib/controller/class-ai1wm-main-controller.php:1047
+msgid "Unable to run the export. Refresh the page and try again"
+msgstr "امکان اجرای خروجی وجود ندارد. برگه را تازه و دوباره سعی کنید"
+
+#: lib/controller/class-ai1wm-main-controller.php:749
+#: lib/controller/class-ai1wm-main-controller.php:1046
+msgid "Unable to start the export. Refresh the page and try again"
+msgstr "امکان آغاز خروجی گرفتن وجود ندارد.  برگه را تازه و دوباره سعی کنید"
+
+#: lib/controller/class-ai1wm-main-controller.php:1071
+msgid "Are you sure you want to delete this file?"
+msgstr "آیا مطمئن هستید که می‌خواهید این فایل را پاک کنید؟"
+
+#: lib/controller/class-ai1wm-main-controller.php:880
+#: lib/controller/class-ai1wm-main-controller.php:1063
+msgid "Proceed"
+msgstr "پیش رفتن"
+
+#: lib/controller/class-ai1wm-main-controller.php:876
+#: lib/controller/class-ai1wm-main-controller.php:1059
+msgid "Please wait, stopping the import..."
+msgstr "لطفاَ صبر کنید، متوقف نمودن وارد کردن پشتیبان..."
+
+#: lib/controller/class-ai1wm-main-controller.php:1127
+msgid "Your purchase ID is invalid, please <a href=\"mailto:support@servmask.com\">contact us</a>"
+msgstr "شناسه خرید شما نامعتبر است، لطفاً <a href=\"mailto:support@servmask.com\">با ما تماس بگیرید</a>"
+
+#: lib/controller/class-ai1wm-main-controller.php:883
+#: lib/controller/class-ai1wm-main-controller.php:1066
+msgid "Please do not close this browser window or your import will fail"
+msgstr "لطفاً این صفحه مرورگر را نبندید! در صورت بستن فرآیند وارد کردن شما با شکست مواجه خواهد شد"
+
+#: lib/controller/class-ai1wm-main-controller.php:874
+#: lib/controller/class-ai1wm-main-controller.php:1057
+msgid "Unable to prepare blogs on import. Refresh the page and try again"
+msgstr "امکان آماده سازی بلاگ‌ها برای وارد کردن وجود ندارد. صفحه را نو کرده و دوباره سعی کنید"
+
+#: lib/controller/class-ai1wm-main-controller.php:873
+#: lib/controller/class-ai1wm-main-controller.php:1056
+msgid "Unable to confirm the import. Refresh the page and try again"
+msgstr "امکان تایید فرآیند وارد کردن وجود ندارد. صفحه را نو کرده و دوباره سعی کنید"
+
+#: lib/controller/class-ai1wm-main-controller.php:872
+#: lib/controller/class-ai1wm-main-controller.php:1055
+msgid "Unable to start the import. Refresh the page and try again"
+msgstr "امکان آغاز فرآیند وارد کردن وجود ندارد. صفحه را نو کرده و دوباره سعی کنید"
+
+#: lib/controller/class-ai1wm-main-controller.php:869
+#: lib/controller/class-ai1wm-main-controller.php:1052
+msgid "You are about to stop importing your website, are you sure?"
+msgstr "آیا مطمئن هستید که می‌خواهید فرآیند وارد کردن تارنما را متوقف کنید؟"
+
+#: lib/controller/class-ai1wm-main-controller.php:751
+#: lib/controller/class-ai1wm-main-controller.php:1048
+msgid "Unable to stop the export. Refresh the page and try again"
+msgstr "امکان متوقف نمودن خروجی گرفتن وجود ندارد. صفحه را نو کرده و دوباره سعی کنید"
+
+#: functions.php:1628
+msgid "Unable to authenticate the secret key. <a href=\"https://help.servmask.com/knowledgebase/invalid-secret-key/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان تصدیق کلید مخفی وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/invalid-secret-key/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:1513
+msgid "Unable to get current pointer position of %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان دریافت موقعیت صحیح نشانگر %s وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:1496
+msgid "Unable to seek to offset %d on %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان کاوش برای جبران کردن %d بر %s وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:1479
+msgid "Unable to read file: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان خواندن فایل %s وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:1460
+msgid "Out of disk space. Unable to write to: %s. <a href=\"https://help.servmask.com/knowledgebase/out-of-disk-space/\" target=\"_blank\">Technical details</a>"
+msgstr "فضای حافظه پر شده است. امکان نوشتن برای %s وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/out-of-disk-space/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:1456
+msgid "Unable to write to: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان نوشتن در %s وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:1437
+msgid "Unable to open %s with mode %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان باز کردن %s به روش %s وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:63 functions.php:82
+msgid "Invalid archive path. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">Technical details</a>"
+msgstr "مسیر بایگانی نامعتبر. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:58 functions.php:77
+msgid "Unable to locate archive path. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان تشخیص مسیر بایگانی وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/invalid-archive-path/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: functions.php:38
+msgid "Unable to locate storage path. <a href=\"https://help.servmask.com/knowledgebase/invalid-storage-path/\" target=\"_blank\">Technical details</a>"
+msgstr "امکان پیدا کردن محل ذخیره سازی وجود ندارد. <a href=\"https://help.servmask.com/knowledgebase/invalid-storage-path/\" target=\"_blank\">جزئیات فنی</a>"
+
+#: lib/model/export/class-ai1wm-export-config.php:36
+msgid "Preparing configuration file..."
+msgstr "اماده سازی فایل پیکره‌بندی..."
+
+#: lib/model/export/class-ai1wm-export-config-file.php:73
+msgid "Done archiving configuration file."
+msgstr "بایگانی کردن فایل تنظیمات انجام شد."
+
+#: lib/model/export/class-ai1wm-export-config.php:167
+msgid "Done preparing configuration file."
+msgstr "آماده‌سازی فایل پیکربندی انجام شد."
+
+#: lib/model/export/class-ai1wm-export-config-file.php:61
+#: lib/model/export/class-ai1wm-export-config-file.php:96
+msgid "Archiving configuration file...<br />%d%% complete"
+msgstr "بایگانی کردن فایل پیکربندی... <br />%d%% انجام شده"
+
+#: lib/view/common/report-problem.php:46 lib/view/common/leave-feedback.php:59
+msgid "I agree that by filling in the contact form with my data, I authorize All-in-One WP Migration to use my <strong>email</strong> to reply to my requests for information. <a href=\"https://www.iubenda.com/privacy-policy/946881\" target=\"_blank\">Privacy policy</a>"
+msgstr "من با پر کردن این فرم تماس با اطلاعات خویش، موافقت خود را جهت استفاده افزونه همه نوع انتقال وردپرس در یکجا از <strong>ایمیل</strong> خود، جهت پاسخ دادن به درخواست‌های من برای اطلاعات بیشتر اعلام می‌نمایم.   <a href=\"https://www.iubenda.com/privacy-policy/946881\" target=\"_blank\">سیاست محرمانگی</a>"
+
+#: lib/view/backups/backups-list.php:88
+msgid "2GB+"
+msgstr "+2 گیگابایت"
+
+#: lib/model/export/class-ai1wm-export-database-file.php:78
+msgid "Done archiving database."
+msgstr "بایگانی کردن پایگاه داده انجام شد."
+
+#: lib/model/import/class-ai1wm-import-validate.php:119
+msgid "Done unpacking archive."
+msgstr "بازکردن بایگانی انجام شد."
+
+#: lib/model/import/class-ai1wm-import-validate.php:82
+#: lib/model/import/class-ai1wm-import-validate.php:139
+msgid "Unpacking archive...<br />%d%% complete"
+msgstr "بازگشایی بایگانی...<br />%d%% انجام شد"
+
+#: lib/model/export/class-ai1wm-export-database-file.php:66
+#: lib/model/export/class-ai1wm-export-database-file.php:101
+msgid "Archiving database...<br />%d%% complete"
+msgstr "بایگانی کردن پایگاه‌داده... <br />%d%% انجام شده"
+
+#: lib/model/import/class-ai1wm-import-database.php:78
+#: lib/model/import/class-ai1wm-import-database.php:997
+msgid "Restoring database...<br />%d%% complete"
+msgstr "بازیابی پایگاه‌داده<br />%d%% انجام شده"
+
+#: lib/model/export/class-ai1wm-export-compatibility.php:35
+#: lib/model/import/class-ai1wm-import-compatibility.php:35
+msgid "Checking extensions compatibility..."
+msgstr "بررسی قابلیت انطباق پسوندها..."
+
+#: lib/controller/class-ai1wm-main-controller.php:1229
+msgid "Monthly"
+msgstr "ماهیانه"
+
+#: lib/controller/class-ai1wm-main-controller.php:1225
+msgid "Weekly"
+msgstr "هفتگی"
+
+#: lib/model/import/class-ai1wm-import-database.php:977
+msgid "Done restoring database."
+msgstr "بازگرداندن پایگاه داده انجام شد."
+
+#: lib/controller/class-ai1wm-main-controller.php:870
+#: lib/controller/class-ai1wm-main-controller.php:1053
+msgid "Preparing to import..."
+msgstr "آماده سازی برای وارد کردن..."
+
+#: lib/model/import/class-ai1wm-import-mu-plugins.php:61
+msgid "Done activating mu-plugins."
+msgstr "فعال‌سازی mu-plugins انجام شد."
+
+#: lib/model/import/class-ai1wm-import-mu-plugins.php:35
+msgid "Activating mu-plugins..."
+msgstr "فعال‌سازی mu-plugins..."
+
+#: lib/view/export/advanced-settings.php:69
+msgid "Do <strong>not</strong> export must-use plugins (files)"
+msgstr "افزونه‌های(یا فایل‌های) لازم الاجرا (mu-plugins) را صادر <strong>نکنید</strong>"
+
+#: lib/model/import/class-ai1wm-import-upload.php:85
+msgid "Failed to write file to disk."
+msgstr "موفق به ذخیره فایل بر روی دیسک نشد."
+
+#: lib/model/import/class-ai1wm-import-upload.php:82
+msgid "Missing a temporary folder."
+msgstr "یک پوشه موقت از دست رفته است."
+
+#: lib/model/import/class-ai1wm-import-upload.php:88
+msgid "A PHP extension stopped the file upload."
+msgstr "یک PHP extension مانع از آپلود فایل شد."
+
+#: lib/model/import/class-ai1wm-import-upload.php:70
+msgid "Unable to upload the file because %s"
+msgstr "امکان بارگذاری فایل وجود ندارد، زیرا %s"
+
+#: lib/view/export/advanced-settings.php:93
+msgid "Do <strong>not</strong> replace email domain (sql)"
+msgstr "دامنه ایمیل (sql) را جایگزین <strong>نکنید</strong>"
+
+#: lib/model/import/class-ai1wm-import-upload.php:91
+msgid "Unrecognized error %s during upload."
+msgstr "خطای نامشخص %s در بارگذاری."
+
+#: lib/model/import/class-ai1wm-import-upload.php:38
+msgid "Missing error key in upload file."
+msgstr "کلید خطای از دست رفته در بارگذاری فایل."
+
+#: lib/model/import/class-ai1wm-import-upload.php:34
+msgid "Missing upload file."
+msgstr "فایل بارگذاری گم شده."
+
+#: lib/model/import/class-ai1wm-import-upload.php:42
+msgid "Missing tmp_name in upload file."
+msgstr "tmp_name در فایل بارگذاری شده از دست رفته است."
+
+#: lib/model/class-ai1wm-report.php:69 lib/model/class-ai1wm-feedback.php:78
+msgid "Something went wrong: %s"
+msgstr "اشتباهی رخ داد: %s"
+
+#: lib/model/import/class-ai1wm-import-blogs.php:35
+msgid "Preparing blogs..."
+msgstr "اماده سازی بلاگ‌ها..."
+
+#: lib/model/class-ai1wm-feedback.php:51
+msgid "Feedback type is not valid."
+msgstr "نوع بازخورد معتبر نیست."
+
+#: lib/model/class-ai1wm-report.php:49 lib/model/class-ai1wm-feedback.php:56
+msgid "Please enter comments in the text area."
+msgstr "لطفاَ نظرات را در محدوده متن وارد نمایید."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:150
+msgid "Done preparing blogs."
+msgstr "بلاگ‌ها آماده شد."
+
+#: lib/model/class-ai1wm-report.php:54
+msgid "Please accept report term conditions."
+msgstr "لطفاَ شرایط وضع گزارش را بپذیرید."
+
+#: lib/model/class-ai1wm-feedback.php:61
+msgid "Please accept feedback term conditions."
+msgstr "لطفا شرایط وضع بازخورد را بپذیرید."
+
+#: lib/model/class-ai1wm-report.php:44 lib/model/class-ai1wm-feedback.php:46
+msgid "Your email is not valid."
+msgstr "ایمیل شما معتبر نیست."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:137
+msgid "At least <strong>one WordPress</strong> site should be presented in the archive."
+msgstr "حداقل <strong>یک سایت</strong> وردپرسی باید در بایگانی موجود باشد."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:140
+msgid "Unable to import <strong>WordPress Network</strong> into WordPress <strong>Single</strong> site."
+msgstr "امکان وارد نمودن  <strong>شبکه وردپرس</strong> به وردپرس <strong>تک</strong> سایتی وجود ندارد."
+
+#: lib/model/import/class-ai1wm-import-blogs.php:134
+msgid "The archive should contain <strong>Single WordPress</strong> site! Please revisit your export settings."
+msgstr "بایگانی می‌بایست شامل سایت <strong>وردپرس منفردی</strong> باشد! لطفاً تنظیمات خروجی خود را بازنگری نمایید. "
+
+#: lib/view/updater/modal.php:48
+msgid "Discard"
+msgstr "انصراف"
+
+#: lib/view/updater/modal.php:55
+msgid "There is an update available. To update, you must enter your"
+msgstr "به روز رسانی  موجود است. برای به روز رسانی، باید وارد کنید"
+
+#: lib/view/updater/modal.php:42
+msgid "here"
+msgstr "اینجا"
+
+#: lib/view/updater/modal.php:37 lib/view/updater/modal.php:56
+msgid "Purchase ID"
+msgstr "شناسه خرید"
+
+#: lib/view/updater/modal.php:46
+msgid "Save"
+msgstr "ذخیره"
+
+#: lib/view/updater/modal.php:41
+msgid "Don't have a Purchase ID? You can find your Purchase ID"
+msgstr "شناسه خرید ندارید؟ می‌توانید شناسه خود را بیابید"
+
+#: lib/view/updater/modal.php:34
+msgid "To update your plugin/extension to the latest version, please fill your Purchase ID below."
+msgstr "برای به‌روز رسانی افزونه/گسترش به آخرین نسخه، لطفاً شناسه خرید خود را در ذیل وارد نمائید."
+
+#: lib/view/main/get-support.php:31
+msgid "Get Support"
+msgstr "دریافت پشتیبانی"
+
+#: lib/view/updater/check.php:31
+#: lib/controller/class-ai1wm-main-controller.php:1126
+msgid "Check for updates"
+msgstr "بررسی بروزرسانی"
+
+#: lib/view/updater/modal.php:33
+msgid "Enter your Purchase ID"
+msgstr "شناسه خرید خود را وارد کنید"
+
+#: lib/view/common/report-problem.php:51 lib/view/common/leave-feedback.php:64
+msgid "Cancel"
+msgstr "لغو"
+
+#: lib/view/backups/backups-list.php:102
+msgid "Delete"
+msgstr "حذف"
+
+#: lib/view/backups/backups-list.php:94
+msgid "Download"
+msgstr "دانلود"
+
+#: lib/view/backups/backups-list.php:36
+msgid "Name"
+msgstr "نام"
+
+#: lib/controller/class-ai1wm-main-controller.php:601
+#: lib/controller/class-ai1wm-main-controller.php:602
+msgid "Export"
+msgstr "برون ریزی"
+
+#: lib/controller/class-ai1wm-main-controller.php:611
+#: lib/controller/class-ai1wm-main-controller.php:612
+msgid "Import"
+msgstr "درون ریزی"
+
+#: lib/view/backups/index.php:37
+#: lib/controller/class-ai1wm-main-controller.php:621
+#: lib/controller/class-ai1wm-main-controller.php:622
+msgid "Backups"
+msgstr "پشتیبان گیری"
+
+#: lib/model/export/class-ai1wm-export-database.php:149
+msgid "Done exporting database."
+msgstr "برون ریزی بانک اطلاعاتی انجام شد."
+
+#: lib/model/export/class-ai1wm-export-download.php:35
+msgid "Renaming exported file..."
+msgstr "تغییر نام فایل برون ریزی شده..."
+
+#: lib/view/backups/backups-list.php:37
+msgid "Date"
+msgstr "تاریخ"
+
+#: lib/view/backups/backups-list.php:38
+msgid "Size"
+msgstr "اندازه"
+
+#: lib/view/backups/backups-list.php:98
+msgid "Restore"
+msgstr "بازگردانی"
+
+#: lib/view/common/report-problem.php:38 lib/view/common/leave-feedback.php:51
+msgid "Enter your email address.."
+msgstr "آدرس ایمیل خود را وارد کنید."
+
+#: lib/view/common/report-problem.php:54 lib/view/common/leave-feedback.php:67
+msgid "Send"
+msgstr "ارسال"
+
+#: lib/view/common/report-problem.php:34
+msgid "Report issue"
+msgstr "گزارش مشکل"
+
+#: lib/view/common/share-buttons.php:58
+msgid "Tweet"
+msgstr "توئیت"
+
+#: lib/view/export/advanced-settings.php:35
+msgid "Advanced options"
+msgstr "گزینه های پیشرفته"
+
+#: lib/view/export/button-file.php:31 lib/view/import/button-file.php:32
+msgid "File"
+msgstr "فایل"
+
+#: lib/view/export/export-buttons.php:35
+msgid "Export To"
+msgstr "برون ریزی به"
+
+#: lib/view/export/find-replace.php:35 lib/view/export/find-replace.php:44
+msgid "Find"
+msgstr "یافتن"
+
+#: lib/view/export/find-replace.php:37 lib/view/export/find-replace.php:45
+msgid "Replace with"
+msgstr "جایگزین با"
+
+#: lib/view/export/find-replace.php:52
+msgid "Add"
+msgstr "افزودن"
+
+#: lib/view/export/index.php:37
+msgid "Export Site"
+msgstr "برون ریزی سایت"
+
+#: lib/view/import/pro.php:39
+msgid "Get unlimited"
+msgstr "رفع محدودیت ها"
+
+#: lib/view/import/import-buttons.php:43
+msgid "Import From"
+msgstr "درون ریزی از"
+
+#: lib/view/backups/index.php:83 lib/view/export/index.php:75
+#: lib/view/import/index.php:71
+msgid "Leave Feedback"
+msgstr "ارائه بازخورد"
+
+#: lib/view/backups/index.php:59
+msgid "Create backup"
+msgstr "ایجاد فایل پشتیبان"
+
+#: lib/view/export/find-replace.php:36
+msgid "<text>"
+msgstr "<text>"
+
+#: lib/view/common/report-problem.php:41
+msgid "Please describe your problem here.."
+msgstr "مشکل خود را اینجا توضیح دهید..."
+
+#: lib/view/common/leave-feedback.php:44
+msgid "I need help with this plugin"
+msgstr "من برای این افزونه نیاز به کمک دارم "
+
+#: lib/view/common/leave-feedback.php:37
+msgid "I have ideas to improve this plugin"
+msgstr "من ایده‌هایی برای ارتقا این افزونه دارم"
+
+#: lib/view/export/find-replace.php:39
+msgid "in the database"
+msgstr "در پایگاه داده"
+
+#: lib/controller/class-ai1wm-main-controller.php:748
+#: lib/controller/class-ai1wm-main-controller.php:1045
+#: lib/controller/class-ai1wm-export-controller.php:85
+#: lib/controller/class-ai1wm-export-controller.php:86
+msgid "Unable to export"
+msgstr "ناتوان در خروجی گرفتن"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://servmask.com/"
+msgstr "https://servmask.com/"
+
+#: lib/model/export/class-ai1wm-export-archive.php:35
+msgid "Creating an empty archive..."
+msgstr "ساختن یک بایگانی خالی..."
+
+#: lib/model/export/class-ai1wm-export-archive.php:42
+msgid "Done creating an empty archive."
+msgstr "یک بایگانی خالی ساخته شد."
+
+#: lib/view/export/help-section.php:37
+msgid "Quick hints"
+msgstr "راهنمایی‌های فوری"
+
+#: lib/model/import/class-ai1wm-import-enumerate.php:35
+msgid "Retrieving a list of all WordPress files..."
+msgstr "درحال بازیابی فهرست تمام فایل‌های وردپرس..."
+
+#: lib/view/export/advanced-settings.php:48
+msgid "Do <strong>not</strong> export post revisions"
+msgstr "بازبینی پست‌ها را صادر <strong>نکنید</strong>"
+
+#: lib/model/import/class-ai1wm-import-enumerate.php:50
+msgid "Done retrieving a list of all WordPress files."
+msgstr "بازیابی فهرست تمام فایل‌های وردپرس انجام شد."
+
+#: lib/view/export/help-section.php:32
+msgid "This screen allows you to export database, media files, themes and plugins as one zipped file."
+msgstr "این صفحه به شما اجازه میدهد که پایگاه داده، فایل‌های رسانه‌ای، قالب‌ها و افزونه ها را در یک فایل فشرده زیپ دریافت کنید."
+
+#: lib/view/export/advanced-settings.php:76
+msgid "Do <strong>not</strong> export plugins (files)"
+msgstr "افزونه‌ها را صادر <strong>نکنید</strong>"
+
+#: lib/view/export/advanced-settings.php:87
+msgid "Do <strong>not</strong> export database (sql)"
+msgstr "پایگاه داده (sql) را صادر <strong>نکنید</strong>"
+
+#: lib/view/export/advanced-settings.php:54
+msgid "Do <strong>not</strong> export media library (files)"
+msgstr "کتابخانه رسانه‌ای را صادر <strong>نکنید</strong>"
+
+#: lib/view/common/leave-feedback.php:54
+msgid "Leave plugin developers any feedback here.."
+msgstr "هر نوع بازخوردی را برای توسعه دهندگان اینجا می‌توانید درج کنید..."
+
+#: lib/view/export/help-section.php:51
+msgid "Once the file is successfully downloaded on your computer, you can import it to any of your WordPress sites."
+msgstr "هنگامی که فایل به طور موفقیت آمیز در رایانه شما دانلود شد، می‌توانید آن را وارد هرکدام از سایت‌های وردپرس خود کنید. "
+
+#: lib/view/export/advanced-settings.php:42
+msgid "Do <strong>not</strong> export spam comments"
+msgstr "نظرات هرز را صادر <strong>نکنید</strong>"
+
+#: lib/controller/class-ai1wm-main-controller.php:871
+#: lib/controller/class-ai1wm-main-controller.php:1054
+#: lib/controller/class-ai1wm-import-controller.php:93
+#: lib/controller/class-ai1wm-import-controller.php:94
+msgid "Unable to import"
+msgstr "ناتوان در وارد کردن"
+
+#: lib/view/export/advanced-settings.php:60
+msgid "Do <strong>not</strong> export themes (files)"
+msgstr "قالب‌ها را صادر <strong>نکنید</strong>"
+
+#: lib/view/export/advanced-settings.php:36
+msgid "(click to expand)"
+msgstr "(برای باز شدن کلیک کنید)"
+
+#: lib/view/backups/index.php:54
+msgid "There are no backups available at this time, why not create a new one?"
+msgstr "نسخه پشتیبانی در حال حاضر وجود ندارد، دوست دارید یک نسخه جدید تهیه نمایید؟"
+
+#: lib/model/import/class-ai1wm-import-content.php:83
+#: lib/model/import/class-ai1wm-import-content.php:203
+msgid "Restoring %d files...<br />%d%% complete"
+msgstr "بازیابی %d از فایل‌ها <br />%d%% انجام شد"
+
+#: lib/view/export/find-replace.php:38
+msgid "<another-text>"
+msgstr "<متنی-دیگر>"
+
+#: lib/view/export/help-section.php:47
+msgid "Press \"Export\" button and the site archive file will pop up in your browser."
+msgstr "دکمه خروجی گرفتن را فشار دهید و فایل بایگانی سایت بر روی مرورگر شما نمایش داده خواهد شد. "
+
+#: lib/view/export/help-section.php:43
+msgid "In the advanced settings section you can configure more precisely the way of exporting."
+msgstr "شما می‌توانید با دقت بیشتری روش خروجی گرفتن را در قسمت تنظیمات پیشرفته تغییر دهید. "
+
+#: lib/view/export/help-section.php:33
+msgid "You can then use the import functionality provided by this plugin to import the zipped file onto any other WordPress sites that you have administrator access to."
+msgstr "سپس شما می‌توانید با استفاده از قابلیت وارد کردن این افزونه برای وارد کردن فایل فشرده شده به هر سایت وردپرس دیگری که به آن دسترسی مدیریتی دارید اقدام نمایید. "
+
+#: lib/model/import/class-ai1wm-import-done.php:360
+#: lib/model/import/class-ai1wm-import-done.php:362
+#: lib/model/import/class-ai1wm-import-done.php:364
+msgid "Your site has been imported successfully!"
+msgstr "سایت شما با موفقیت وارد شد!"
+
+#. Description of the plugin
+msgid "Migration tool for all your blog data. Import or Export your blog content with a single click."
+msgstr "ابزار انتقال برای تمام داده‌های بلاگ شما، با یک کلیک محتوی بلاگ خود را وارد یا خارج کنید."
+
+#. Plugin Name of the plugin
+msgid "All-in-One WP Migration"
+msgstr "انتقال وردپرس به صورت یکجا"
+
+#. Author of the plugin
+msgid "ServMask"
+msgstr "ServMask"
+
+#: lib/view/import/index.php:37
+msgid "Import Site"
+msgstr "درون‌ریزی سایت"
+
+#: lib/view/main/multisite-notice.php:42
+msgid "Get multisite"
+msgstr "دریافت مولتی‌سایت"

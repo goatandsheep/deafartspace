@@ -334,8 +334,10 @@
             email_field.val(email_val);
 
             if ('' === email_val || !is_mail(email_val)) {
-                var to_replace = licence_message.email;
-                message_email.text(licence_message.error.replace('%field%', to_replace));
+                var to_replace = licence_message.email,
+                  error_message = '';
+                error_message = licence_message.error.replace('%field%', to_replace) + '.</br>' + licence_message.be_sure +'.';
+                message_email.html( error_message );
                 message_email.addClass('visible');
                 email.addClass('require error');
             }
@@ -418,6 +420,4 @@
           input_licence_key.trigger( 'focusout' );
         }
       } );
-
-
 } )( jQuery );

@@ -29,7 +29,6 @@ if ( ! class_exists( 'YITH_Reports' ) ) {
 
             /* === Filter WC Orders Reports === */
             add_filter( 'woocommerce_reports_get_order_report_data_args', array( $this, 'filter_report_get_order_args' ) );
-            add_filter( 'woocommerce_json_search_found_products', array( $this, 'json_filter_report_products' ) );
             add_filter( 'woocommerce_report_sales_by_category_get_products_in_category', array( $this, 'filter_report_products_in_category' ), 10, 2 );
 
             /* === Filter WC Stock Reports === */
@@ -412,30 +411,6 @@ if ( ! class_exists( 'YITH_Reports' ) ) {
             }
 
             return $product_ids;
-        }
-
-        /**
-         * Set product reports by vendor
-         *
-         * @param $products The products array to filter
-         *
-         * @since    1.0
-         * @author   Andrea Grillo <andrea.grillo@yithemes.com>
-         * @return array The new query args
-         */
-        public function json_filter_report_products( $products ){
-            $vendor = yith_get_vendor( 'current', 'user' );
-            $filtered_product = array();
-
-            if ( $vendor->is_valid() && $vendor->has_limited_access() ) {
-                foreach( $vendor->get_products() as $product_id ){
-                    if( isset( $products[ $product_id ] ) ){
-                        $filtered_product[ $product_id ] = $products[ $product_id ];
-                    }
-                }
-                $products = $filtered_product;
-            }
-            return $products;
         }
 
         /**

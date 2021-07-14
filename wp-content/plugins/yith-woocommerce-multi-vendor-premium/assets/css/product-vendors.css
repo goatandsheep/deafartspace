@@ -216,6 +216,10 @@
     margin: 0;
 }
 
+.theme-storefront .store-socials .socials-container a.vendor-social-uri{
+  text-decoration: none;
+}
+
 .shortcodes.vendors-list li.vendor-item {
     margin-bottom: 15px;
 }

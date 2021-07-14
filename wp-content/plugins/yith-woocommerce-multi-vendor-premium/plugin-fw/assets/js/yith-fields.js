@@ -17,13 +17,15 @@
 				sliderWrapper : $( '.yith-plugin-fw-image-gallery ul.slides-wrapper' )
 			},
 			$sidebars     = $( '.yith-plugin-fw-sidebar-layout' ),
-			$slider       = $( '.yith-plugin-fw .yith-plugin-fw-slider-container .ui-slider-horizontal' ),
+			$slider       = $( '.yith-plugin-fw-slider-container .ui-slider-horizontal' ),
 			$icons        = $( '.yit-icons-manager-wrapper' ),
 			$checkgroup   = $( ".yith-plugin-ui td.forminp-checkbox" );
 
 		/* Datepicker */
 		$datepicker.each( function () {
-			var args = $( this ).data();
+			var currentDatePicker = $( this ),
+				args              = currentDatePicker.data(),
+				icon              = currentDatePicker.next( '.yith-icon-calendar' );
 
 			// set animation to false to prevent style 'glitches' when removing class on closing
 			args.showAnim   = false;
@@ -34,7 +36,12 @@
 				instance.dpDiv.removeClass( 'yith-plugin-fw-datepicker-div' );
 			};
 
-			$( this ).datepicker( args );
+			currentDatePicker.datepicker( args );
+			if ( icon ) {
+				icon.on( 'click', function () {
+					currentDatePicker.datepicker( 'show' );
+				} )
+			}
 		} );
 
 		/* Colorpicker */
@@ -203,8 +210,8 @@
 					} );
 
 					$image_gallery_ids.val( attachment_ids );
-          $image_gallery_ids.trigger( 'change' );
-        } );
+					$image_gallery_ids.trigger( 'change' );
+				} );
 
 				image_gallery_frame.open();
 
@@ -316,7 +323,7 @@
 
 
 								  slide: function ( event, ui ) {
-									  $( this ).find( 'input' ).val( ui.value );
+									  $( this ).find( 'input' ).val( ui.value ).trigger( 'change' );
 									  $( this ).find( '.ui-slider-handle' ).text( ui.value );
 									  $( this ).siblings( '.feedback' ).find( 'strong' ).text( ui.value + labels );
 								  }
@@ -388,7 +395,7 @@
 				select  = wrapper.find( 'select' ).first();
 
 			if ( select.length ) {
-				select.val( key ).trigger( 'yith_select_images_value_changed' );
+				select.val( key ).trigger( 'yith_select_images_value_changed' ).trigger( 'change' );
 				items.removeClass( 'yith-plugin-fw-select-images__item--selected' );
 				item.addClass( 'yith-plugin-fw-select-images__item--selected' );
 			}
@@ -426,16 +433,24 @@
 
 	/* on-off */
 	$( document ).on( 'click', '.yith-plugin-fw-onoff-container span', function () {
-		var input   = $( this ).prev( 'input' ),
-			checked = input.prop( 'checked' );
+		var input    = $( this ).prev( 'input' ),
+			disabled = input.prop( 'disabled' );
 
-		if ( checked ) {
-			input.prop( 'checked', false ).attr( 'value', 'no' ).removeClass( 'onoffchecked' );
-		} else {
-			input.prop( 'checked', true ).attr( 'value', 'yes' ).addClass( 'onoffchecked' );
+		if ( disabled ) {
+			return;
 		}
 
-		input.change();
+		input.trigger( 'click' );
+	} );
+
+	// Useful for triggering deps when clicking on field label.
+	$( document ).on( 'click', '.yith-plugin-fw-onoff-container input', function ( e ) {
+		if ( $( this ).is( ':checked' ) ) {
+			$( this ).attr( 'value', 'yes' ).addClass( 'onoffchecked' );
+		} else {
+			$( this ).attr( 'value', 'no' ).removeClass( 'onoffchecked' );
+		}
+		$( this ).trigger( 'change' );
 	} );
 
 
@@ -605,12 +620,12 @@
 			counter        = 0,
 			hidden_obj     = $( '<input type="hidden">' );
 
-		toggle_element.find( '.yith-toggle-row' ).each( function() {
+		toggle_element.find( '.yith-toggle-row' ).each( function () {
 			var key = parseInt( $( this ).data( 'item_key' ) );
-			if( counter <= key ) {
+			if ( counter <= key ) {
 				counter = key + 1;
 			}
-		});
+		} );
 
 		hidden_obj.val( counter );
 
@@ -779,7 +794,7 @@
 
 			units.removeClass( fw_dimensions.selectors.units.selectedClass );
 			unit.addClass( fw_dimensions.selectors.units.selectedClass );
-			valueField.val( value );
+			valueField.val( value ).trigger( 'change' );
 		},
 		linkedChange: function () {
 			var button      = $( this ).closest( fw_dimensions.selectors.linked.button ),
@@ -808,5 +823,128 @@
 		}
 	};
 	fw_dimensions.init();
+
+	/**
+	 * Copy to clip-board
+	 */
+	var clearSelection = function () {
+		var selection = 'getSelection' in window ? window.getSelection() : false;
+		if ( selection ) {
+			if ( 'empty' in selection ) {  // Chrome.
+				selection.empty();
+			} else if ( 'removeAllRanges' in selection ) {  // Firefox.
+				selection.removeAllRanges();
+			}
+		} else if ( 'selection' in document ) {  // IE.
+			document.selection.empty();
+		}
+	}
+
+	$( document ).on( 'click', '.yith-plugin-fw-copy-to-clipboard__copy', function () {
+		var wrap    = $( this ).closest( '.yith-plugin-fw-copy-to-clipboard' ),
+			input   = wrap.find( '.yith-plugin-fw-copy-to-clipboard__field' ),
+			tip     = wrap.find( '.yith-plugin-fw-copy-to-clipboard__tip' ),
+			timeout = wrap.data( 'tip-timeout' );
+
+		timeout && clearTimeout( timeout );
+
+		input.select();
+		document.execCommand( 'copy' );
+		clearSelection();
+
+		tip.fadeIn( 400 );
+
+		// Use timeout instead of delay to prevent issues with multiple clicks.
+		timeout = setTimeout( function () {
+			tip.fadeOut( 400 );
+		}, 1500 );
+		wrap.data( 'tip-timeout', timeout );
+	} );
+
+	/**
+	 * Action buttons
+	 */
+	var actionButtons = {
+		init           : function () {
+			$( document ).on( 'click', '.yith-plugin-fw__action-button--has-menu', actionButtons.open );
+			$( document ).on( 'click', '.yith-plugin-fw__action-button__menu', actionButtons.stopPropagation );
+			$( document ).on( 'click', actionButtons.closeAll );
+		},
+		closeAll       : function () {
+			$( '.yith-plugin-fw__action-button--opened' ).removeClass( 'yith-plugin-fw__action-button--opened' );
+		},
+		open           : function ( e ) {
+			var button    = $( this ).closest( '.yith-plugin-fw__action-button' ),
+				wasOpened = button.hasClass( 'yith-plugin-fw__action-button--opened' );
+			e.preventDefault();
+			e.stopPropagation();
+
+			actionButtons.closeAll();
+
+			if ( !wasOpened ) {
+				button.addClass( 'yith-plugin-fw__action-button--opened' );
+			}
+		},
+		stopPropagation: function ( e ) {
+			e.stopPropagation();
+		}
+	};
+	actionButtons.init();
+
+	/**
+	 * Require confirmation link
+	 */
+	$( document ).on( 'click', 'a.yith-plugin-fw__require-confirmation-link', function ( e ) {
+		var link = $( this ).closest( 'a.yith-plugin-fw__require-confirmation-link' ),
+			url  = link.attr( 'href' );
+
+		if ( url && '#' !== url ) {
+			e.preventDefault();
+			e.stopPropagation();
+			if ( 'yith' in window && 'ui' in yith ) {
+				var dataForOptions = [
+						'title',
+						'message',
+						'confirmButtonType',
+						'cancelButton',
+						'confirmButton'
+					],
+					options        = {}, i;
+
+				for ( i in dataForOptions ) {
+					var key   = dataForOptions[ i ],
+						value = link.data( key );
+
+					if ( typeof value !== 'undefined' ) {
+						options[ key ] = value;
+					}
+				}
+
+				options.onConfirm = function () {
+					window.location.href = url;
+				};
+
+				options.closeAfterConfirm = false;
+
+				yith.ui.confirm( options );
+
+			}
+		}
+
+	} );
+
+	/**
+	 * Tips
+	 */
+	$( document ).on( 'yith-plugin-fw-tips-init', function () {
+		$( '.yith-plugin-fw__tips' ).tipTip(
+			{
+				attribute: 'data-tip',
+				fadeIn   : 50,
+				fadeOut  : 50,
+				delay    : 200
+			}
+		);
+	} ).trigger( 'yith-plugin-fw-tips-init' );
 
 } )( jQuery );

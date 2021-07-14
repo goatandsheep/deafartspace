@@ -12,9 +12,9 @@
  * @var YITH_Vendor $vendor
  */
 
-$allowed_countries = WC()->countries->get_allowed_countries();
-$continents        = WC()->countries->get_continents();
-$shipping_methods  = WC()->shipping->load_shipping_methods();
+$allowed_countries = apply_filters( 'yith_wcmv_get_allowed_countries', WC()->countries->get_allowed_countries() );
+$continents        = apply_filters( 'yith_wcmv_get_continents', WC()->countries->get_continents() );
+$shipping_methods  = apply_filters( 'yith_wcmv_load_shipping_methods', WC()->shipping->load_shipping_methods() );
 ?>
 
 <h3><?php esc_html_e( 'Shipping Areas', 'yith-woocommerce-product-vendors' ); ?></h3>
@@ -35,7 +35,7 @@ $shipping_methods  = WC()->shipping->load_shipping_methods();
     <?php
 
     if( is_array( $vendor->zone_data ) ) {
-        
+
         foreach( $vendor->zone_data as $key => $zone ) {
             YITH_Vendor_Shipping()->admin->print_line_option( $key , $zone , $continents , $allowed_countries , $shipping_methods );
         }

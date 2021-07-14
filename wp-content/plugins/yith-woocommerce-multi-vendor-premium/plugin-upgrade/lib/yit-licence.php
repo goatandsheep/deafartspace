@@ -75,6 +75,14 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 		public $version = '1.0.0';
 
 		/**
+		 * The product type
+		 *
+		 * @since 1.0
+		 * @var string
+		 */
+		protected $product_type = 'product';
+
+		/**
 		 * Constructor
 		 *
 		 * @since    1.0
@@ -186,9 +194,9 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 			}
 
 			wp_register_script( 'yit-license-utils', $script_path . 'assets/js/yit-license-utils' . $suffix . '.js', array( 'jquery' ), $this->version, true );
-			wp_register_script( 'yit-licence', $script_path . 'assets/js/yit-licence' . $suffix . '.js', array( 'jquery', 'wc-enhanced-select' ), $this->version, true );
-			wp_register_style( 'yit-theme-licence', $style_path . 'assets/css/yit-licence.css', array(), $this->version );
-			wp_register_style( 'yith-license-banner', $style_path . 'assets/css/yith-license-banner.css', array(), $this->version );
+			wp_register_script( 'yit-licence', $script_path . 'assets/js/yit-licence' . $suffix . '.js', array( 'jquery', 'wc-enhanced-select', 'wc-backbone-modal'  ), $this->version, true );
+			wp_register_style( 'yit-theme-licence', $style_path . 'assets/css/yit-licence.css', array( 'yit-plugin-style' ), $this->version );
+			wp_register_style( 'yith-license-banner', $style_path . 'assets/css/yith-license-banner.css', array( 'yit-plugin-style' ), $this->version );
 
 			/* Register select2 stylesheet */
 			if ( ! wp_style_is( 'select2', 'registered' ) ) {
@@ -214,6 +222,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 				array(
 					'error'                      => sprintf( esc_html_x( 'Please, insert a valid %s', '%s = field name', 'yith-plugin-upgrade-fw' ), '%field%' ),
 					'errors'                     => sprintf( esc_html__( 'Please, insert a valid %s and a valid %s', 'yith-plugin-upgrade-fw' ), '%field_1%', '%field_2%' ),
+					'be_sure'					 => esc_html_x( 'Be sure you entered the e-mail used for your order in YITH', 'error message for activation panel', 'yith-plugin-upgrade-fw' ),
 					'server'                     => esc_html__( 'Unable to contact remote server: this occurs when there are issues with connecting to our own servers. Trying again after a few minutes should solve the issue. If the problem persists please submit a support ticket and we will be happy to help you.', 'yith-plugin-upgrade-fw' ),
 					'email'                      => esc_html__( 'email address', 'yith-plugin-upgrade-fw' ),
 					'license_key'                => esc_html__( 'license key', 'yith-plugin-upgrade-fw' ),
@@ -223,9 +232,34 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 				)
 			);
 
+			$ajax_url = admin_url( 'admin-ajax.php', 'relative' );
+
+			//translators: You can find the License e-mail and the License key in your License & Download page.
+			$modal_description_text = esc_html__( 'You can find the License e-mail and the License key in your', 'yith-plugin-upgrade-fw' );
+			//translators: My account section name. Use the same translation of the yithemes.com webiste.
+			$license_and_download     = esc_html_x( 'Licenses and Downloads page >', 'yithemes.com webiste section', 'yith-plugin-upgrade-fw' );
+			$license_and_download_url = 'https://yithemes.com/my-account/recent-downloads/';
+			$modal_description        = sprintf( '<div class="yith-license-modal-description">%s <a href="%s" target="_blank" rel="nofollow noopener">%s</a></div>', $modal_description_text, $license_and_download_url, $license_and_download );
+			$modal_image_src          = $script_path . 'assets/images/license-and-downloads.png';
+			//translators: Button label, use a short text please.
+			$cta_text      = esc_html_x( 'Go to your Licenses page', 'Button text', 'yith-plugin-upgrade-fw' );
+			$cta           = sprintf( '<a href="%s" target="_blank" rel="nofollow noopener" class="yith-license-modal-cta-link yith-plugin-fw__button--primary yith-plugin-fw__button--xxl">%s</a>', $license_and_download_url, $cta_text );
+			$modal_image   = sprintf( '<div class="yith-license-modal-image"><img src="%s" /></div>', $modal_image_src );
+			$modal_content = $modal_description . $modal_image;
+
+			$yith_license_utils_i18n = array(
+				'ajax_url' => $ajax_url,
+				'modal'    => array(
+					//translators: Modal title. Shown on activation license page to help the customer to find the license information
+					'title'   => esc_html__( 'Where to find the e-mail and license ?', 'yith-plugin-upgrade-fw' ),
+					'content' => $modal_content,
+					'footer'  => $cta
+				),
+			);
+
 			wp_localize_script( 'yit-licence', 'script_info', array( 'is_debug' => defined( 'YIT_LICENCE_DEBUG' ) && YIT_LICENCE_DEBUG ) );
-			wp_localize_script( 'yit-licence', 'yith_ajax', array( 'url' => admin_url( 'admin-ajax.php', 'relative' ) ) );
-			wp_localize_script( 'yit-license-utils', 'yith_ajax', array( 'url' => admin_url( 'admin-ajax.php', 'relative' ) ) );
+			wp_localize_script( 'yit-licence', 'yith_ajax', array( 'url' =>  $ajax_url ) );
+			wp_localize_script( 'yit-license-utils', 'yith_license_utils', $yith_license_utils_i18n );
 
 			/* Enqueue Scripts only in Licence Activation page of plugins and themes */
 			if ( strpos( get_current_screen()->id, 'yith_plugins_activation' ) !== false || strpos( get_current_screen()->id, 'yit_panel_license' ) !== false ) {
@@ -256,6 +290,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 			$product_init = isset( $_REQUEST['product_init'] ) ? sanitize_text_field( $_REQUEST['product_init'] ) : '';
 			$product      = $product_init ? $this->get_product( $product_init ) : false;
 			$body         = false;
+			$activated    = false;
 
 			if ( $product ) {
 				$args     = array(
@@ -287,6 +322,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 					);
 
 					$option[ $product['product_id'] ] = $license;
+					$activated                        = true;
 
 					/* === Check for other plugins activation === */
 					$options                           = $this->get_licence();
@@ -316,6 +352,8 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 						$body['debug'] = print_r( $body['debug'], true );
 					}
 				}
+
+				do_action( "yith_{$this->product_type}_licence_check", $product_init, $activated, $this->product_type );
 			}
 
 			wp_send_json( $body );
@@ -339,6 +377,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 			$license      = $this->get_licence();
 			$product_id   = isset( $_POST['product_id'] ) ? sanitize_text_field( $_POST['product_id'] ) : '';
 			$body         = false;
+			$changed      = false;
 
 			if ( $product && $product_id ) {
 
@@ -380,7 +419,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 						/* === Update Plugin Licence Information === */
 						yith_plugin_fw_force_regenerate_plugin_update_transient();
 
-						update_option( $this->licence_option, $options );
+						$changed = update_option( $this->licence_option, $options );
 
 						/* === Licence Activation Template === */
 						$body['template'] = $this->show_activation_panel( $this->get_response_code_message( 'deactivated', array( 'instance' => $body['instance'] ) ) );
@@ -427,7 +466,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 								break;
 						}
 
-						update_option( $this->licence_option, $options );
+						$changed = update_option( $this->licence_option, $options );
 
 						/* === Licence Activation Template === */
 						$deactivate_message = $this->get_response_code_message( 'deactivated' );
@@ -437,6 +476,10 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 						$body['activated']  = false;
 					}
 				}
+			}
+
+			if( true === $changed ){
+				do_action( "yith_{$this->product_type}_licence_check", $product_init, false, $this->product_type );
 			}
 
 			wp_send_json( $body );
@@ -454,7 +497,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 		 * @return bool True if activated, false otherwise.
 		 */
 		public function check( $product_init, $regenerate_transient = true, $force_check = false ) {
-
+			$changed    = false;
 			$status     = false;
 			$body       = false;
 			$product    = $this->get_product( $product_init );
@@ -477,6 +520,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 				'instance'    => $this->get_home_url(),
 				'request'     => 'check',
 			);
+
 			$response = $this->do_request( $this->get_api_uri( 'check' ), $args, 'GET' );
 
 			if ( ! is_wp_error( $response ) ) {
@@ -499,6 +543,7 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 					$licence[ $product_id ]['is_membership']        = isset( $body['is_membership'] ) ? $body['is_membership'] : false;
 
 					$status = (bool) $body['activated'];
+
 				} elseif ( isset( $body['code'] ) ) {
 
 					switch ( $body['code'] ) {
@@ -539,7 +584,11 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 				}
 
 				/* === Update Plugin Licence Information === */
-				update_option( $this->licence_option, $licence );
+				$changed = update_option( $this->licence_option, $licence );
+
+				if( true === $changed ){
+					do_action( "yith_{$this->product_type}_licence_check", $product_init, $status, $this->product_type );
+				}
 
 				/* === Update Plugin Licence Information === */
 				if ( $regenerate_transient ) {
@@ -994,6 +1043,17 @@ if ( ! class_exists( 'YITH_Licence' ) ) {
 			if ( $nonce && wp_verify_nonce( $nonce, 'dismiss-yith-license-banner' ) ) {
 				update_user_meta( get_current_user_id(), 'yith-license-banner', 'hide' );
 			}
+		}
+
+		/**
+		 * Get the license option name
+		 *
+		 * @since 4.1.15
+		 * @author Andrea Grillo <andrea.grillo@yithemes.com>
+		 * @return string license option name
+		 */
+		public function get_licence_option_name(){
+			return $this->licence_option;
 		}
 	}
 }

@@ -166,7 +166,7 @@ function deaf_woocommerce_product_categories( $product_categories )
     array(
       'slug' => 'uncategorized',
     ),
-    'NOT'
+	'NOT'
   );
 
   return $product_categories;

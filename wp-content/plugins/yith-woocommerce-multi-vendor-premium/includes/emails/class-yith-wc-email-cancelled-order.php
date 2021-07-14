@@ -86,7 +86,7 @@ class YITH_WC_Email_Cancelled_Order extends WC_Email {
 			$this->object = wc_get_order( $suborder_id );
 			$this->vendor = yith_get_vendor( get_post_field( 'post_author', yit_get_prop( $this->object, 'id' ) ), 'user' );
 
-			if ( ! $this->vendor->is_valid() ) {
+			if( ! $this->vendor->is_valid() || $this->object->get_created_via() !== 'yith_wcmv_vendor_suborder' ){
 				return false;
 			}
 

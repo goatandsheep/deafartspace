@@ -90,7 +90,7 @@ $to_active_products_count      = count( $to_active_products );
 							<?php
 							$new_email_url = sprintf(
 								'%s:',
-								esc_html_x( 'E-mail account with YITH', 'Link on activation license panel', 'yith-plugin-upgrade-fw' )
+								esc_html_x( 'E-mail associated with order', 'Link on activation license panel', 'yith-plugin-upgrade-fw' )
 							);
 							echo $new_email_url; //@codingStandardsIgnoreLine
 							?>
@@ -101,20 +101,26 @@ $to_active_products_count      = count( $to_active_products );
 						<span class="error-message email"></span>
 					</p>
 					<p class="yith-license-form-row yith-licence-key-wrapper">
-						<label for="yith-licence-key" class="yith-license-key">
-							<?php
-							$find_license_key_url = sprintf(
-								'%s: <a href="%s" target="_blank" rel="nofollow noopener" tabindex="-1">%s</a>',
-								esc_html_x( 'License key', 'Link on activation license panel', 'yith-plugin-upgrade-fw' ),
-								$renew_url,
-								esc_html_x( 'Where to find it ?', 'Link on activation license panel', 'yith-plugin-upgrade-fw' )
-							);
-							echo $find_license_key_url; //@codingStandardsIgnoreLine
-							?>
-						</label>
+						<span class="yith-license-input-row">
+							<label for="yith-licence-key" class="yith-license-key">
+								<?php
+								$find_license_key_url = sprintf(
+									'<span class="yith-license-license-key-label" >%s:</span><a id="yith-license-where-find-these" href="#" target="_blank" rel="nofollow noopener" tabindex="-1">%s</a>',
+									esc_html_x( 'License key', 'Link on activation license panel', 'yith-plugin-upgrade-fw' ),
+									esc_html_x( 'Where to find these?', 'Link on activation license panel', 'yith-plugin-upgrade-fw' )
+								);
+								echo $find_license_key_url; //@codingStandardsIgnoreLine
+								?>
+							</label>
+						</span>
 						<input type="text" autocomplete="off" name="licence_key" maxlength="36" placeholder="<?php echo esc_html_x( 'Enter the license key', 'Placeholder', 'yith-plugin-upgrade-fw' ); ?>" value="" class="licence-key" id="yith-licence-key"/>
-						<input type="submit" name="submit" value="<?php echo esc_html_x( 'Activate', 'Button Label', 'yith-plugin-upgrade-fw' ); ?>" class="button-primary button-licence licence-activation" data-formid="yith-license-activation"/>
+
+
 						<span class="error-message license-key"></span>
+					</p>
+
+					<p class="yith-license-form-row yith-licence-submit-wrapper">
+						<input type="submit" name="submit" value="<?php echo esc_html_x( 'Activate', 'Button Label', 'yith-plugin-upgrade-fw' ); ?>" class="button-primary button-licence licence-activation" data-formid="yith-license-activation"/>
 					</p>
 					<input type="hidden" name="action" value="yith_activate-<?php echo esc_attr( $this->get_product_type() ); ?>"/>
 					<input type="hidden" name="product_init" id="product_init" value=""/>

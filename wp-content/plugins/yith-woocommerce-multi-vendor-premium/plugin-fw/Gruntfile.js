@@ -12,10 +12,13 @@ const potInfo = {
 module.exports = function ( grunt ) {
 	'use strict';
 
+	var sass = require( 'node-sass' );
+
 	grunt.initConfig( {
 						  dirs: {
-							  css: 'assets/css',
-							  js : 'assets/js'
+							  css : 'assets/css',
+							  scss: 'assets/css/scss',
+							  js  : 'assets/js'
 						  },
 
 						  uglify: {
@@ -42,6 +45,23 @@ module.exports = function ( grunt ) {
 							  }
 						  },
 
+						  // Compile all .scss files.
+						  sass: {
+							  compile: {
+								  options: {
+									  implementation: sass,
+									  outputStyle: 'expanded'
+								  },
+								  files  : [{
+									  expand: true,
+									  cwd   : '<%= dirs.scss %>/',
+									  src   : ['*.scss'],
+									  dest  : '<%= dirs.css %>/',
+									  ext   : '.css'
+								  }]
+							  }
+						  },
+
 						  jshint: {
 							  options: {
 								  jshintrc: '.jshintrc'
@@ -52,6 +72,14 @@ module.exports = function ( grunt ) {
 							  ]
 						  },
 
+
+						  // Watch changes for assets.
+						  watch: {
+							  css: {
+								  files: ['<%= dirs.scss %>/**/*.scss'],
+								  tasks: ['sass']
+							  }
+						  },
 
 						  makepot  : {
 							  options: {
@@ -66,6 +94,7 @@ module.exports = function ( grunt ) {
 									  potFilename: potInfo.filename,
 									  exclude    : [
 										  'bin/.*',
+										  'dist/.*',
 										  'node_modules/.*',
 										  'tests/.*',
 										  'tmp/.*',
@@ -91,6 +120,8 @@ module.exports = function ( grunt ) {
 							  dist   : {
 								  src: [
 									  '**/*.php', // Include all php files.
+									  '!bin/**',
+									  '!dist/**',
 									  '!node_modules/**',
 									  '!tests/**',
 									  '!tools/**',
@@ -153,10 +184,15 @@ module.exports = function ( grunt ) {
 	// Load NPM tasks to be used here.
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-phpcs' );
+	grunt.loadNpmTasks( 'grunt-sass' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 	// Use uglify-es (instead of uglify) to uglify also JS for ES6.
 	grunt.loadNpmTasks( 'grunt-contrib-uglify-es' );
 
 	// Register tasks.
 	grunt.registerTask( 'js', ['uglify'] );
+
+	grunt.registerTask( 'css', ['sass'] );
+	grunt.registerTask( 'assets', ['js', 'css'] );
 };

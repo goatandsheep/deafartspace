@@ -454,11 +454,6 @@ if ( ! class_exists( 'YITH_Order_Premium' ) ) {
 		 */
 		public function parent_order_status_synchronization( $order_id, $old_status, $new_status ) {
 			$parent_order_id = wp_get_post_parent_id( $order_id );
-			$status_to_sync  = array(
-				'completed',
-				'refunded'
-			);
-
 			if ( $parent_order_id ) {
 
 				remove_action( 'woocommerce_order_status_changed', array(
@@ -486,21 +481,12 @@ if ( ! class_exists( 'YITH_Order_Premium' ) ) {
 				}
 
 				$parent_order = wc_get_order( $parent_order_id );
-
-				if ( $suborder_count == $new_status_count ) {
-					if ( 'refunded' != $new_status ) {
-						$parent_order->update_status( $new_status, _x( "Sync with vendor's suborders: ", 'Order note', 'yith-woocommerce-product-vendors' ) );
-					}
-				} elseif ( $suborder_count != 0 ) {
-					/**
-					 * If the parent order have only 1 suborder I can sync it with the same status.
-					 * Otherwise I set the parent order to processing
-					 */
-					if ( $suborder_count == 1 ) {
-						if ( 'refunded' != $new_status ) {
-							$parent_order->update_status( $new_status, _x( "Sync with vendor's suborders: ", 'Order note', 'yith-woocommerce-product-vendors' ) );
-						}
-					}
+				/**
+				 * If the parent order have only 1 suborder I can sync it with the same status.
+				 * Otherwise I set the parent order to processing
+				 */
+				if ( ( $suborder_count == $new_status_count ) || $suborder_count == 1 ) {
+					$parent_order->update_status( $new_status, _x( "Sync with vendor's suborders: ", 'Order note', 'yith-woocommerce-product-vendors' ) );
 				}
 
 				add_action( 'woocommerce_order_status_changed', array(

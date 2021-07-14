@@ -524,13 +524,13 @@ if ( ! class_exists( 'YITH_Vendors_Gateway_Stripe_Connect' ) ) {
 						'amount'      => yith_wcsc_get_amount( $amount, $currency ),
 						'currency'    => $currency,
 						'destination' => $stripe_connect_id,
-						//'description' => sprintf( __( 'Commission %d - Order %d - %s', 'yith-stripe-connect-for-woocommerce' ), $commission['ID'], $commission['order_id'], $item->get_name() )
 					);
 
-					$args = apply_filters( 'yith_wcmv_stripe_connect_transfer_args', $args, $pay_data );
+					$args = apply_filters( 'yith_wcmv_stripe_connect_transfer_args', $args, $pay_data, $vendor_pay_data, $vendor_id );
 
 					if( ! empty( $pay_data[ $vendor_id ]['transfer_group'] ) ){
 						$args['transfer_group'] = $pay_data[ $vendor_id ]['transfer_group'];
+						$args['description'] = sprintf( esc_html__( 'Commission for order %d', 'yith-stripe-connect-for-woocommerce' ), $pay_data[ $vendor_id ]['transfer_group'] );
 					}
 
 					if( ! empty( $pay_data[ $vendor_id ]['source_transaction'] ) ){

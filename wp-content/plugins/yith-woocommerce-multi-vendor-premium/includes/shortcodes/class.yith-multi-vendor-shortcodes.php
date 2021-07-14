@@ -65,7 +65,7 @@ if ( ! class_exists( 'YITH_Multi_Vendor_Shortcodes' ) ) {
 		public static function vendors_list( $sc_args = array() ) {
 			$default = array(
 				'per_page'                => - 1,
-				'hide_no_products_vendor' => 'false',
+				'hide_no_products_vendor' => false,
 				'show_description'        => 'false',
 				'description_lenght'      => 40,
 				'vendor_image'            => 'store',
@@ -108,8 +108,8 @@ if ( ! class_exists( 'YITH_Multi_Vendor_Shortcodes' ) ) {
 			}
 			$vendors = YITH_Vendors()->get_vendors( apply_filters( 'yith_wcmv_vendor_list_shortcode_args', $vendors_args ) );
 
-			$total = wp_count_terms( YITH_Vendors()->get_taxonomy_name(), array( 'hide_empty' => true ) );
-			$total = 0 !== $per_page ? ceil( $total / $per_page ) : $total;
+			$total = wp_count_terms( YITH_Vendors()->get_taxonomy_name(), array( 'hide_empty' => $vendors_args['hide_empty'] ) );
+			$total = 0 !== $per_page ? ceil( $total / $per_page ) : $per_page;
 
 			if ( empty( $vendors ) ) {
 				return false;

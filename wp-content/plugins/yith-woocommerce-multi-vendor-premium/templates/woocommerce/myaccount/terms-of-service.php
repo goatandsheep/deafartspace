@@ -63,8 +63,7 @@ $privacy_accepted = $vendor->has_privacy_policy_accepted();
 				<?php
 				if ( $privacy_req ) {
 					if ( $privacy_accepted ):
-						$info = _x( 'Accepted privacy policy, published on', 'Accepted privacy policy, published on 2020-04-22',
-							'yit	h-woocommerce-product-vendors' );
+						$info = _x( 'Accepted privacy policy, published on', 'Accepted privacy policy, published on 2020-04-22', 'yith-woocommerce-product-vendors' );
 						$info = sprintf( '%s <span class="yith_mv_accept_data">%s</span>', $info, wc_format_datetime( new
 						WC_DateTime( $vendor->data_privacy_policy ) ) );
 						?>
