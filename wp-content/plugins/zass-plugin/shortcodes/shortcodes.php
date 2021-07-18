@@ -1273,7 +1273,7 @@ if (!function_exists('zass_latest_projects_shortcode')) {
 					</div>
 					<div class="iconbox_content">
 						<?php if ($title) : ?>
-							<h5<?php echo ($titles_color ? ' style="color:' . esc_attr($titles_color) . ';"' : ''); ?>><?php echo esc_html($title) ?></h5>
+							<h3<?php echo ($titles_color ? ' style="color:' . esc_attr($titles_color) . ';"' : ''); ?>><?php echo esc_html($title) ?></h3>
 							<?php endif; ?>
 							<?php if ($subtitle) : ?>
 								<small<?php echo ($titles_color ? ' style="color:' . esc_attr($titles_color) . ';"' : ''); ?>><?php echo esc_html($subtitle) ?></small>

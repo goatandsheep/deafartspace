@@ -85,7 +85,7 @@ if ( ! is_bool( $show_description ) ){
 		                                <?php $uri = str_replace( 'https://', '', $uri ); ?>
 		                                <?php $uri = ( $uri != '#yith-live-chat' ? '//' . $uri : $uri ); ?>
 		                                <?php $uri = trim( $uri ); ?>
-                                        <a class="vendor-social-uri" href="<?php echo $uri ?>" target="_blank">
+					<a class="vendor-social-uri" href="<?php echo $uri ?>" title="<?php echo $uri ?>" alt="<?php echo $uri ?>" target="_blank">
                                             <i class="<?php echo $socials_list['social_fields'][ $social ]['icon'] ?>"></i>
                                         </a>
                                     <?php endif; ?>

@@ -106,7 +106,7 @@ td {
 
 .page-numbers {
   background-color: #dd4540 !important;
-  color: #fff !important;
+  color: #270101 !important;
   padding: 5px 10px;
 }
 
@@ -169,3 +169,26 @@ div.product-category.product h2 mark {
   text-decoration: none;
   color: inherit;
 }
+
+#zass_price_range span {
+  color: white;
+}
+
+.owner-avatar .store-name {
+  color: white;
+  text-shadow: 3px 3px black;
+}
+
+.tagcloud a {
+  color: #634e4e !important;
+}
+
+ul.tabs a {
+  color: #565555 !important;
+}
+
+body.woocommerce-account #customer_login.col2-set .owl-nav .disabled,
+#customer_login.u-columns.col2-set .owl-nav .disabled {
+  color: #807373 !important;
+}
+
