@@ -79,7 +79,7 @@
   }
   ?>
   <!-- MAIN WRAPPER -->
-  <div id="container">
+  <div role="main" id="container">
     <!-- If it is not a blank page template -->
     <?php if (!$zass_is_blank) : ?>
       <?php if (is_page() && $zass_featured_slider != 'none' && function_exists('putRevSlider') && $zass_rev_slider_before_header) : ?>
