@@ -38,7 +38,7 @@
     // Top mobile menu
     $zass_top_nav_mobile_args = array(
       'theme_location' => $mobile_menu_id,
-      'container' => 'div',
+      'container' => 'nav',
       'container_id' => 'menu_mobile',
       'container_aria_label' => 'navigation',
       'menu_id' => 'mobile-menu',
