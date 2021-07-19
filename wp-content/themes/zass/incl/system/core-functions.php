@@ -1,18 +1,19 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 /* Register Theme Features */
 
 /* Hook into the 'after_setup_theme' action */
 add_action('after_setup_theme', 'zass_register_theme_features');
 if (!function_exists('zass_register_theme_features')) {
 
-	function zass_register_theme_features() {
+	function zass_register_theme_features()
+	{
 
 		// Add post-thumbnails support
 		add_theme_support('post-thumbnails');
 
 		// Gutenberg
-		add_theme_support( 'align-wide' );
+		add_theme_support('align-wide');
 
 		// Add Content Width theme support
 		if (!isset($content_width)) {
@@ -32,18 +33,17 @@ if (!function_exists('zass_register_theme_features')) {
 
 		// Add theme support for Custom Background
 		$background_args = array(
-				'default-color' => '',
-				'default-image' => '',
-				'wp-head-callback' => '_custom_background_cb',
-				'admin-head-callback' => '',
-				'admin-preview-callback' => '',
+			'default-color' => '',
+			'default-image' => '',
+			'wp-head-callback' => '_custom_background_cb',
+			'admin-head-callback' => '',
+			'admin-preview-callback' => '',
 		);
 		add_theme_support('custom-background', $background_args);
 
 		//  Add theme suppport for aside, gallery, link, image, quote, status, video, audio, chat
 		add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 	}
-
 }
 
 // BC for title tag
@@ -51,12 +51,12 @@ if (!function_exists('_wp_render_title_tag')) {
 	add_action('wp_head', 'zass_render_title');
 	if (!function_exists('zass_render_title')) {
 
-		function zass_render_title() {
-			?>
+		function zass_render_title()
+		{
+?>
 			<title><?php wp_title('|', true, 'right'); ?></title>
-			<?php
+<?php
 		}
-
 	}
 }
 
@@ -78,65 +78,66 @@ if (!function_exists('zass_register_sidebars')) {
 	/**
 	 * Register sidebars
 	 */
-	function zass_register_sidebars() {
+	function zass_register_sidebars()
+	{
 		if (function_exists('register_sidebar')) {
 
 			// Define default sidebar
 			register_sidebar(array(
-					'name' => esc_html__('Default Sidebar', 'zass'),
-					'id' => 'right_sidebar',
-					'description' => esc_html__('Default Blog widget area', 'zass'),
-					'before_widget' => '<div id="%1$s" class="widget box %2$s">',
-					'after_widget' => '</div>',
-					'before_title' => '<h3>',
-					'after_title' => '</h3>',
+				'name' => esc_html__('Default Sidebar', 'zass'),
+				'id' => 'right_sidebar',
+				'description' => esc_html__('Default Blog widget area', 'zass'),
+				'before_widget' => '<div id="%1$s" class="widget box %2$s">',
+				'after_widget' => '</div>',
+				'before_title' => '<h2>',
+				'after_title' => '</h2>',
 			));
 
 			// Define bottom footer widget area
 			register_sidebar(array(
-					'name' => esc_html__('Footer Sidebar', 'zass'),
-					'id' => 'bottom_footer_sidebar',
-					'description' => esc_html__('Footer widget area', 'zass'),
-					'before_widget' => '<div id="%1$s" class="widget %2$s ">',
-					'after_widget' => '</div>',
-					'before_title' => '<h3>',
-					'after_title' => '</h3>',
+				'name' => esc_html__('Footer Sidebar', 'zass'),
+				'id' => 'bottom_footer_sidebar',
+				'description' => esc_html__('Footer widget area', 'zass'),
+				'before_widget' => '<div id="%1$s" class="widget %2$s ">',
+				'after_widget' => '</div>',
+				'before_title' => '<h2>',
+				'after_title' => '</h2>',
 			));
 
 			// Define Pre header widget area
 			register_sidebar(array(
-					'name' => esc_html__('Pre Header Sidebar', 'zass'),
-					'id' => 'pre_header_sidebar',
-					'description' => esc_html__('Pre header widget area', 'zass'),
-					'before_widget' => '<div id="%1$s" class="widget %2$s ">',
-					'after_widget' => '</div>',
-					'before_title' => '<h3>',
-					'after_title' => '</h3>',
+				'name' => esc_html__('Pre Header Sidebar', 'zass'),
+				'id' => 'pre_header_sidebar',
+				'description' => esc_html__('Pre header widget area', 'zass'),
+				'before_widget' => '<div id="%1$s" class="widget %2$s ">',
+				'after_widget' => '</div>',
+				'before_title' => '<h2>',
+				'after_title' => '</h2>',
 			));
 
 			if (ZASS_IS_WOOCOMMERCE) {
 				// Define shop sidebar if woocommerce is active
 				register_sidebar(array(
-						'name' => 'Shop Sidebar',
-						'id' => 'shop',
-						'description' => esc_html__('Default Shop sidebar', 'zass'),
-						'before_widget' => '<div id="%1$s" class="widget box %2$s">',
-						'after_widget' => '</div>',
-						'before_title' => '<h3>',
-						'after_title' => '</h3>',
+					'name' => 'Shop Sidebar',
+					'id' => 'shop',
+					'description' => esc_html__('Default Shop sidebar', 'zass'),
+					'before_widget' => '<div id="%1$s" class="widget box %2$s">',
+					'after_widget' => '</div>',
+					'before_title' => '<h2>',
+					'after_title' => '</h2>',
 				));
 			}
 
 			if (ZASS_IS_BBPRESS) {
 				// Define shop sidebar if BBpress is active
 				register_sidebar(array(
-						'name' => 'Forum Sidebar',
-						'id' => 'zass_forum',
-						'description' => esc_html__('Default Forum sidebar', 'zass'),
-						'before_widget' => '<div id="%1$s" class="widget box %2$s">',
-						'after_widget' => '</div>',
-						'before_title' => '<h3>',
-						'after_title' => '</h3>',
+					'name' => 'Forum Sidebar',
+					'id' => 'zass_forum',
+					'description' => esc_html__('Default Forum sidebar', 'zass'),
+					'before_widget' => '<div id="%1$s" class="widget box %2$s">',
+					'after_widget' => '</div>',
+					'before_title' => '<h2>',
+					'after_title' => '</h2>',
 				));
 			}
 
@@ -148,18 +149,17 @@ if (!function_exists('zass_register_sidebars')) {
 				foreach ($sdbrsArr as $sdbr) {
 					$sdbr_id = zass_generate_slug($sdbr, 45);
 					register_sidebar(array(
-							'name' => $sdbr,
-							'id' => $sdbr_id,
-							'before_widget' => '<div id="%1$s" class="widget box %2$s">',
-							'after_widget' => '</div>',
-							'before_title' => '<h3>',
-							'after_title' => '</h3>',
+						'name' => $sdbr,
+						'id' => $sdbr_id,
+						'before_widget' => '<div id="%1$s" class="widget box %2$s">',
+						'after_widget' => '</div>',
+						'before_title' => '<h2>',
+						'after_title' => '</h2>',
 					));
 				}
 			}
 		}
 	}
-
 }
 
 add_action('tgmpa_register', 'zass_register_required_plugins');
@@ -172,61 +172,62 @@ add_action('tgmpa_register', 'zass_register_required_plugins');
  */
 if (!function_exists('zass_register_required_plugins')) {
 
-	function zass_register_required_plugins() {
+	function zass_register_required_plugins()
+	{
 
 		/**
 		 * Array of plugin arrays. Required keys are name and slug.
 		 * If the source is NOT from the .org repo, then source is also required.
 		 */
 		$plugins = array(
-				array(
-						'name' => esc_html__('Zass Plugin', 'zass'), // The plugin name
-						'slug' => 'zass-plugin', // The plugin slug (typically the folder name)
-						'source' => get_template_directory() . '/plugins/zass-plugin.zip', // The plugin source
-						'required' => true, // If false, the plugin is only 'recommended' instead of required
-						'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-						'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-						'version' => '2.3.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-				),
-                array(
-                        'name' => esc_html__('Envato Market - WordPress Theme & Plugin management for the Envato Market', 'zass'), // The plugin name
-                        'slug' => 'envato-market', // The plugin slug (typically the folder name)
-                        'source' => get_template_directory() . '/plugins/envato-market.zip', // The plugin source
-                        'required' => false, // If false, the plugin is only 'recommended' instead of required
-                        'version' => '2.0.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                        'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-                        'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-                ),
-				array(
-						'name' => esc_html__('WooCommerce - excelling eCommerce', 'zass'), // The plugin name
-						'slug' => 'woocommerce', // The plugin slug (typically the folder name)
-						'required' => false, // If false, the plugin is only 'recommended' instead of required
-						'version' => '5.1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-				),
-				array(
-						'name' => esc_html__('YITH WooCommerce Wishlist', 'zass'), // The plugin name
-						'slug' => 'yith-woocommerce-wishlist', // The plugin slug (typically the folder name)
-						'required' => false, // If false, the plugin is only 'recommended' instead of required
-						'version' => '3.0.20', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-				),
-				array(
-						'name' => esc_html__('Revolution Slider', 'zass'), // The plugin name
-						'slug' => 'revslider', // The plugin slug (typically the folder name)
-						'source' => get_template_directory() . '/plugins/revslider.zip', // The plugin source
-						'required' => false, // If false, the plugin is only 'recommended' instead of required
-						'version' => '6.4.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-						'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-						'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-				),
-				array(
-						'name' => esc_html__('WPBakery Page Builder', 'zass'), // The plugin name
-						'slug' => 'js_composer', // The plugin slug (typically the folder name)
-						'source' => get_template_directory() . '/plugins/js_composer.zip', // The plugin source
-						'required' => false, // If false, the plugin is only 'recommended' instead of required
-						'version' => '6.6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-						'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-						'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-				),
+			array(
+				'name' => esc_html__('Zass Plugin', 'zass'), // The plugin name
+				'slug' => 'zass-plugin', // The plugin slug (typically the folder name)
+				'source' => get_template_directory() . '/plugins/zass-plugin.zip', // The plugin source
+				'required' => true, // If false, the plugin is only 'recommended' instead of required
+				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+				'version' => '2.3.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			),
+			array(
+				'name' => esc_html__('Envato Market - WordPress Theme & Plugin management for the Envato Market', 'zass'), // The plugin name
+				'slug' => 'envato-market', // The plugin slug (typically the folder name)
+				'source' => get_template_directory() . '/plugins/envato-market.zip', // The plugin source
+				'required' => false, // If false, the plugin is only 'recommended' instead of required
+				'version' => '2.0.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			),
+			array(
+				'name' => esc_html__('WooCommerce - excelling eCommerce', 'zass'), // The plugin name
+				'slug' => 'woocommerce', // The plugin slug (typically the folder name)
+				'required' => false, // If false, the plugin is only 'recommended' instead of required
+				'version' => '5.1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			),
+			array(
+				'name' => esc_html__('YITH WooCommerce Wishlist', 'zass'), // The plugin name
+				'slug' => 'yith-woocommerce-wishlist', // The plugin slug (typically the folder name)
+				'required' => false, // If false, the plugin is only 'recommended' instead of required
+				'version' => '3.0.20', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			),
+			array(
+				'name' => esc_html__('Revolution Slider', 'zass'), // The plugin name
+				'slug' => 'revslider', // The plugin slug (typically the folder name)
+				'source' => get_template_directory() . '/plugins/revslider.zip', // The plugin source
+				'required' => false, // If false, the plugin is only 'recommended' instead of required
+				'version' => '6.4.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			),
+			array(
+				'name' => esc_html__('WPBakery Page Builder', 'zass'), // The plugin name
+				'slug' => 'js_composer', // The plugin slug (typically the folder name)
+				'source' => get_template_directory() . '/plugins/js_composer.zip', // The plugin source
+				'required' => false, // If false, the plugin is only 'recommended' instead of required
+				'version' => '6.6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+			),
 		);
 
 
@@ -238,74 +239,91 @@ if (!function_exists('zass_register_required_plugins')) {
 		 * end of each line for what each argument will be.
 		 */
 		$config = array(
-				'id' => 'zass', // Unique ID for hashing notices for multiple instances of TGMPA.
-				'default_path' => '', // Default absolute path to bundled plugins.
-				'menu' => 'tgmpa-install-plugins', // Menu slug.
-				'has_notices' => true, // Show admin notices or not.
-				'is_automatic' => false, // Automatically activate plugins after installation or not.
-				'dismissable' => true, // If false, a user cannot dismiss the nag message.
-				'dismiss_msg' => '', // If 'dismissable' is false, this message will be output at top of nag.
-				'message' => '', // Message to output right before the plugins table.
-				'strings' => array(
-						'page_title' => esc_html__('Install Required Plugins', 'zass'),
-						'menu_title' => esc_html__('Install Plugins', 'zass'),
-						/* translators: %s: plugin name. */
-						'installing' => esc_html__('Installing Plugin: %s', 'zass'),
-						/* translators: %s: plugin name. */
-						'updating' => esc_html__('Updating Plugin: %s', 'zass'),
-						'oops' => esc_html__('Something went wrong with the plugin API.', 'zass'),
-						'notice_can_install_required' => _n_noop(
-										/* translators: 1: plugin name(s). */
-										'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'zass'
-						),
-						'notice_can_install_recommended' => _n_noop(
-										/* translators: 1: plugin name(s). */
-										'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'zass'
-						),
-						'notice_ask_to_update' => _n_noop(
-										/* translators: 1: plugin name(s). */
-										'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'zass'
-						),
-						'notice_ask_to_update_maybe' => _n_noop(
-										/* translators: 1: plugin name(s). */
-										'There is an update available for: %1$s. Prior update please make sure that the theme is compatible with the new version.', 'There are updates available for the following plugins: %1$s. Prior update please make sure that the theme is compatible with the new version.', 'zass'
-						),
-						'notice_can_activate_required' => _n_noop(
-										/* translators: 1: plugin name(s). */
-										'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'zass'
-						),
-						'notice_can_activate_recommended' => _n_noop(
-										/* translators: 1: plugin name(s). */
-										'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'zass'
-						),
-						'install_link' => _n_noop(
-										'Begin installing plugin', 'Begin installing plugins', 'zass'
-						),
-						'update_link' => _n_noop(
-										'Begin updating plugin', 'Begin updating plugins', 'zass'
-						),
-						'activate_link' => _n_noop(
-										'Begin activating plugin', 'Begin activating plugins', 'zass'
-						),
-						'return' => esc_html__('Return to Required Plugins Installer', 'zass'),
-						'plugin_activated' => esc_html__('Plugin activated successfully.', 'zass'),
-						'activated_successfully' => esc_html__('The following plugin was activated successfully:', 'zass'),
-						/* translators: 1: plugin name. */
-						'plugin_already_active' => esc_html__('No action taken. Plugin %1$s was already active.', 'zass'),
-						/* translators: 1: plugin name. */
-						'plugin_needs_higher_version' => esc_html__('Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'zass'),
-						/* translators: 1: dashboard link. */
-						'complete' => esc_html__('All plugins installed and activated successfully. %1$s', 'zass'),
-						'dismiss' => esc_html__('Dismiss this notice', 'zass'),
-						'notice_cannot_install_activate' => esc_html__('There are one or more required or recommended plugins to install, update or activate.', 'zass'),
-						'contact_admin' => esc_html__('Please contact the administrator of this site for help.', 'zass'),
-						'nag_type' => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
+			'id' => 'zass', // Unique ID for hashing notices for multiple instances of TGMPA.
+			'default_path' => '', // Default absolute path to bundled plugins.
+			'menu' => 'tgmpa-install-plugins', // Menu slug.
+			'has_notices' => true, // Show admin notices or not.
+			'is_automatic' => false, // Automatically activate plugins after installation or not.
+			'dismissable' => true, // If false, a user cannot dismiss the nag message.
+			'dismiss_msg' => '', // If 'dismissable' is false, this message will be output at top of nag.
+			'message' => '', // Message to output right before the plugins table.
+			'strings' => array(
+				'page_title' => esc_html__('Install Required Plugins', 'zass'),
+				'menu_title' => esc_html__('Install Plugins', 'zass'),
+				/* translators: %s: plugin name. */
+				'installing' => esc_html__('Installing Plugin: %s', 'zass'),
+				/* translators: %s: plugin name. */
+				'updating' => esc_html__('Updating Plugin: %s', 'zass'),
+				'oops' => esc_html__('Something went wrong with the plugin API.', 'zass'),
+				'notice_can_install_required' => _n_noop(
+					/* translators: 1: plugin name(s). */
+					'This theme requires the following plugin: %1$s.',
+					'This theme requires the following plugins: %1$s.',
+					'zass'
 				),
+				'notice_can_install_recommended' => _n_noop(
+					/* translators: 1: plugin name(s). */
+					'This theme recommends the following plugin: %1$s.',
+					'This theme recommends the following plugins: %1$s.',
+					'zass'
+				),
+				'notice_ask_to_update' => _n_noop(
+					/* translators: 1: plugin name(s). */
+					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
+					'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
+					'zass'
+				),
+				'notice_ask_to_update_maybe' => _n_noop(
+					/* translators: 1: plugin name(s). */
+					'There is an update available for: %1$s. Prior update please make sure that the theme is compatible with the new version.',
+					'There are updates available for the following plugins: %1$s. Prior update please make sure that the theme is compatible with the new version.',
+					'zass'
+				),
+				'notice_can_activate_required' => _n_noop(
+					/* translators: 1: plugin name(s). */
+					'The following required plugin is currently inactive: %1$s.',
+					'The following required plugins are currently inactive: %1$s.',
+					'zass'
+				),
+				'notice_can_activate_recommended' => _n_noop(
+					/* translators: 1: plugin name(s). */
+					'The following recommended plugin is currently inactive: %1$s.',
+					'The following recommended plugins are currently inactive: %1$s.',
+					'zass'
+				),
+				'install_link' => _n_noop(
+					'Begin installing plugin',
+					'Begin installing plugins',
+					'zass'
+				),
+				'update_link' => _n_noop(
+					'Begin updating plugin',
+					'Begin updating plugins',
+					'zass'
+				),
+				'activate_link' => _n_noop(
+					'Begin activating plugin',
+					'Begin activating plugins',
+					'zass'
+				),
+				'return' => esc_html__('Return to Required Plugins Installer', 'zass'),
+				'plugin_activated' => esc_html__('Plugin activated successfully.', 'zass'),
+				'activated_successfully' => esc_html__('The following plugin was activated successfully:', 'zass'),
+				/* translators: 1: plugin name. */
+				'plugin_already_active' => esc_html__('No action taken. Plugin %1$s was already active.', 'zass'),
+				/* translators: 1: plugin name. */
+				'plugin_needs_higher_version' => esc_html__('Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'zass'),
+				/* translators: 1: dashboard link. */
+				'complete' => esc_html__('All plugins installed and activated successfully. %1$s', 'zass'),
+				'dismiss' => esc_html__('Dismiss this notice', 'zass'),
+				'notice_cannot_install_activate' => esc_html__('There are one or more required or recommended plugins to install, update or activate.', 'zass'),
+				'contact_admin' => esc_html__('Please contact the administrator of this site for help.', 'zass'),
+				'nag_type' => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
+			),
 		);
 
 		tgmpa($plugins, $config);
 	}
-
 }
 
 /**
@@ -316,7 +334,8 @@ if (!function_exists('zass_register_required_plugins')) {
  */
 if (!function_exists('zass_get_supersized_image_urls')) {
 
-	function zass_get_supersized_image_urls($ids) {
+	function zass_get_supersized_image_urls($ids)
+	{
 		$image_urls = array();
 
 		$ids_arr = explode(';', $ids);
@@ -329,7 +348,6 @@ if (!function_exists('zass_get_supersized_image_urls')) {
 
 		return $image_urls;
 	}
-
 }
 
 /**
@@ -340,7 +358,8 @@ if (!function_exists('zass_get_supersized_image_urls')) {
  */
 if (!function_exists('zass_enqueue_admin_js')) {
 
-	function zass_enqueue_admin_js($hook) {
+	function zass_enqueue_admin_js($hook)
+	{
 		wp_enqueue_style('zass-admin', get_template_directory_uri() . "/styles/zass-admin.css");
 		wp_register_script('zass-medialibrary-uploader', ZASS_OPTIONS_FRAMEWORK_DIRECTORY . 'js/zass-medialibrary-uploader.js', array('jquery-ui-accordion', 'media-upload'), false, true);
 		wp_enqueue_script('zass-medialibrary-uploader');
@@ -367,7 +386,6 @@ if (!function_exists('zass_enqueue_admin_js')) {
 		wp_enqueue_style('zass-mega-menu', get_template_directory_uri() . '/styles/zass-admin-megamenu.css');
 		wp_enqueue_script('zass-mega-menu', get_template_directory_uri() . '/js/zass-admin-mega-menu.js', array('jquery', 'jquery-ui-sortable'), false, true);
 	}
-
 }
 add_action('admin_enqueue_scripts', 'zass_enqueue_admin_js');
 
@@ -376,7 +394,8 @@ if (!function_exists('zass_enqueue_gutenberg_styles')) {
 	/**
 	 * Enqueue the Gutenberg styles
 	 */
-	function zass_enqueue_gutenberg_styles() {
+	function zass_enqueue_gutenberg_styles()
+	{
 		wp_enqueue_style('zass_block_editor_assets', get_template_directory_uri() . "/styles/zass-gutenberg-styles.css");
 		zass_typography_enqueue_google_font();
 	}
@@ -390,7 +409,8 @@ if (!function_exists('zass_enqueue_gutenberg_styles')) {
  */
 if (!function_exists('zass_has_post_supersized')) {
 
-	function zass_has_post_supersized() {
+	function zass_has_post_supersized()
+	{
 		$image_urls = array();
 		$custom = false;
 
@@ -410,7 +430,6 @@ if (!function_exists('zass_has_post_supersized')) {
 
 		return false;
 	}
-
 }
 
 /**
@@ -422,7 +441,8 @@ if (!function_exists('zass_has_post_supersized')) {
  */
 if (!function_exists('zass_has_post_video_bckgr')) {
 
-	function zass_has_post_video_bckgr() {
+	function zass_has_post_video_bckgr()
+	{
 
 		$custom = false;
 
@@ -436,7 +456,6 @@ if (!function_exists('zass_has_post_video_bckgr')) {
 
 		return false;
 	}
-
 }
 
 /**
@@ -449,7 +468,8 @@ if (!function_exists('zass_has_post_video_bckgr')) {
  */
 if (!function_exists('zass_generate_slug')) {
 
-	function zass_generate_slug($phrase, $maxLength) {
+	function zass_generate_slug($phrase, $maxLength)
+	{
 		$result = strtolower($phrase);
 
 		$result = preg_replace("/[^a-z0-9\s-]/", "", $result);
@@ -459,7 +479,6 @@ if (!function_exists('zass_generate_slug')) {
 
 		return $result;
 	}
-
 }
 
 /**
@@ -467,7 +486,8 @@ if (!function_exists('zass_generate_slug')) {
  */
 if (!function_exists('zass_get_taxonomy_parents')) {
 
-	function zass_get_taxonomy_parents($id, $taxonomy, $link = false, $separator = '/', $nicename = false, $visited = array()) {
+	function zass_get_taxonomy_parents($id, $taxonomy, $link = false, $separator = '/', $nicename = false, $visited = array())
+	{
 		$chain = '';
 		$parent = get_term($id, $taxonomy);
 		if (is_wp_error($parent))
@@ -478,7 +498,7 @@ if (!function_exists('zass_get_taxonomy_parents')) {
 		else
 			$name = $parent->name;
 
-		if ($parent->parent && ( $parent->parent != $parent->term_id ) && !in_array($parent->parent, $visited)) {
+		if ($parent->parent && ($parent->parent != $parent->term_id) && !in_array($parent->parent, $visited)) {
 			$visited[] = $parent->parent;
 			$chain .= zass_get_taxonomy_parents($parent->parent, $taxonomy, $link, $separator, $nicename, $visited);
 		}
@@ -490,7 +510,6 @@ if (!function_exists('zass_get_taxonomy_parents')) {
 			$chain .= $name . $separator;
 		return $chain;
 	}
-
 }
 
 if (!function_exists('zass_get_more_featured_images')) {
@@ -501,7 +520,8 @@ if (!function_exists('zass_get_more_featured_images')) {
 	 * @param int $post_id
 	 * @return array of custom featured images. If not - empty array
 	 */
-	function zass_get_more_featured_images($post_id) {
+	function zass_get_more_featured_images($post_id)
+	{
 		$featured_imgs = array();
 		$post_meta = get_post_meta($post_id);
 
@@ -513,15 +533,15 @@ if (!function_exists('zass_get_more_featured_images')) {
 
 		return $featured_imgs;
 	}
-
 }
 
 if (!function_exists('zass_wp_lang_to_valid_language_code')) {
 
-	function zass_wp_lang_to_valid_language_code($wp_lang) {
+	function zass_wp_lang_to_valid_language_code($wp_lang)
+	{
 		$wp_lang = str_replace('_', '-', $wp_lang);
 		switch (strtolower($wp_lang)) {
-			// arabic
+				// arabic
 			case 'ar':
 			case 'ar-ae':
 			case 'ar-bh':
@@ -538,43 +558,52 @@ if (!function_exists('zass_wp_lang_to_valid_language_code')) {
 			case 'ar-sa':
 			case 'ar-sy':
 			case 'ar-tn':
-			case 'ar-ye': return 'ar';
+			case 'ar-ye':
+				return 'ar';
 
-			// bulgarian
+				// bulgarian
 			case 'bg':
-			case 'bg-bg': return 'bg';
+			case 'bg-bg':
+				return 'bg';
 
-			// bosnian
+				// bosnian
 			case 'bs':
-			case 'bs-ba': return 'bs';
+			case 'bs-ba':
+				return 'bs';
 
-			// catalan
+				// catalan
 			case 'ca':
-			case 'ca-es': return 'ca';
+			case 'ca-es':
+				return 'ca';
 
-			// czech
+				// czech
 			case 'cs':
-			case 'cs-cz': return 'cs';
+			case 'cs-cz':
+				return 'cs';
 
-			case 'cy': return 'cy';
+			case 'cy':
+				return 'cy';
 
-			// danish
+				// danish
 			case 'da':
-			case 'da-dk': return 'da';
+			case 'da-dk':
+				return 'da';
 
-			// german
+				// german
 			case 'de':
 			case 'de-at':
 			case 'de-ch':
 			case 'de-de':
 			case 'de-li':
-			case 'de-lu': return 'de';
+			case 'de-lu':
+				return 'de';
 
-			// greek
+				// greek
 			case 'el':
-			case 'el-gr': return 'el';
+			case 'el-gr':
+				return 'el';
 
-			// spanish
+				// spanish
 			case 'es':
 			case 'es-ar':
 			case 'es-bo':
@@ -595,183 +624,223 @@ if (!function_exists('zass_wp_lang_to_valid_language_code')) {
 			case 'es-py':
 			case 'es-sv':
 			case 'es-uy':
-			case 'es-ve': return 'es';
+			case 'es-ve':
+				return 'es';
 
-			// estonian
+				// estonian
 			case 'et':
-			case 'et-ee': return 'et';
+			case 'et-ee':
+				return 'et';
 
-			// farsi/persian
+				// farsi/persian
 			case 'fa':
-			case 'fa fa-ir': return 'fa';
+			case 'fa fa-ir':
+				return 'fa';
 
-			// finnish
+				// finnish
 			case 'fi':
-			case 'fi-fi': return 'fi';
+			case 'fi-fi':
+				return 'fi';
 
-			// french
+				// french
 			case 'fr':
 			case 'fr-be':
 			case 'fr-ca':
 			case 'fr-ch':
 			case 'fr-fr':
 			case 'fr-lu':
-			case 'fr-mc': return 'fr';
+			case 'fr-mc':
+				return 'fr';
 
-			// galician
+				// galician
 			case 'gl':
-			case 'gl-es': return 'gl';
+			case 'gl-es':
+				return 'gl';
 
-			// gujarati
+				// gujarati
 			case 'gu':
-			case 'gu-in': return 'gu';
+			case 'gu-in':
+				return 'gu';
 
-			// hebrew
+				// hebrew
 			case 'he':
-			case 'he-il': return 'he';
+			case 'he-il':
+				return 'he';
 
-			// croatian
+				// croatian
 			case 'hr':
 			case 'hr-ba':
-			case 'hr-hr': return 'hr';
+			case 'hr-hr':
+				return 'hr';
 
-			// hungarian
+				// hungarian
 			case 'hu':
-			case 'hu-hu': return 'hu';
+			case 'hu-hu':
+				return 'hu';
 
-			// armenian
+				// armenian
 			case 'hy':
-			case 'hy-am': return 'hy';
+			case 'hy-am':
+				return 'hy';
 
-			// indonesian
+				// indonesian
 			case 'id':
-			case 'id-id': return 'id';
+			case 'id-id':
+				return 'id';
 
-			// italian
+				// italian
 			case 'it':
 			case 'it-ch':
-			case 'it-it': return 'it';
+			case 'it-it':
+				return 'it';
 
-			// japanese
+				// japanese
 			case 'ja':
-			case 'ja-jp': return 'ja';
+			case 'ja-jp':
+				return 'ja';
 
-			// kannada
+				// kannada
 			case 'kn':
-			case 'kn-in': return 'kn';
+			case 'kn-in':
+				return 'kn';
 
-			// korean
+				// korean
 			case 'ko':
-			case 'ko-kr': return 'ko';
+			case 'ko-kr':
+				return 'ko';
 
-			// lithuanian
+				// lithuanian
 			case 'lt':
-			case 'lt-lt': return 'lt';
+			case 'lt-lt':
+				return 'lt';
 
-			// latvian
+				// latvian
 			case 'lv':
-			case 'lv-lv': return 'lv';
+			case 'lv-lv':
+				return 'lv';
 
-			// malay
+				// malay
 			case 'ms':
 			case 'ms-bn':
-			case 'ms-my': return 'ms';
+			case 'ms-my':
+				return 'ms';
 
-			// burmese
-			case 'my': return 'my';
+				// burmese
+			case 'my':
+				return 'my';
 
-			// norwegian
+				// norwegian
 			case 'nb':
-			case 'nb-no': return 'nb';
+			case 'nb-no':
+				return 'nb';
 
-			// dutch
+				// dutch
 			case 'nl':
 			case 'nl-be':
-			case 'nl-nl': return 'nl';
+			case 'nl-nl':
+				return 'nl';
 
-			// polish
+				// polish
 			case 'pl':
-			case 'pl-pl': return 'pl';
+			case 'pl-pl':
+				return 'pl';
 
-			// portuguese
+				// portuguese
 			case 'pt':
 			case 'pt-br':
-			case 'pt-pt': return 'pt-br';
+			case 'pt-pt':
+				return 'pt-br';
 
-			// romanian
+				// romanian
 			case 'ro':
-			case 'ro-ro': return 'ro';
+			case 'ro-ro':
+				return 'ro';
 
-			// russian
+				// russian
 			case 'ru':
-			case 'ru-ru': return 'ru';
+			case 'ru-ru':
+				return 'ru';
 
-			// slovak
+				// slovak
 			case 'sk':
-			case 'sk-sk': return 'sk';
+			case 'sk-sk':
+				return 'sk';
 
-			// slovenian
+				// slovenian
 			case 'sl':
-			case 'sl-si': return 'sl';
+			case 'sl-si':
+				return 'sl';
 
-			// albanian
+				// albanian
 			case 'sq':
-			case 'sq-al': return 'sq';
+			case 'sq-al':
+				return 'sq';
 
-			// serbian
+				// serbian
 			case 'sr-ba':
 			case 'sr-sp':
-			case 'sr-rs': return 'sr-rs';
+			case 'sr-rs':
+				return 'sr-rs';
 
-			// swedish
+				// swedish
 			case 'sv':
 			case 'sv-fi':
-			case 'sv-se': return 'sv';
+			case 'sv-se':
+				return 'sv';
 
-			// thai
+				// thai
 			case 'th':
-			case 'th-th': return 'th';
+			case 'th-th':
+				return 'th';
 
-			// turkish
+				// turkish
 			case 'tr':
-			case 'tr-tr': return 'tr';
+			case 'tr-tr':
+				return 'tr';
 
-			// ukranian
+				// ukranian
 			case 'uk':
-			case 'uk-ua': return 'uk';
+			case 'uk-ua':
+				return 'uk';
 
-			// urdu
+				// urdu
 			case 'ur':
-			case 'ur-pk': return 'ur';
+			case 'ur-pk':
+				return 'ur';
 
-			// uzbek
+				// uzbek
 			case 'uz':
-			case 'uz-uz': return 'uz';
+			case 'uz-uz':
+				return 'uz';
 
-			// vietnamese
+				// vietnamese
 			case 'vi':
-			case 'vi-vn': return 'vi';
+			case 'vi-vn':
+				return 'vi';
 
-			// chinese/simplified
-			case 'zh-cn': return 'zh-cn';
+				// chinese/simplified
+			case 'zh-cn':
+				return 'zh-cn';
 
-			// chinese/traditional
+				// chinese/traditional
 			case 'zh':
 			case 'zh-hk':
 			case 'zh-mo':
 			case 'zh-sg':
-			case 'zh-tw': return 'zh-tw';
+			case 'zh-tw':
+				return 'zh-tw';
 
-			/* these don't exist and have no real language code? */
+				/* these don't exist and have no real language code? */
 
-			// malaylam
-			case 'ml': return 'ml';
+				// malaylam
+			case 'ml':
+				return 'ml';
 
-			// assume english
-			default: return '';
+				// assume english
+			default:
+				return '';
 		}
 	}
-
 }
 
 /**
@@ -780,7 +849,8 @@ if (!function_exists('zass_wp_lang_to_valid_language_code')) {
  */
 if (!function_exists('zass_typography_google_fonts_url')) {
 
-	function zass_typography_google_fonts_url() {
+	function zass_typography_google_fonts_url()
+	{
 
 		$font_families = array();
 
@@ -797,8 +867,9 @@ if (!function_exists('zass_typography_google_fonts_url')) {
 
 			// Get the font face for each option and put it in an array
 			$selected_fonts = array(
-					$body_font['face'],
-					$headings_font['face']);
+				$body_font['face'],
+				$headings_font['face']
+			);
 
 			// Remove any duplicates in the list
 			$selected_fonts = array_unique($selected_fonts);
@@ -816,15 +887,14 @@ if (!function_exists('zass_typography_google_fonts_url')) {
 
 		if (!empty($font_families)) {
 			$font_families_string_to_encode = implode('|', $font_families);
-			$font_url = add_query_arg( array(
-				'family' => urlencode( $font_families_string_to_encode . ':100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=' . zass_get_google_subsets() ),
+			$font_url = add_query_arg(array(
+				'family' => urlencode($font_families_string_to_encode . ':100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=' . zass_get_google_subsets()),
 				'display' => 'swap',
-			), '//fonts.googleapis.com/css' );
+			), '//fonts.googleapis.com/css');
 		}
 
 		return $font_url;
 	}
-
 }
 add_action('wp_enqueue_scripts', 'zass_typography_enqueue_google_font');
 add_action('admin_enqueue_scripts', 'zass_typography_enqueue_google_font');
@@ -833,19 +903,21 @@ add_action('admin_enqueue_scripts', 'zass_typography_enqueue_google_font');
  * Enqueues the Google $font that is passed
  */
 if (!function_exists('zass_typography_enqueue_google_font')) {
-	function zass_typography_enqueue_google_font() {
-		wp_enqueue_style( 'zass-fonts', zass_typography_google_fonts_url(), array(), false, 'print' );
+	function zass_typography_enqueue_google_font()
+	{
+		wp_enqueue_style('zass-fonts', zass_typography_google_fonts_url(), array(), false, 'print');
 	}
 }
 
-add_filter( 'style_loader_tag', 'zass_style_loader_tag_filter', 10, 2 );
-if ( ! function_exists( 'zass_style_loader_tag_filter' ) ) {
-	function zass_style_loader_tag_filter( $html, $handle ) {
-		if ( in_array( $handle, array( 'zass-fonts', 'font_awesome_5_shims', 'font_awesome_5', 'et-line-font', 'flaticon' ) ) ) {
-			$link_stylesheet = str_replace( "rel='stylesheet'", "rel='stylesheet' onload=\"this.media='all'\"", $html );
-			$link_preload    = str_replace( "rel='stylesheet'", "rel='preload' as='style'", $html );
-			$link_preload    = str_replace( "media='print'", "", $link_preload );
-			$link_preload    = str_replace( "id='" . $handle . "-css'", "", $link_preload );
+add_filter('style_loader_tag', 'zass_style_loader_tag_filter', 10, 2);
+if (!function_exists('zass_style_loader_tag_filter')) {
+	function zass_style_loader_tag_filter($html, $handle)
+	{
+		if (in_array($handle, array('zass-fonts', 'font_awesome_5_shims', 'font_awesome_5', 'et-line-font', 'flaticon'))) {
+			$link_stylesheet = str_replace("rel='stylesheet'", "rel='stylesheet' onload=\"this.media='all'\"", $html);
+			$link_preload    = str_replace("rel='stylesheet'", "rel='preload' as='style'", $html);
+			$link_preload    = str_replace("media='print'", "", $link_preload);
+			$link_preload    = str_replace("id='" . $handle . "-css'", "", $link_preload);
 
 			return $link_preload . $link_stylesheet;
 		}
@@ -860,7 +932,8 @@ if ( ! function_exists( 'zass_style_loader_tag_filter' ) ) {
 add_action('wp_enqueue_scripts', 'zass_enqueue_scripts_and_styles');
 if (!function_exists('zass_enqueue_scripts_and_styles')) {
 
-	function zass_enqueue_scripts_and_styles() {
+	function zass_enqueue_scripts_and_styles()
+	{
 
 		// Preloader style
 		if (zass_get_option('show_preloader')) {
@@ -875,9 +948,9 @@ if (!function_exists('zass_enqueue_scripts_and_styles')) {
 			wp_enqueue_style('zass-responsive', get_template_directory_uri() . "/styles/zass-responsive.css", array('zass-style'));
 		}
 
-		wp_enqueue_style( 'font_awesome_5_shims', get_template_directory_uri() . "/styles/font-awesome/css/v4-shims.min.css", array(),false, 'print' );
-		wp_enqueue_style( 'font_awesome_5', get_template_directory_uri() . "/styles/font-awesome/css/all.min.css", array( 'font_awesome_5_shims' ), false, 'print' );
-		wp_enqueue_style('et-line-font', get_template_directory_uri() . "/styles/et-line-font/style.css", array(),false, 'print');
+		wp_enqueue_style('font_awesome_5_shims', get_template_directory_uri() . "/styles/font-awesome/css/v4-shims.min.css", array(), false, 'print');
+		wp_enqueue_style('font_awesome_5', get_template_directory_uri() . "/styles/font-awesome/css/all.min.css", array('font_awesome_5_shims'), false, 'print');
+		wp_enqueue_style('et-line-font', get_template_directory_uri() . "/styles/et-line-font/style.css", array(), false, 'print');
 
 		// Jquery ui style
 		wp_register_style('jquery-ui', get_template_directory_uri() . "/js/ui/jquery-ui-1.9.1.custom.min.css");
@@ -892,43 +965,43 @@ if (!function_exists('zass_enqueue_scripts_and_styles')) {
 
 		$cart_redirect_after_add = 'no';
 		$cart_url                = '';
-		if ( ZASS_IS_WOOCOMMERCE && get_option( 'woocommerce_cart_redirect_after_add' ) == 'yes' ) {
+		if (ZASS_IS_WOOCOMMERCE && get_option('woocommerce_cart_redirect_after_add') == 'yes') {
 			$cart_redirect_after_add = 'yes';
-			$cart_url                = apply_filters( 'woocommerce_add_to_cart_redirect', wc_get_cart_url(), null );
+			$cart_url                = apply_filters('woocommerce_add_to_cart_redirect', wc_get_cart_url(), null);
 		}
 
 		$enable_ajax_add_to_cart = 'no';
-		if ( ZASS_IS_WOOCOMMERCE && zass_get_option('ajax_to_cart_single') ) {
+		if (ZASS_IS_WOOCOMMERCE && zass_get_option('ajax_to_cart_single')) {
 			$enable_ajax_add_to_cart = 'yes';
 		}
 
 		$page_title_fade = 'no';
-		if ( ZASS_IS_WOOCOMMERCE && zass_get_option( 'page_title_fade' ) ) {
+		if (ZASS_IS_WOOCOMMERCE && zass_get_option('page_title_fade')) {
 			$page_title_fade = 'yes';
 		}
 
 		wp_enqueue_script('zass-front', get_template_directory_uri() . "/js/zass-front.js", array('jquery'), false, true);
 		wp_localize_script('zass-front', 'zass_main_js_params', array(
-				'img_path' => esc_js(ZASS_IMAGES_PATH),
-				'admin_url' => esc_js(admin_url('admin-ajax.php')),
-				'product_label' =>  esc_js(__('Product', 'zass')),
-				'added_to_cart_label' => esc_js(__('was added to the cart', 'zass')),
-				'show_preloader' => esc_js(zass_get_option('show_preloader')),
-				'sticky_header' => esc_js(zass_get_option('sticky_header')),
-				'products_hover' => esc_js(zass_get_option('products_hover')),
-				'enable_smooth_scroll' => esc_js(zass_get_option('enable_smooth_scroll')),
-				'login_label' => esc_js(__('Login', 'zass')),
-				'register_label' => esc_js(__('Register', 'zass')),
-				'cart_redirect_after_add' => $cart_redirect_after_add,
-				'cart_url' => $cart_url,
-				'enable_ajax_add_to_cart' => $enable_ajax_add_to_cart,
-				'page_title_fade' => $page_title_fade,
-				'my_account_display_style' => zass_get_option('my_account_display_style'),
-				'is_rtl' => (is_rtl() ? 'true' : 'false')
+			'img_path' => esc_js(ZASS_IMAGES_PATH),
+			'admin_url' => esc_js(admin_url('admin-ajax.php')),
+			'product_label' =>  esc_js(__('Product', 'zass')),
+			'added_to_cart_label' => esc_js(__('was added to the cart', 'zass')),
+			'show_preloader' => esc_js(zass_get_option('show_preloader')),
+			'sticky_header' => esc_js(zass_get_option('sticky_header')),
+			'products_hover' => esc_js(zass_get_option('products_hover')),
+			'enable_smooth_scroll' => esc_js(zass_get_option('enable_smooth_scroll')),
+			'login_label' => esc_js(__('Login', 'zass')),
+			'register_label' => esc_js(__('Register', 'zass')),
+			'cart_redirect_after_add' => $cart_redirect_after_add,
+			'cart_url' => $cart_url,
+			'enable_ajax_add_to_cart' => $enable_ajax_add_to_cart,
+			'page_title_fade' => $page_title_fade,
+			'my_account_display_style' => zass_get_option('my_account_display_style'),
+			'is_rtl' => (is_rtl() ? 'true' : 'false')
 		));
 
 		/* imagesloaded */
-		wp_enqueue_script('imagesloaded', '',array('jquery'), false, true);
+		wp_enqueue_script('imagesloaded', '', array('jquery'), false, true);
 
 		/* include minifined css for js plugins: flexslider, owl-carousel, cloud-zoom-min, jquery-tipsy, jquery-plugin, jquery-countdown, magnific-popup */
 		wp_enqueue_style('zass-plugins', get_template_directory_uri() . "/styles/zass-js-plugins-css/zass-plugins.min.css");
@@ -942,21 +1015,21 @@ if (!function_exists('zass_enqueue_scripts_and_styles')) {
 
 		// register Isotope
 		wp_register_script('isotope', get_template_directory_uri() . "/js/isotope/dist/isotope.pkgd.min.js", array('jquery'), false, true);
-		if ( is_post_type_archive( 'zass-portfolio' ) || is_tax( 'zass_portfolio_category' ) || ( zass_get_option( 'general_blog_style' ) === 'zass_blog_masonry' && ( is_archive() || is_category() || zass_is_blog() ) ) ) {
+		if (is_post_type_archive('zass-portfolio') || is_tax('zass_portfolio_category') || (zass_get_option('general_blog_style') === 'zass_blog_masonry' && (is_archive() || is_category() || zass_is_blog()))) {
 			// load Isotope
-			wp_enqueue_script( 'isotope' );
+			wp_enqueue_script('isotope');
 		}
 
-		if(is_post_type_archive( 'zass-portfolio' ) || is_tax( 'zass_portfolio_category' )) {
+		if (is_post_type_archive('zass-portfolio') || is_tax('zass_portfolio_category')) {
 			// Infinite scroll
 			wp_enqueue_script('infinitescroll');
-        }
+		}
 
 		// Infinite scroll
 		wp_register_script('infinitescroll', get_template_directory_uri() . "/js/infinite/jquery.infinitescroll.min.js", array('jquery'), false, true);
 
 		// enqueue google map api
-		wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?'.( zass_get_option('google_maps_api_key') ? 'key='.zass_get_option('google_maps_api_key').'&' : '' ).'sensor=false', array('jquery'), false, true);
+		wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?' . (zass_get_option('google_maps_api_key') ? 'key=' . zass_get_option('google_maps_api_key') . '&' : '') . 'sensor=false', array('jquery'), false, true);
 
 		$zass_local = zass_wp_lang_to_valid_language_code(get_locale());
 		if ($zass_local) {
@@ -989,32 +1062,38 @@ if (!function_exists('zass_enqueue_scripts_and_styles')) {
 		wp_enqueue_script('zass-libs-config', get_template_directory_uri() . "/js/zass-libs-config.min.js", $libs_config_dependant_scripts, false, true);
 
 		// send is_rtl to js for owl carousel
-		wp_localize_script( 'zass-libs-config', 'zass_rtl',
+		wp_localize_script(
+			'zass-libs-config',
+			'zass_rtl',
 			array(
-				'is_rtl' => ( is_rtl() ? 'true' : 'false' )
-			) );
+				'is_rtl' => (is_rtl() ? 'true' : 'false')
+			)
+		);
 
-		if ( ZASS_IS_WOOCOMMERCE && zass_get_option( 'use_quickview' ) ) {
-			wp_localize_script( 'zass-libs-config', 'zass_quickview',
+		if (ZASS_IS_WOOCOMMERCE && zass_get_option('use_quickview')) {
+			wp_localize_script(
+				'zass-libs-config',
+				'zass_quickview',
 				array(
-					'zass_ajax_url' => esc_js( admin_url( 'admin-ajax.php' ) )
-				) );
+					'zass_ajax_url' => esc_js(admin_url('admin-ajax.php'))
+				)
+			);
 		}
 
 		$search_options = zass_get_option('search_options');
 		if (zass_get_option('show_searchform') && $search_options['use_ajax']) {
 			wp_localize_script('zass-libs-config', 'zass_ajax_search', array(
-					'include' => 'true'
+				'include' => 'true'
 			));
 		}
 
 		if (ZASS_IS_WOOCOMMERCE && is_product()) {
 			wp_localize_script('zass-libs-config', 'zass_variation_prod_cloudzoom', array(
-					'include' => 'true',
+				'include' => 'true',
 			));
 		}
 
-        // Register video background plugin
+		// Register video background plugin
 		wp_register_style('ytplayer', get_template_directory_uri() . "/js/jquery.mb.YTPlayer/css/jquery.mb.YTPlayer.min.css");
 		wp_register_script('ytplayer', get_template_directory_uri() . "/js/jquery.mb.YTPlayer/jquery.mb.YTPlayer.min.js", array('jquery'), '3.3.8', true);
 
@@ -1023,7 +1102,7 @@ if (!function_exists('zass_enqueue_scripts_and_styles')) {
 			wp_enqueue_style('ytplayer');
 			wp_enqueue_script('ytplayer');
 			wp_localize_script('zass-libs-config', 'zass_ytplayer_conf', array(
-					'include' => 'true',
+				'include' => 'true',
 			));
 			// Load supersized plugin if a slider is set up
 		} elseif ($to_include_supersized) {
@@ -1031,45 +1110,46 @@ if (!function_exists('zass_enqueue_scripts_and_styles')) {
 			wp_enqueue_script('supersized-min', get_template_directory_uri() . "/js/supersized/js/supersized.3.2.7.min.js", array('jquery'), '3.2.7', true);
 			if ($to_include_supersized == 'postmeta') {
 				wp_localize_script('zass-libs-config', 'zass_supersized_conf', array(
-						'images' => zass_has_post_supersized(),
+					'images' => zass_has_post_supersized(),
 				));
 			} elseif ($to_include_supersized == 'global') {
 				wp_localize_script('zass-libs-config', 'zass_supersized_conf', array(
-						'images' => zass_get_supersized_image_urls(esc_attr(zass_get_option('supersized_images'))),
+					'images' => zass_get_supersized_image_urls(esc_attr(zass_get_option('supersized_images'))),
 				));
 			} elseif ($to_include_supersized == 'blog') {
 				wp_localize_script('zass-libs-config', 'zass_supersized_conf', array(
-						'images' => zass_get_supersized_image_urls(esc_attr(zass_get_option('blog_supersized_images'))),
+					'images' => zass_get_supersized_image_urls(esc_attr(zass_get_option('blog_supersized_images'))),
 				));
 			} elseif (in_array($to_include_supersized, array('shop', 'shopwide'))) {
 				wp_localize_script('zass-libs-config', 'zass_supersized_conf', array(
-						'images' => zass_get_supersized_image_urls(esc_attr(zass_get_option('shop_supersized_images'))),
+					'images' => zass_get_supersized_image_urls(esc_attr(zass_get_option('shop_supersized_images'))),
 				));
 			}
 		}
 	}
-
 }
 
 // Deregister additional font awesome registration. We always register our own.
-add_action( 'wp_enqueue_scripts', 'zass_deregister_plugins_awesome_stylesheet', 20 );
-if ( ! function_exists( 'zass_deregister_plugins_awesome_stylesheet' ) ) {
-	function zass_deregister_plugins_awesome_stylesheet() {
-		if ( class_exists( 'Vc_Manager' ) ) {
-			wp_deregister_style( 'vc_font_awesome_5_shims' );
-			wp_deregister_style( 'vc_font_awesome_5' );
+add_action('wp_enqueue_scripts', 'zass_deregister_plugins_awesome_stylesheet', 20);
+if (!function_exists('zass_deregister_plugins_awesome_stylesheet')) {
+	function zass_deregister_plugins_awesome_stylesheet()
+	{
+		if (class_exists('Vc_Manager')) {
+			wp_deregister_style('vc_font_awesome_5_shims');
+			wp_deregister_style('vc_font_awesome_5');
 		}
-		if ( function_exists( 'yith_wishlist_install' ) ) {
-			wp_dequeue_style( 'yith-wcwl-font-awesome' );
-			wp_dequeue_style( 'yith-wcwl-main' );
+		if (function_exists('yith_wishlist_install')) {
+			wp_dequeue_style('yith-wcwl-font-awesome');
+			wp_dequeue_style('yith-wcwl-main');
 		}
 	}
 }
 
-add_filter( 'wp_resource_hints', 'zass_add_resource_hints', 20, 2 );
-if ( ! function_exists( 'zass_add_resource_hints' ) ) {
-	function zass_add_resource_hints( $urls, $relation_type ) {
-		if ( 'preconnect' === $relation_type ) {
+add_filter('wp_resource_hints', 'zass_add_resource_hints', 20, 2);
+if (!function_exists('zass_add_resource_hints')) {
+	function zass_add_resource_hints($urls, $relation_type)
+	{
+		if ('preconnect' === $relation_type) {
 			$urls[] = array(
 				'href' => 'https://fonts.gstatic.com',
 				'crossorigin'
@@ -1094,7 +1174,8 @@ if (!function_exists('zass_generate_excerpt')) {
 	 * @param boolean $safe_truncate use mb_strimwidth()
 	 * @return string the generated excerpt
 	 */
-	function zass_generate_excerpt($input, $limit, $break = ".", $more = "...", $strip_it = false, $exclude = '<strong><em><span>', $safe_truncate = false) {
+	function zass_generate_excerpt($input, $limit, $break = ".", $more = "...", $strip_it = false, $exclude = '<strong><em><span>', $safe_truncate = false)
+	{
 		if ($strip_it) {
 			$input = strip_shortcodes(strip_tags($input, $exclude));
 		}
@@ -1126,7 +1207,6 @@ if (!function_exists('zass_generate_excerpt')) {
 
 		return $input;
 	}
-
 }
 
 if (!function_exists('zass_get_option')) {
@@ -1137,16 +1217,17 @@ if (!function_exists('zass_get_option')) {
 	 * The function is in use
 	 * This should be starting point when implementing skins
 	 */
-	function zass_get_option($name, $default = false) {
+	function zass_get_option($name, $default = false)
+	{
 
 		$option_name = 'zass';
 
 		// In case the option is in url return that value
-		if ( array_key_exists( $name, $_GET ) ) {
-			return esc_attr( $_GET[ $name ] );
+		if (array_key_exists($name, $_GET)) {
+			return esc_attr($_GET[$name]);
 		}
 
-        // else get it from stored options
+		// else get it from stored options
 		if (get_option($option_name)) {
 			$options = get_option($option_name);
 		}
@@ -1154,7 +1235,7 @@ if (!function_exists('zass_get_option')) {
 		if (isset($options) && isset($options[$name])) {
 			return $options[$name];
 		} else {
-			if($default) {
+			if ($default) {
 				return $default;
 			}
 
@@ -1166,7 +1247,6 @@ if (!function_exists('zass_get_option')) {
 			}
 		}
 	}
-
 }
 
 if (!function_exists('zass_has_to_include_supersized')) {
@@ -1180,7 +1260,8 @@ if (!function_exists('zass_has_to_include_supersized')) {
 	 * @param type $is_compare
 	 * @return string|boolean
 	 */
-	function zass_has_to_include_supersized($is_compare = false) {
+	function zass_has_to_include_supersized($is_compare = false)
+	{
 
 		if (!$is_compare) {
 			// The post has supersized
@@ -1203,7 +1284,6 @@ if (!function_exists('zass_has_to_include_supersized')) {
 
 		return false;
 	}
-
 }
 
 if (!function_exists('zass_has_to_include_backgr_video')) {
@@ -1217,7 +1297,8 @@ if (!function_exists('zass_has_to_include_backgr_video')) {
 	 * @param type $is_compare
 	 * @return string|boolean
 	 */
-	function zass_has_to_include_backgr_video($is_compare = false) {
+	function zass_has_to_include_backgr_video($is_compare = false)
+	{
 
 		// The post has video background
 		if (zass_has_post_video_bckgr()) {
@@ -1238,7 +1319,6 @@ if (!function_exists('zass_has_to_include_backgr_video')) {
 
 		return false;
 	}
-
 }
 
 if (!function_exists('zass_is_blog')) {
@@ -1247,7 +1327,8 @@ if (!function_exists('zass_is_blog')) {
 	 * Return true if this is the Blog page
 	 * @return boolean
 	 */
-	function zass_is_blog() {
+	function zass_is_blog()
+	{
 
 		if (is_front_page() && is_home()) {
 			return false;
@@ -1260,27 +1341,26 @@ if (!function_exists('zass_is_blog')) {
 			return false;
 		}
 	}
-
 }
 
 add_action('after_switch_theme', 'zass_redirect_to_options', 99);
 if (!function_exists('zass_redirect_to_options')) {
 
 	// Redirect to theme options on theme activation
-	function zass_redirect_to_options() {
+	function zass_redirect_to_options()
+	{
 		wp_redirect(admin_url("themes.php?page=zass-optionsframework"));
 	}
-
 }
 
 add_action('init', 'zass_mega_menu_init');
 if (!function_exists('zass_mega_menu_init')) {
 
 	// Initialise ZassMegaMenu class
-	function zass_mega_menu_init() {
+	function zass_mega_menu_init()
+	{
 		$init_mega_menu = new ZassMegaMenu();
 	}
-
 }
 
 add_filter('wp_nav_menu_args', 'zass_set_menu_on_primary');
@@ -1292,7 +1372,8 @@ if (!function_exists('zass_set_menu_on_primary')) {
 	 * @param Array $args
 	 * @return Array
 	 */
-	function zass_set_menu_on_primary($args) {
+	function zass_set_menu_on_primary($args)
+	{
 		if ($args['theme_location'] === 'primary') {
 			if (zass_is_blog()) {
 				return zass_set_menu_on_primary_helper($args, zass_get_option('blog_top_menu'));
@@ -1306,8 +1387,8 @@ if (!function_exists('zass_set_menu_on_primary')) {
 			if (ZASS_IS_EVENTS) {
 				$mode_and_title = zass_get_current_events_display_mode_and_title();
 				$events_mode = $mode_and_title['display_mode'];
-				if(in_array($events_mode, array('MAIN_CALENDAR', 'CALENDAR_CATEGORY', 'MAIN_EVENTS', 'CATEGORY_EVENTS', 'SINGLE_EVENT_DAYS'))) {
-					return zass_set_menu_on_primary_helper( $args, zass_get_option( 'events_top_menu' ) );
+				if (in_array($events_mode, array('MAIN_CALENDAR', 'CALENDAR_CATEGORY', 'MAIN_EVENTS', 'CATEGORY_EVENTS', 'SINGLE_EVENT_DAYS'))) {
+					return zass_set_menu_on_primary_helper($args, zass_get_option('events_top_menu'));
 				}
 			}
 
@@ -1317,7 +1398,6 @@ if (!function_exists('zass_set_menu_on_primary')) {
 			return $args;
 		}
 	}
-
 }
 
 if (!function_exists('zass_set_menu_on_primary_helper')) {
@@ -1329,7 +1409,8 @@ if (!function_exists('zass_set_menu_on_primary_helper')) {
 	 * @param string $chosen_menu
 	 * @return string
 	 */
-	function zass_set_menu_on_primary_helper($args, $chosen_menu) {
+	function zass_set_menu_on_primary_helper($args, $chosen_menu)
+	{
 		if ('default' === $chosen_menu) {
 			return $args;
 		} else if ('none' === $chosen_menu) {
@@ -1340,7 +1421,6 @@ if (!function_exists('zass_set_menu_on_primary_helper')) {
 			return $args;
 		}
 	}
-
 }
 /*
  * Check for sidebar
@@ -1348,7 +1428,8 @@ if (!function_exists('zass_set_menu_on_primary_helper')) {
 add_filter('zass_has_sidebar', 'zass_check_for_sidebar');
 if (!function_exists('zass_check_for_sidebar')) {
 
-	function zass_check_for_sidebar() {
+	function zass_check_for_sidebar()
+	{
 
 		$options = array();
 		$is_cat_tag_tax_archive = false;
@@ -1368,7 +1449,7 @@ if (!function_exists('zass_check_for_sidebar')) {
 			$bbpress_sidebar = zass_get_option('bbpress_sidebar');
 		}
 
-		if(ZASS_IS_EVENTS) {
+		if (ZASS_IS_EVENTS) {
 			$events_sidebar = zass_get_option('events_sidebar');
 		}
 
@@ -1387,7 +1468,7 @@ if (!function_exists('zass_check_for_sidebar')) {
 			$sidebar_choice = $woocommerce_sidebar;
 		} elseif (ZASS_IS_BBPRESS && is_bbpress() && isset($bbpress_sidebar) && (empty($options) || (isset($options['zass_custom_sidebar']) && $options['zass_custom_sidebar'][0] == 'default' && $show_sidebar_from_meta == 'yes'))) {
 			$sidebar_choice = $bbpress_sidebar;
-		} elseif ( ZASS_IS_EVENTS && zass_is_events_part() && isset($events_sidebar) && ( empty($options) || ( isset($options['zass_custom_sidebar']) && $options['zass_custom_sidebar'][0] == 'default' && $show_sidebar_from_meta == 'yes'))) {
+		} elseif (ZASS_IS_EVENTS && zass_is_events_part() && isset($events_sidebar) && (empty($options) || (isset($options['zass_custom_sidebar']) && $options['zass_custom_sidebar'][0] == 'default' && $show_sidebar_from_meta == 'yes'))) {
 			$sidebar_choice = $events_sidebar;
 		} elseif (is_tax('zass_portfolio_category') || is_post_type_archive('zass-portfolio')) {
 			$sidebar_choice = $portfolio_categoty_sidebar;
@@ -1405,7 +1486,6 @@ if (!function_exists('zass_check_for_sidebar')) {
 
 		return $sidebar_choice;
 	}
-
 }
 
 /*
@@ -1414,7 +1494,8 @@ if (!function_exists('zass_check_for_sidebar')) {
 add_filter('zass_has_offcanvas_sidebar', 'zass_check_for_offcanvas_sidebar');
 if (!function_exists('zass_check_for_offcanvas_sidebar')) {
 
-	function zass_check_for_offcanvas_sidebar() {
+	function zass_check_for_offcanvas_sidebar()
+	{
 		$meta_options = array();
 		if (is_single() || is_page()) {
 			$meta_options = get_post_custom(get_queried_object_id());
@@ -1431,7 +1512,6 @@ if (!function_exists('zass_check_for_offcanvas_sidebar')) {
 
 		return $offcanvas_sidebar_choice;
 	}
-
 }
 
 add_filter('zass_left_sidebar_position_class', 'zass_check_for_sidebar_position');
@@ -1442,7 +1522,8 @@ if (!function_exists('zass_check_for_sidebar_position')) {
 	 *
 	 * @return string - Empty string for left and the class name for right
 	 */
-	function zass_check_for_sidebar_position() {
+	function zass_check_for_sidebar_position()
+	{
 		$meta_options = array();
 		if (is_single() || is_page()) {
 			$meta_options = get_post_custom(get_queried_object_id());
@@ -1455,7 +1536,6 @@ if (!function_exists('zass_check_for_sidebar_position')) {
 
 		return $sidebar_position;
 	}
-
 }
 
 
@@ -1466,11 +1546,12 @@ if (!function_exists('zass_get_choose_menu_options')) {
 	 *
 	 * @return Array
 	 */
-	function zass_get_choose_menu_options() {
+	function zass_get_choose_menu_options()
+	{
 		$registered_menus = wp_get_nav_menus();
 		$choose_menu_options = array(
-				'none' => esc_html__('- No menu -', 'zass'),
-				'default' => esc_html__('- Use global set top menu -', 'zass')
+			'none' => esc_html__('- No menu -', 'zass'),
+			'default' => esc_html__('- Use global set top menu -', 'zass')
 		);
 
 		foreach ($registered_menus as $menu) {
@@ -1479,13 +1560,12 @@ if (!function_exists('zass_get_choose_menu_options')) {
 
 		return $choose_menu_options;
 	}
-
 }
 
 // Disable BBPress breadcrumb
 add_filter('bbp_no_breadcrumb', '__return_true');
 
-if ( ! function_exists( 'zass_get_current_events_display_mode_and_title' ) ) {
+if (!function_exists('zass_get_current_events_display_mode_and_title')) {
 
 	/**
 	 * Returns current events display mode and page title specific for the Events Calendar Plugin
@@ -1494,12 +1574,13 @@ if ( ! function_exists( 'zass_get_current_events_display_mode_and_title' ) ) {
 	 *
 	 * @return array Array[display_mode, title]
 	 */
-	function zass_get_current_events_display_mode_and_title( $id = 0 ) {
+	function zass_get_current_events_display_mode_and_title($id = 0)
+	{
 
-		if ( $id == 0 ) {
+		if ($id == 0) {
 			global $wp_query;
 
-			if ( isset($wp_query->post) ) {
+			if (isset($wp_query->post)) {
 				$id = $wp_query->post->ID;
 			}
 		}
@@ -1510,42 +1591,42 @@ if ( ! function_exists( 'zass_get_current_events_display_mode_and_title' ) ) {
 		);
 
 		// If Event calendar is active follow the procedure to display the title
-		if ( function_exists( 'tribe_is_month' ) ) {
-			if ( tribe_is_month() && ! is_tax('', $id) ) { // The Main Calendar Page
-				if ( zass_get_option( 'events_title' ) ) {
-					$title = zass_get_option( 'events_title' );
+		if (function_exists('tribe_is_month')) {
+			if (tribe_is_month() && !is_tax('', $id)) { // The Main Calendar Page
+				if (zass_get_option('events_title')) {
+					$title = zass_get_option('events_title');
 				} else {
-					$title = esc_html__( 'The Main Calendar', 'zass' );
+					$title = esc_html__('The Main Calendar', 'zass');
 				}
 				$mode = 'MAIN_CALENDAR';
-			} elseif ( tribe_is_month() && is_tax('', $id) ) { // Calendar Category Pages
-				$title = esc_html__( 'Calendar Category', 'zass' ) . ': ' . tribe_meta_event_category_name();
+			} elseif (tribe_is_month() && is_tax('', $id)) { // Calendar Category Pages
+				$title = esc_html__('Calendar Category', 'zass') . ': ' . tribe_meta_event_category_name();
 				$mode  = 'CALENDAR_CATEGORY';
-			} elseif ( tribe_is_event( $id ) && ! tribe_is_day() && ! is_singular() && ! is_tax('', $id) ) { // The Main Events List
-				if ( zass_get_option( 'events_title' ) ) {
-					$title = zass_get_option( 'events_title' );
+			} elseif (tribe_is_event($id) && !tribe_is_day() && !is_singular() && !is_tax('', $id)) { // The Main Events List
+				if (zass_get_option('events_title')) {
+					$title = zass_get_option('events_title');
 				} else {
-					$title = esc_html__( 'Events List', 'zass' );
+					$title = esc_html__('Events List', 'zass');
 				}
 				$mode = 'MAIN_EVENTS';
-			} elseif ( tribe_is_event( $id ) && ! tribe_is_day() && ! is_singular() && is_tax('', $id) ) { // Category Events List
-				$title = esc_html__( 'Events List', 'zass' ) . ': ' . tribe_meta_event_category_name();
+			} elseif (tribe_is_event($id) && !tribe_is_day() && !is_singular() && is_tax('', $id)) { // Category Events List
+				$title = esc_html__('Events List', 'zass') . ': ' . tribe_meta_event_category_name();
 				$mode  = 'CATEGORY_EVENTS';
-			} elseif ( tribe_is_event( $id ) && is_singular() ) { // Single Events
-				$title = get_the_title( $id );
+			} elseif (tribe_is_event($id) && is_singular()) { // Single Events
+				$title = get_the_title($id);
 				$mode  = 'SINGLE_EVENTS';
-			} elseif ( tribe_is_day() ) { // Single Event Days
-				$title = esc_html__( 'Events on', 'zass' ) . ': ' . date( 'F j, Y', strtotime( get_query_var( 'eventDate' ) ) );
+			} elseif (tribe_is_day()) { // Single Event Days
+				$title = esc_html__('Events on', 'zass') . ': ' . date('F j, Y', strtotime(get_query_var('eventDate')));
 				$mode  = 'SINGLE_EVENT_DAYS';
-			} elseif ( tribe_is_venue( $id ) ) { // Single Venues
-				$title = get_the_title( $id );
+			} elseif (tribe_is_venue($id)) { // Single Venues
+				$title = get_the_title($id);
 				$mode  = 'VENUE';
 			} else {
-				$title = get_the_title( $id );
+				$title = get_the_title($id);
 				$mode  = '';
 			}
 		} else {
-			$title = get_the_title( $id );
+			$title = get_the_title($id);
 			$mode  = '';
 		}
 
@@ -1556,16 +1637,17 @@ if ( ! function_exists( 'zass_get_current_events_display_mode_and_title' ) ) {
 	}
 }
 
-if ( ! function_exists( 'zass_is_events_part' ) ) {
+if (!function_exists('zass_is_events_part')) {
 
 	/**
 	 * Detect if we are on an Events Calendar page
 	 *
 	 * @return bool
 	 */
-	function zass_is_events_part() {
+	function zass_is_events_part()
+	{
 
-		if ( ZASS_IS_EVENTS && function_exists( 'tribe_is_event' ) && ( tribe_is_month() || tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type() || is_singular( 'tribe_events' ) ) ) {
+		if (ZASS_IS_EVENTS && function_exists('tribe_is_event') && (tribe_is_month() || tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type() || is_singular('tribe_events'))) {
 			return true;
 		}
 
@@ -1582,16 +1664,18 @@ if ( ! function_exists( 'zass_is_events_part' ) ) {
  *
  * @return string The string without "script" tag
  */
-function zass_strip_script_tag_from_js_block( $source ) {
-	return trim( preg_replace( '#<script[^>]*>(.*)</script>#is', '$1', $source ) );
+function zass_strip_script_tag_from_js_block($source)
+{
+	return trim(preg_replace('#<script[^>]*>(.*)</script>#is', '$1', $source));
 }
 
-if ( ! function_exists('zass_write_log')) {
-	function zass_write_log ( $log )  {
-		if ( is_array( $log ) || is_object( $log ) ) {
-			error_log( print_r( $log, true ) );
+if (!function_exists('zass_write_log')) {
+	function zass_write_log($log)
+	{
+		if (is_array($log) || is_object($log)) {
+			error_log(print_r($log, true));
 		} else {
-			error_log( $log );
+			error_log($log);
 		}
 	}
 }
