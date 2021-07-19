@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html role="document" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 
 <head>
   <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -40,6 +40,7 @@
       'theme_location' => $mobile_menu_id,
       'container' => 'div',
       'container_id' => 'menu_mobile',
+      'container_aria_label' => 'navigation',
       'menu_id' => 'mobile-menu',
       'items_wrap' => '<a class="mob-close-toggle"></a><ul id="%1$s" class="%2$s">%3$s</ul>',
       'fallback_cb' => '',
@@ -68,7 +69,7 @@
     $zass_meta_show_pre_header = 'default';
   }
 
-  $zass_featured_slider = get_post_meta(get_queried_object_id(), 'zass_rev_slider', true);
+  $zass_featured_slider  get_post_meta(get_queried_object_id(), 'zass_rev_slider', true);
   if (!$zass_featured_slider) {
     $zass_featured_slider = 'none';
   }
