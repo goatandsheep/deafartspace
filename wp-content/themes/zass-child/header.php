@@ -69,7 +69,7 @@
     $zass_meta_show_pre_header = 'default';
   }
 
-  $zass_featured_slider  get_post_meta(get_queried_object_id(), 'zass_rev_slider', true);
+  $zass_featured_slider = get_post_meta(get_queried_object_id(), 'zass_rev_slider', true);
   if (!$zass_featured_slider) {
     $zass_featured_slider = 'none';
   }
