@@ -171,7 +171,7 @@
               <?php
               // Main logo
               if ($zass_theme_logo_img) {
-                echo wp_get_attachment_image($zass_theme_logo_img, 'full', false, array('class' => esc_attr($zass_persistent_logo_class)));
+                echo wp_get_attachment_image($zass_theme_logo_img, 'full', false, array('class' => esc_attr($zass_persistent_logo_class), 'alt' => get_bloginfo('name')));
               }
 
               // Secondary logo
