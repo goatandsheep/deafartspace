@@ -976,9 +976,6 @@
         }
       }
     });
-
-    $("#main").attr("role", "main");
-
     // End of document.ready()
   });
 
