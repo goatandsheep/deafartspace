@@ -977,7 +977,10 @@
       }
     });
 
-    $("#content > .inner > #main").attr("role", "main");
+    $("#container > #content > .inner:not(.site-main) > #main").attr(
+      "role",
+      "main"
+    );
     $("#zass_page_title").attr("role", "region");
     $("#zass_page_title").attr("aria-label", "Breadcrumb");
 
