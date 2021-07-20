@@ -170,7 +170,7 @@
               $zass_is_text_logo = false;
             }
             ?>
-            <h1 <?php if ($zass_is_text_logo) echo 'class="zass_text_logo"' ?> id="logo">
+            <h1 <?php if ($zass_is_text_logo) echo 'class="zass_text_logo"' ?> id="logo" role="banner">
               <a href="<?php echo esc_url(zass_wpml_get_home_url()); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
                 <?php
                 // Main logo
@@ -192,7 +192,7 @@
             <a class="mob-menu-toggle" href="#"><i class="fa fa-bars"></i></a>
 
             <?php if ($zass_is_search_or_cart_or_account) : ?>
-              <div class="zass-search-cart-holder">
+              <div class="zass-search-cart-holder" role="complementary">
                 <?php if (zass_get_option('show_searchform')) : ?>
                   <div id="search">
                     <?php $zass_search_options = zass_get_option('search_options'); ?>
@@ -247,19 +247,21 @@
 
               </div>
             <?php endif; ?>
-            <?php
-            // Top menu
-            $zass_top_nav_args = array(
-              'theme_location' => 'primary',
-              'container' => 'div',
-              'container_id' => 'main-menu',
-              'container_class' => 'menu-main-menu-container',
-              'menu_id' => 'main_nav',
-              'fallback_cb' => '',
-              'walker' => new ZassFrontWalker()
-            );
-            wp_nav_menu($zass_top_nav_args);
-            ?>
+            <div role="navigation" aria-label="Main">
+              <?php
+              // Top menu
+              $zass_top_nav_args = array(
+                'theme_location' => 'primary',
+                'container' => 'div',
+                'container_id' => 'main-menu',
+                'container_class' => 'menu-main-menu-container',
+                'menu_id' => 'main_nav',
+                'fallback_cb' => '',
+                'walker' => new ZassFrontWalker()
+              );
+              wp_nav_menu($zass_top_nav_args);
+              ?>
+            </div>
           </div>
         </div>
         <!-- END OF HEADER -->
