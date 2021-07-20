@@ -976,6 +976,11 @@
         }
       }
     });
+
+    $("#content .inner #main").attr("role", "main");
+    $("#zass_page_title").attr("role", "region");
+    $("#zass_page_title").attr("aria-label", "Breadcrumb");
+
     // End of document.ready()
   });
 
