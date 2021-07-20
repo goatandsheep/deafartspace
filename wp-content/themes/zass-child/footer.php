@@ -140,6 +140,9 @@ $zass_to_include_backgr_video = zass_has_to_include_backgr_video($zass_is_compar
 <?php wp_footer(); ?>
 
 <?php
+$zass_title_landmark = '(function ($) {"use strict"; $(document).ready(function () { $("#zass_page_title").attr("role", "region"); $("#zass_page_title").attr("aria-label", "Breadcrumb"); });})(window.jQuery);';
+wp_add_inline_script('zass-front', $zass_title_landmark);
+
 if (!is_woocommerce()) {
   $zass_main_landmark = '(function ($) {"use strict"; $(document).ready(function () { $("#main").attr("role", "main"); $("#zass_page_title").attr("role", "region"); $("#zass_page_title").attr("aria-label", "Breadcrumb"); });})(window.jQuery);';
   wp_add_inline_script('zass-front', $zass_main_landmark);
