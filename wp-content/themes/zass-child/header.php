@@ -170,25 +170,27 @@
               $zass_is_text_logo = false;
             }
             ?>
-            <h1 <?php if ($zass_is_text_logo) echo 'class="zass_text_logo"' ?> id="logo" role="banner">
-              <a href="<?php echo esc_url(zass_wpml_get_home_url()); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-                <?php
-                // Main logo
-                if ($zass_theme_logo_img) {
-                  echo wp_get_attachment_image($zass_theme_logo_img, 'full', false, array('class' => esc_attr($zass_persistent_logo_class), 'alt' => get_bloginfo('name')));
-                }
+            <div role="banner">
+              <h1 <?php if ($zass_is_text_logo) echo 'class="zass_text_logo"' ?> id="logo">
+                <a href="<?php echo esc_url(zass_wpml_get_home_url()); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+                  <?php
+                  // Main logo
+                  if ($zass_theme_logo_img) {
+                    echo wp_get_attachment_image($zass_theme_logo_img, 'full', false, array('class' => esc_attr($zass_persistent_logo_class), 'alt' => get_bloginfo('name')));
+                  }
 
-                // Secondary logo
-                if ($zass_transparent_theme_logo_img) {
-                  echo wp_get_attachment_image($zass_transparent_theme_logo_img, 'full', false, array('class' => 'transparent_logo'));
-                }
-                ?>
-                <?php if ($zass_is_text_logo) : ?>
-                  <span class="zass-logo-title"><?php bloginfo('name') ?></span>
-                  <span class="zass-logo-subtitle"><?php bloginfo('description') ?></span>
-                <?php endif; ?>
-              </a>
-            </h1>
+                  // Secondary logo
+                  if ($zass_transparent_theme_logo_img) {
+                    echo wp_get_attachment_image($zass_transparent_theme_logo_img, 'full', false, array('class' => 'transparent_logo'));
+                  }
+                  ?>
+                  <?php if ($zass_is_text_logo) : ?>
+                    <span class="zass-logo-title"><?php bloginfo('name') ?></span>
+                    <span class="zass-logo-subtitle"><?php bloginfo('description') ?></span>
+                  <?php endif; ?>
+                </a>
+              </h1>
+            </div>
             <a class="mob-menu-toggle" href="#"><i class="fa fa-bars"></i></a>
 
             <?php if ($zass_is_search_or_cart_or_account) : ?>
