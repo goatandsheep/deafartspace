@@ -249,9 +249,27 @@ function deaf_woocommerce_product_categories($product_categories)
 // add_filter( 'gettext', 'deaf_translate_text' );
 // add_filter( 'ngettext', 'deaf_translate_text' );
 
-add_filter('woocommerce_product_tabs', 'change_desc_tab_priority', 99, 1);
-function change_desc_tab_priority($tabs)
+
+function change_desc_tab_priority()
 {
-  $tabs['description']['priority'] = 100;
-  return $tabs;
+  if (is_product()) {
+    $html = '
+      <script>
+        (function ($) {
+          "use strict";
+
+          $(function () {
+            $("#tab-title-yith_wc_vendor").removeClass("active");
+            $("#tab-title-description").addClass("active");
+
+            $("#tab-yith_wc_vendor").css("display", "none");
+            $("#tab-description").css("display", "block");
+          });
+
+        })(jQuery);
+      </script>
+    ';
+    echo $html;
+  }
 }
+add_action('wp_footer', 'change_desc_tab_priority', 99);
