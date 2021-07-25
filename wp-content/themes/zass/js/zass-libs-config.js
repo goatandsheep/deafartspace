@@ -212,8 +212,8 @@
         loop: false,
         nav: true,
         navText: [
-          "<i class='fas fa-angle-left'></i>",
-          "<i class='fas fa-angle-right'></i>",
+          "<i class='fas fa-angle-left' title='prev'></i>",
+          "<i class='fas fa-angle-right' title='next'></i>",
         ],
       });
     }
@@ -282,8 +282,8 @@
         dots: false,
         nav: true,
         navText: [
-          "<i class='fas fa-angle-left'></i>",
-          "<i class='fas fa-angle-right'></i>",
+          "<i class='fas fa-angle-left' title='prev'></i>",
+          "<i class='fas fa-angle-right' title='next'></i>",
         ],
       });
     }
