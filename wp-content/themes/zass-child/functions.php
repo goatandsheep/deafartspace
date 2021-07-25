@@ -145,19 +145,19 @@ if (!is_admin()) {
   add_filter('term_link', 'deaf_term_link', 10, 3);
 }
 function deaf_term_link($termlink, $term, $taxonomy)
-{  
-  if (isset($_GET['type']) && !empty($_GET['type']) && $_GET['type'] == 'portfolio') {    
-    if ( false === strpos($termlink, 'type=portfolio') ) {
+{
+  if (isset($_GET['type']) && !empty($_GET['type']) && $_GET['type'] == 'portfolio') {
+    if (false === strpos($termlink, 'type=portfolio')) {
       $termlink = false === strpos($termlink, '?') ? $termlink . '?type=portfolio' : $termlink . '&type=portfolio';
-    }      
+    }
   }
   return $termlink;
 }
 
-add_filter( 'woocommerce_product_categories', 'deaf_woocommerce_product_categories', 10, 1);
-function deaf_woocommerce_product_categories( $product_categories ) 
+add_filter('woocommerce_product_categories', 'deaf_woocommerce_product_categories', 10, 1);
+function deaf_woocommerce_product_categories($product_categories)
 {
-  if ( is_admin() ) {
+  if (is_admin()) {
     return $product_categories;
   }
 
@@ -166,7 +166,7 @@ function deaf_woocommerce_product_categories( $product_categories )
     array(
       'slug' => 'uncategorized',
     ),
-	'NOT'
+    'NOT'
   );
 
   return $product_categories;
@@ -174,7 +174,7 @@ function deaf_woocommerce_product_categories( $product_categories )
 
 // add_action('template_redirect', 'deaf_template_redirect');
 // function deaf_query_vars(){
-	
+
 // }
 
 
@@ -243,8 +243,15 @@ function deaf_woocommerce_product_categories( $product_categories )
 // 		$translated = str_ireplace( 'Product', 'Art', $translated );
 // 		$translated = str_ireplace( 'product', 'art', $translated );	
 // 	}
-	
+
 // 	return $translated;
 // }
 // add_filter( 'gettext', 'deaf_translate_text' );
 // add_filter( 'ngettext', 'deaf_translate_text' );
+
+add_filter('woocommerce_product_tabs', 'change_desc_tab_priority', 99, 1);
+function change_desc_tab_priority($tabs)
+{
+  $tabs['description']['priority'] = 100;
+  return $tabs;
+}
