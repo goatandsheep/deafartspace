@@ -83,12 +83,19 @@ if (!is_admin()) {
 }
 function deaf_woocommerce_product_query_tax_query($tax_query, $query)
 {
-  if (is_product_category() || is_product_tag()) {
+  if (is_product_category() || is_product_tag() || is_tax(YITH_Vendors()->get_taxonomy_name())) {
     if (isset($_GET['type']) && $_GET['type'] == 'portfolio') {
       $tax_query[] = array(
         'taxonomy'      => 'product_tag',
         'terms'         => 'portfolio',
         'field'         => 'name',
+      );
+    } else {
+      $tax_query[] = array(
+        'taxonomy'      => 'product_tag',
+        'terms'         => 'portfolio',
+        'field'         => 'name',
+        'operator' => 'NOT IN',
       );
     }
   }
