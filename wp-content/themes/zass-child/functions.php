@@ -264,6 +264,8 @@ function change_desc_tab_priority()
 
             $("#tab-yith_wc_vendor").css("display", "none");
             $("#tab-description").css("display", "block");
+
+            $(".woocommerce-product-gallery__trigger").attr("title", "maximize")
           });
 
         })(jQuery);
